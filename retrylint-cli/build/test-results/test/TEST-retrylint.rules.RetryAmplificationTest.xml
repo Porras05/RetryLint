@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="retrylint.rules.RetryAmplificationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-09-01T12:10:28.172Z" hostname="DESKTOP-40LA28Q" time="0.028">
+<testsuite name="retrylint.rules.RetryAmplificationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-09-01T12:55:27.536Z" hostname="DESKTOP-40LA28Q" time="0.001">
   <properties/>
-  <testcase name="three retry layers with three attempts amplify to twenty seven()" classname="retrylint.rules.RetryAmplificationTest" time="0.028"/>
+  <testcase name="three retry layers with three attempts amplify to twenty seven()" classname="retrylint.rules.RetryAmplificationTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

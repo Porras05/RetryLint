@@ -8,6 +8,10 @@ kotlin {
 }
 
 dependencies {
+    implementation("info.picocli:picocli:4.7.7")
+    implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.18.3")
+    implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.18.3")
+
     testImplementation(kotlin("test"))
 }
 
