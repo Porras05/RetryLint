@@ -5,8 +5,9 @@ import picocli.CommandLine.Command
 import picocli.CommandLine.Parameters
 import picocli.CommandLine.Spec
 import picocli.CommandLine.Model.CommandSpec
-import retrylint.graph.TopologyValidator
-import retrylint.input.TopologyManifestParser
+import retrylint.config.ConfigurationException
+import retrylint.graph.TopologyValidationException
+import retrylint.input.RetryLintProjectLoader
 import java.nio.file.Path
 import java.util.concurrent.Callable
 import kotlin.system.exitProcess
@@ -36,16 +37,22 @@ class ValidateCommand : Callable<Int> {
 
     override fun call(): Int {
         return try {
-            val manifest = TopologyManifestParser().parse(manifestPath)
-            val topology = TopologyValidator().validate(manifest)
+            val project = RetryLintProjectLoader().load(manifestPath)
             spec.commandLine().out.println(
-                "VALID: ${manifest.name} " +
-                    "(${topology.servicesById.size} services, " +
-                    "${topology.operationsById.size} operations, ${topology.callsById.size} calls)",
+                "VALID: ${project.manifest.name} " +
+                    "(${project.topology.servicesById.size} services, " +
+                    "${project.topology.operationsById.size} operations, " +
+                    "${project.topology.callsById.size} calls)",
             )
             0
-        } catch (exception: Exception) {
+        } catch (exception: TopologyValidationException) {
             spec.commandLine().err.println("INVALID_TOPOLOGY: ${exception.message ?: exception::class.simpleName}")
+            2
+        } catch (exception: ConfigurationException) {
+            spec.commandLine().err.println("INVALID_CONFIGURATION: ${exception.message}")
+            2
+        } catch (exception: Exception) {
+            spec.commandLine().err.println("INVALID_INPUT: ${exception.message ?: exception::class.simpleName}")
             2
         }
     }

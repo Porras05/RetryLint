@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: checkout
+
+resilience4j:
+  retry:
+    configs:
+      default:
+        maxAttempts: 3
+        waitDuration: 100ms
+    instances:
+      orders-client:
+        baseConfig: default
+  timelimiter:
+    configs:
+      default:
+        timeoutDuration: 500ms
+    instances:
+      orders-client:
+        baseConfig: default

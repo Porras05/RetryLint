@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="retrylint.graph.TopologyValidatorTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-09-02T10:32:11.143Z" hostname="DESKTOP-40LA28Q" time="0.045">
+<testsuite name="retrylint.graph.TopologyValidatorTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-09-02T21:10:32.084Z" hostname="DESKTOP-40LA28Q" time="0.063">
   <properties/>
-  <testcase name="cycle fails with its concrete operation path()" classname="retrylint.graph.TopologyValidatorTest" time="0.011"/>
-  <testcase name="missing operation reference fails clearly()" classname="retrylint.graph.TopologyValidatorTest" time="0.011"/>
+  <testcase name="cycle fails with its concrete operation path()" classname="retrylint.graph.TopologyValidatorTest" time="0.019"/>
+  <testcase name="missing operation reference fails clearly()" classname="retrylint.graph.TopologyValidatorTest" time="0.014"/>
   <testcase name="duplicate service ID fails clearly()" classname="retrylint.graph.TopologyValidatorTest" time="0.011"/>
-  <testcase name="complete example builds maps and passes topological sorting()" classname="retrylint.graph.TopologyValidatorTest" time="0.007"/>
+  <testcase name="complete example builds maps and passes topological sorting()" classname="retrylint.graph.TopologyValidatorTest" time="0.014"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

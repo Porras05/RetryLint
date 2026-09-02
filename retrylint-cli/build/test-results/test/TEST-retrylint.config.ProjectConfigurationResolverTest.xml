@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="retrylint.config.ProjectConfigurationResolverTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-09-02T21:10:31.884Z" hostname="DESKTOP-40LA28Q" time="0.024">
+  <properties/>
+  <testcase name="loads each service file and links policies from the caller service()" classname="retrylint.config.ProjectConfigurationResolverTest" time="0.024"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

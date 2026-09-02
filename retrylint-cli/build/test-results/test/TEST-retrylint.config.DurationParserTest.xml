@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="retrylint.config.DurationParserTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-09-02T21:10:31.869Z" hostname="DESKTOP-40LA28Q" time="0.012">
+  <properties/>
+  <testcase name="invalid duration fails clearly()" classname="retrylint.config.DurationParserTest" time="0.008"/>
+  <testcase name="parses supported simple and ISO durations()" classname="retrylint.config.DurationParserTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -13,6 +13,8 @@ dependencies {
     implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.18.3")
 
     testImplementation(kotlin("test"))
+    testImplementation("io.github.resilience4j:resilience4j-retry:2.3.0")
+    testImplementation("io.github.resilience4j:resilience4j-timelimiter:2.3.0")
 }
 
 tasks.test {
