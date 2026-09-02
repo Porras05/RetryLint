@@ -22,3 +22,7 @@ tasks.test {
 application {
     mainClass.set("retrylint.cli.MainKt")
 }
+
+tasks.named<JavaExec>("run") {
+    workingDir = rootProject.projectDir
+}
