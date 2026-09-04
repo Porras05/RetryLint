@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="retrylint.config.ServiceConfigurationResolverTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-09-02T21:10:31.963Z" hostname="DESKTOP-40LA28Q" time="0.117">
+<testsuite name="retrylint.config.ServiceConfigurationResolverTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-09-04T11:27:49.814Z" hostname="DESKTOP-40LA28Q" time="0.073">
   <properties/>
-  <testcase name="unknown base configuration fails clearly()" classname="retrylint.config.ServiceConfigurationResolverTest" time="0.046"/>
-  <testcase name="uses supported Resilience4j defaults for instances()" classname="retrylint.config.ServiceConfigurationResolverTest" time="0.007"/>
-  <testcase name="named base chains and instance values merge using both key spellings()" classname="retrylint.config.ServiceConfigurationResolverTest" time="0.01"/>
-  <testcase name="invalid configured duration fails clearly()" classname="retrylint.config.ServiceConfigurationResolverTest" time="0.011"/>
-  <testcase name="unsupported backoff remains explicit while attempts still resolve()" classname="retrylint.config.ServiceConfigurationResolverTest" time="0.015"/>
-  <testcase name="base configuration cycle fails with its chain()" classname="retrylint.config.ServiceConfigurationResolverTest" time="0.012"/>
-  <testcase name="randomized wait interval functions and custom aspect order are marked unsupported()" classname="retrylint.config.ServiceConfigurationResolverTest" time="0.007"/>
+  <testcase name="unknown base configuration fails clearly()" classname="retrylint.config.ServiceConfigurationResolverTest" time="0.021"/>
+  <testcase name="uses supported Resilience4j defaults for instances()" classname="retrylint.config.ServiceConfigurationResolverTest" time="0.005"/>
+  <testcase name="named base chains and instance values merge using both key spellings()" classname="retrylint.config.ServiceConfigurationResolverTest" time="0.008"/>
+  <testcase name="invalid configured duration fails clearly()" classname="retrylint.config.ServiceConfigurationResolverTest" time="0.008"/>
+  <testcase name="unsupported backoff remains explicit while attempts still resolve()" classname="retrylint.config.ServiceConfigurationResolverTest" time="0.011"/>
+  <testcase name="base configuration cycle fails with its chain()" classname="retrylint.config.ServiceConfigurationResolverTest" time="0.007"/>
+  <testcase name="randomized wait interval functions and custom aspect order are marked unsupported()" classname="retrylint.config.ServiceConfigurationResolverTest" time="0.006"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

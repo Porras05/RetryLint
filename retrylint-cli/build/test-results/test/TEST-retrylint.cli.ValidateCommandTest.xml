@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="retrylint.cli.ValidateCommandTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-09-02T21:10:29.903Z" hostname="DESKTOP-40LA28Q" time="1.957">
+<testsuite name="retrylint.cli.ValidateCommandTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-09-04T11:27:48.642Z" hostname="DESKTOP-40LA28Q" time="1.113">
   <properties/>
-  <testcase name="invalid fixtures exit with input error and clear diagnostics()" classname="retrylint.cli.ValidateCommandTest" time="1.822"/>
-  <testcase name="complete example exits successfully()" classname="retrylint.cli.ValidateCommandTest" time="0.133"/>
+  <testcase name="invalid fixtures exit with input error and clear diagnostics()" classname="retrylint.cli.ValidateCommandTest" time="1.055"/>
+  <testcase name="complete example exits successfully()" classname="retrylint.cli.ValidateCommandTest" time="0.056"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
