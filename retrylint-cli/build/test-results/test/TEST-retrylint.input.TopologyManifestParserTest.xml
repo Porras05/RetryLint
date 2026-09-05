@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="retrylint.input.TopologyManifestParserTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-09-04T11:27:49.930Z" hostname="DESKTOP-40LA28Q" time="0.009">
-  <properties/>
-  <testcase name="parses the complete topology example()" classname="retrylint.input.TopologyManifestParserTest" time="0.009"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

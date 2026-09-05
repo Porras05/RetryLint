@@ -13,3 +13,15 @@ data class Finding(
     val callPath: List<String>,
     val evidence: Map<String, Any>,
 )
+
+data class CompletenessGap(
+    val ruleId: String,
+    val operationId: String?,
+    val callPath: List<String>,
+    val reason: String,
+)
+
+data class RuleAnalysisResult(
+    val findings: List<Finding>,
+    val completenessGaps: List<CompletenessGap> = emptyList(),
+)

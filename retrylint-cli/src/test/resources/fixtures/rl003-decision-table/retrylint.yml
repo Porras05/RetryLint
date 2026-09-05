@@ -1,0 +1,40 @@
+version: 1
+name: rl003-decision-table
+services:
+  - id: service
+    config: application.yml
+operations:
+  - id: service.root
+    service: service
+    idempotency: idempotent
+  - id: service.idempotent
+    service: service
+    idempotency: idempotent
+  - id: service.unknown
+    service: service
+    idempotency: unknown
+  - id: service.non-idempotent
+    service: service
+    idempotency: non-idempotent
+  - id: service.single-attempt
+    service: service
+    idempotency: non-idempotent
+calls:
+  - id: to-idempotent
+    from: service.root
+    to: service.idempotent
+    retry: repeated
+  - id: to-unknown
+    from: service.root
+    to: service.unknown
+    retry: repeated
+  - id: to-non-idempotent
+    from: service.root
+    to: service.non-idempotent
+    retry: repeated
+  - id: to-single-attempt
+    from: service.root
+    to: service.single-attempt
+    retry: once
+analysis:
+  roots: [service.root]

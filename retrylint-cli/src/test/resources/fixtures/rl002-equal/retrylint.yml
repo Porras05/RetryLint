@@ -1,0 +1,27 @@
+version: 1
+name: rl002-equal
+services:
+  - id: service
+    config: application.yml
+operations:
+  - id: service.a
+    service: service
+    idempotency: idempotent
+  - id: service.b
+    service: service
+    idempotency: idempotent
+  - id: service.c
+    service: service
+    idempotency: idempotent
+calls:
+  - id: a-to-b
+    from: service.a
+    to: service.b
+    timeLimiter: incoming
+  - id: b-to-c
+    from: service.b
+    to: service.c
+    retry: downstream
+    timeLimiter: downstream
+analysis:
+  roots: [service.a]
