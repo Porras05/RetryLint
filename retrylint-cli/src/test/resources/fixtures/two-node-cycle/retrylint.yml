@@ -1,0 +1,10 @@
+version: 1
+name: two-node-cycle
+services: [{ id: service, config: application.yml }]
+operations:
+  - { id: service.a, service: service, idempotency: idempotent }
+  - { id: service.b, service: service, idempotency: idempotent }
+calls:
+  - { id: a-b, from: service.a, to: service.b }
+  - { id: b-a, from: service.b, to: service.a }
+analysis: { roots: [service.a] }

@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="retrylint.report.AnalysisReportRendererTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-09-06T01:53:55.180Z" hostname="DESKTOP-40LA28Q" time="0.05">
-  <properties/>
-  <testcase name="text and JSON expose the same completeness gaps()" classname="retrylint.report.AnalysisReportRendererTest" time="0.031"/>
-  <testcase name="text and JSON expose the same finding facts()" classname="retrylint.report.AnalysisReportRendererTest" time="0.018"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

@@ -7,6 +7,7 @@ import retrylint.model.ResolvedCallPolicies
 import retrylint.model.ResolvedProjectConfiguration
 import retrylint.model.ResolvedRetry
 import java.nio.file.Path
+import java.nio.file.Files
 import java.time.Duration
 
 class ProjectConfigurationResolver(
@@ -18,17 +19,37 @@ class ProjectConfigurationResolver(
         topology: ValidatedTopology,
     ): ResolvedProjectConfiguration {
         val normalizedManifest = manifestPath.toAbsolutePath().normalize()
+        if (Files.isSymbolicLink(normalizedManifest)) {
+            throw ConfigurationException("manifest must not be a symbolic link: '$manifestPath'")
+        }
         val manifestDirectory = normalizedManifest.parent
             ?: throw ConfigurationException("manifest path has no parent directory: '$manifestPath'")
 
         val services = manifest.services.associate { service ->
-            val configurationPath = manifestDirectory.resolve(service.config).normalize()
-            if (!configurationPath.startsWith(manifestDirectory)) {
+            val requestedPath = manifestDirectory.resolve(service.config).normalize()
+            if (!requestedPath.startsWith(manifestDirectory)) {
                 throw ConfigurationException(
                     "service '${service.id}' configuration path escapes the manifest directory: '${service.config}'",
                 )
             }
-            service.id to serviceResolver.resolve(service.id, configurationPath)
+            val relativePath = manifestDirectory.relativize(requestedPath)
+            var current = manifestDirectory
+            relativePath.forEach { component ->
+                current = current.resolve(component)
+                if (Files.isSymbolicLink(current)) {
+                    throw ConfigurationException(
+                        "service '${service.id}' configuration path must not contain symbolic links: '${service.config}'",
+                    )
+                }
+            }
+            if (!Files.isRegularFile(requestedPath)) {
+                throw ConfigurationException(
+                    "service '${service.id}' configuration must be a regular file inside the manifest directory: '${service.config}'",
+                )
+            }
+            service.id to serviceResolver.resolve(service.id, requestedPath).copy(
+                source = Path.of(service.config).normalize(),
+            )
         }
 
         val calls = manifest.calls.associate { call ->

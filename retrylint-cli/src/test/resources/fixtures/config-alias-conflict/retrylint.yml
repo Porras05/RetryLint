@@ -1,0 +1,6 @@
+version: 1
+name: config-alias-conflict
+services: [{ id: service, config: application.yml }]
+operations: [{ id: service.a, service: service, idempotency: idempotent }]
+calls: []
+analysis: { roots: [service.a] }

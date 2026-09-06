@@ -1,0 +1,13 @@
+version: 1
+name: rl001-bigint
+services: [{ id: service, config: application.yml }]
+operations:
+  - { id: service.a, service: service, idempotency: idempotent }
+  - { id: service.b, service: service, idempotency: idempotent }
+  - { id: service.c, service: service, idempotency: idempotent }
+  - { id: service.d, service: service, idempotency: idempotent }
+calls:
+  - { id: a-b, from: service.a, to: service.b, retry: maximum }
+  - { id: b-c, from: service.b, to: service.c, retry: maximum }
+  - { id: c-d, from: service.c, to: service.d, retry: maximum }
+analysis: { roots: [service.a] }

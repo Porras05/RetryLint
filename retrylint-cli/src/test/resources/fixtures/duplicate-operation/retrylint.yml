@@ -1,0 +1,8 @@
+version: 1
+name: duplicate-operation
+services: [{ id: service, config: application.yml }]
+operations:
+  - { id: service.op, service: service, idempotency: idempotent }
+  - { id: service.op, service: service, idempotency: unknown }
+calls: []
+analysis: { roots: [service.op] }

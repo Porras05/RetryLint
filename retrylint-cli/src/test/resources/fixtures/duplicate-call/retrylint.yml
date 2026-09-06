@@ -1,0 +1,10 @@
+version: 1
+name: duplicate-call
+services: [{ id: service, config: application.yml }]
+operations:
+  - { id: service.a, service: service, idempotency: idempotent }
+  - { id: service.b, service: service, idempotency: idempotent }
+calls:
+  - { id: duplicated, from: service.a, to: service.b }
+  - { id: duplicated, from: service.a, to: service.b }
+analysis: { roots: [service.a] }

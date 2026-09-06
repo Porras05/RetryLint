@@ -1,0 +1,5 @@
+resilience4j:
+  retry:
+    instances:
+      one: { maxAttempts: 1 }
+      huge: { maxAttempts: 1000 }

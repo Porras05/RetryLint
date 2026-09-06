@@ -1,0 +1,4 @@
+resilience4j:
+  retry:
+    instances:
+      client: { baseConfig: missing }

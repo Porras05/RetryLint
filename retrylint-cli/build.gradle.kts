@@ -1,6 +1,7 @@
 plugins {
     kotlin("jvm")
     application
+    jacoco
 }
 
 kotlin {
@@ -19,6 +20,22 @@ dependencies {
 
 tasks.test {
     useJUnitPlatform()
+    finalizedBy(tasks.jacocoTestReport)
+}
+
+tasks.jacocoTestReport {
+    dependsOn(tasks.test)
+    reports {
+        xml.required.set(true)
+        html.required.set(true)
+    }
+    classDirectories.setFrom(
+        files(classDirectories.files.map { directory ->
+            fileTree(directory) {
+                include("retrylint/config/**", "retrylint/graph/**", "retrylint/rules/**")
+            }
+        }),
+    )
 }
 
 application {

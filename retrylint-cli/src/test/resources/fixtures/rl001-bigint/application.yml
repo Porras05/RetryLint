@@ -1,0 +1,4 @@
+resilience4j:
+  retry:
+    instances:
+      maximum: { maxAttempts: 2147483647 }

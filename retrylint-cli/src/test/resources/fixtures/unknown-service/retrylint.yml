@@ -1,0 +1,7 @@
+version: 1
+name: unknown-service
+services: [{ id: service, config: application.yml }]
+operations:
+  - { id: missing.op, service: missing, idempotency: unknown }
+calls: []
+analysis: { roots: [missing.op] }

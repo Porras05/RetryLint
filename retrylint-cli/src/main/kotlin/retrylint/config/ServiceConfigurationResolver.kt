@@ -8,6 +8,8 @@ import retrylint.model.Resolution
 import retrylint.model.ResolvedRetry
 import retrylint.model.ResolvedServiceConfiguration
 import retrylint.model.ResolvedTimeLimiter
+import retrylint.input.InputLimits
+import java.nio.file.Files
 import java.nio.file.Path
 import java.time.Duration
 import kotlin.io.path.inputStream
@@ -16,6 +18,14 @@ class ServiceConfigurationResolver {
     private val mapper = ObjectMapper(YAMLFactory())
 
     fun resolve(serviceId: String, path: Path): ResolvedServiceConfiguration {
+        if (!Files.isRegularFile(path)) {
+            throw ConfigurationException("configuration for service '$serviceId' is not a regular file: '$path'")
+        }
+        if (Files.size(path) > InputLimits.MAX_SERVICE_CONFIG_BYTES) {
+            throw ConfigurationException(
+                "configuration for service '$serviceId' exceeds ${InputLimits.MAX_SERVICE_CONFIG_BYTES} byte limit: '$path'",
+            )
+        }
         val root = try {
             path.inputStream().use(mapper::readTree)
         } catch (exception: Exception) {
@@ -309,14 +319,22 @@ class ServiceConfigurationResolver {
         val result = linkedMapOf<String, JsonNode>()
         node.fields().forEach { (name, value) ->
             if (name != excluded) {
+                if (name.length > InputLimits.MAX_IDENTIFIER_LENGTH) {
+                    throw ConfigurationException("policy name in $context exceeds length limit ${InputLimits.MAX_IDENTIFIER_LENGTH}")
+                }
                 if (!value.isObject) throw ConfigurationException("'$name' must be an object in $context")
                 result[name] = value
             }
+        }
+        if (result.size > InputLimits.MAX_NAMED_POLICIES_PER_SECTION) {
+            throw ConfigurationException(
+                "$context contains ${result.size} policies; limit is ${InputLimits.MAX_NAMED_POLICIES_PER_SECTION}",
+            )
         }
         return result
     }
 
     private companion object {
-        const val MAX_BASE_DEPTH = 8
+        const val MAX_BASE_DEPTH = InputLimits.MAX_BASE_CONFIG_DEPTH
     }
 }

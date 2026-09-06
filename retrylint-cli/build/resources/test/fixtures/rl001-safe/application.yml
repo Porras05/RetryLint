@@ -1,7 +1,0 @@
-resilience4j:
-  retry:
-    instances:
-      one-attempt:
-        maxAttempts: 1
-      three-attempts:
-        maxAttempts: 3

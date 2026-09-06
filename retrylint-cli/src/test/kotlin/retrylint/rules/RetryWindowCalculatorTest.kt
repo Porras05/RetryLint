@@ -3,6 +3,7 @@ package retrylint.rules
 import java.time.Duration
 import kotlin.test.Test
 import kotlin.test.assertEquals
+import kotlin.test.assertFailsWith
 
 class RetryWindowCalculatorTest {
     @Test
@@ -25,5 +26,18 @@ class RetryWindowCalculatorTest {
         )
 
         assertEquals(Duration.ofMillis(400), window)
+    }
+
+    @Test
+    fun `invalid arithmetic inputs are rejected before calculation`() {
+        assertFailsWith<IllegalArgumentException> {
+            RetryWindowCalculator.calculate(0, Duration.ZERO, Duration.ZERO)
+        }
+        assertFailsWith<IllegalArgumentException> {
+            RetryWindowCalculator.calculate(1, Duration.ofMillis(-1), Duration.ZERO)
+        }
+        assertFailsWith<IllegalArgumentException> {
+            RetryWindowCalculator.calculate(1, Duration.ZERO, Duration.ofMillis(-1))
+        }
     }
 }

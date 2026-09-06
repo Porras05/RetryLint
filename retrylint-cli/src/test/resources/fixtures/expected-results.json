@@ -1,0 +1,28 @@
+{
+  "complete-example": { "exitCode": 0, "findingRules": ["RL001", "RL002", "RL002", "RL003", "RL003"], "gapRules": [] },
+  "rl001-branching": { "exitCode": 0, "findingRules": ["RL001"], "gapRules": ["RL002", "RL002"] },
+  "rl001-safe": { "exitCode": 0, "findingRules": [], "gapRules": ["RL002", "RL002"] },
+  "rl002-equal": { "exitCode": 0, "findingRules": [], "gapRules": [] },
+  "rl002-unsupported": { "exitCode": 0, "findingRules": ["RL002", "RL003"], "gapRules": ["RL002"] },
+  "rl003-decision-table": { "exitCode": 0, "findingRules": ["RL003", "RL003"], "gapRules": [] },
+  "week5-mixed": { "exitCode": 0, "findingRules": ["RL002", "RL003"], "gapRules": [] },
+  "rl001-between": { "exitCode": 0, "findingRules": ["RL001"], "gapRules": [] },
+  "rl001-above": { "exitCode": 0, "findingRules": ["RL001"], "gapRules": [] },
+  "rl001-unreachable": { "exitCode": 0, "findingRules": [], "gapRules": [] },
+  "rl001-bigint": { "exitCode": 0, "findingRules": ["RL001"], "gapRules": ["RL002", "RL002"] },
+  "rl002-safe-greater": { "exitCode": 0, "findingRules": ["RL003"], "gapRules": [] },
+  "rl002-one-attempt": { "exitCode": 0, "findingRules": [], "gapRules": [] },
+
+  "duplicate-id": { "exitCode": 2, "errorContains": "duplicate service ID" },
+  "duplicate-operation": { "exitCode": 2, "errorContains": "duplicate operation ID" },
+  "duplicate-call": { "exitCode": 2, "errorContains": "duplicate call ID" },
+  "missing-reference": { "exitCode": 2, "errorContains": "unknown target operation" },
+  "unknown-service": { "exitCode": 2, "errorContains": "unknown service" },
+  "missing-root": { "exitCode": 2, "errorContains": "at least one analysis root" },
+  "unknown-root": { "exitCode": 2, "errorContains": "unknown operation" },
+  "self-cycle": { "exitCode": 2, "errorContains": "service.a -> service.a" },
+  "two-node-cycle": { "exitCode": 2, "errorContains": "service.a -> service.b -> service.a" },
+  "cycle": { "exitCode": 2, "errorContains": "service-a.call -> service-b.call -> service-c.call -> service-a.call" },
+  "config-unknown-base": { "exitCode": 2, "errorContains": "unknown retry baseConfig" },
+  "config-alias-conflict": { "exitCode": 2, "errorContains": "declares both 'maxAttempts' and 'max-attempts'" }
+}

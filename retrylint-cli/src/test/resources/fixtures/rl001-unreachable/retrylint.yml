@@ -1,0 +1,12 @@
+version: 1
+name: rl001-unreachable
+services: [{ id: service, config: application.yml }]
+operations:
+  - { id: service.root, service: service, idempotency: idempotent }
+  - { id: service.safe, service: service, idempotency: idempotent }
+  - { id: service.unreachable-a, service: service, idempotency: idempotent }
+  - { id: service.unreachable-b, service: service, idempotency: idempotent }
+calls:
+  - { id: root-safe, from: service.root, to: service.safe, retry: one }
+  - { id: unreachable, from: service.unreachable-a, to: service.unreachable-b, retry: huge }
+analysis: { roots: [service.root] }

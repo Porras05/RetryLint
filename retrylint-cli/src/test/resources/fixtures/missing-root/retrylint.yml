@@ -1,0 +1,6 @@
+version: 1
+name: missing-root
+services: [{ id: service, config: application.yml }]
+operations: [{ id: service.op, service: service, idempotency: idempotent }]
+calls: []
+analysis: { roots: [] }

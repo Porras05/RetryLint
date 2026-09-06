@@ -3,6 +3,10 @@
 RetryLint is a Kotlin command-line analyzer for composed Resilience4j retry and
 TimeLimiter configuration across an explicit synchronous service topology.
 
+The mandatory analyzer and CLI behavior is documented in
+[`docs/CORE_CONTRACT_V0.1.md`](docs/CORE_CONTRACT_V0.1.md) and frozen for the
+v0.1.0 release.
+
 ## Five-minute example
 
 Build and validate the bundled example from PowerShell:

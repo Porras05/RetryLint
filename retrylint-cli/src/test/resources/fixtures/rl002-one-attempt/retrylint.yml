@@ -1,0 +1,11 @@
+version: 1
+name: rl002-one-attempt
+services: [{ id: service, config: application.yml }]
+operations:
+  - { id: service.a, service: service, idempotency: idempotent }
+  - { id: service.b, service: service, idempotency: idempotent }
+  - { id: service.c, service: service, idempotency: non-idempotent }
+calls:
+  - { id: a-b, from: service.a, to: service.b, timeLimiter: incoming }
+  - { id: b-c, from: service.b, to: service.c, retry: once, timeLimiter: downstream }
+analysis: { roots: [service.a] }

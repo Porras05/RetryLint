@@ -1,0 +1,8 @@
+version: 1
+name: rl001-between
+services: [{ id: service, config: application.yml }]
+operations:
+  - { id: service.a, service: service, idempotency: idempotent }
+  - { id: service.b, service: service, idempotency: idempotent }
+calls: [{ id: a-b, from: service.a, to: service.b, retry: fifteen }]
+analysis: { roots: [service.a], amplificationWarning: 9, amplificationError: 27, failOn: error }

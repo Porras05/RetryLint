@@ -27,7 +27,7 @@ import kotlin.system.exitProcess
     name = "retrylint",
     description = ["Analyze composed retry and timeout configurations."],
     mixinStandardHelpOptions = true,
-    version = ["RetryLint 0.1.0-SNAPSHOT"],
+    version = ["RetryLint 0.1.0"],
     subcommands = [ValidateCommand::class, AnalyzeCommand::class, VersionCommand::class],
 )
 class RetryLintCommand : Runnable {
@@ -127,7 +127,7 @@ class VersionCommand : Callable<Int> {
     lateinit var spec: CommandSpec
 
     override fun call(): Int {
-        spec.commandLine().out.println("RetryLint 0.1.0-SNAPSHOT")
+        spec.commandLine().out.println("RetryLint 0.1.0")
         return 0
     }
 }

@@ -1,0 +1,6 @@
+resilience4j:
+  retry:
+    instances:
+      client:
+        maxAttempts: 2
+        max-attempts: 3

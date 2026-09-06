@@ -142,7 +142,11 @@ private fun normalizeJsonValue(value: Any?): Any? = when (value) {
 }
 
 private fun formatTextValue(value: Any?): String = when (value) {
-    is Duration -> value.toMillis().toString() + " ms"
+    is Duration -> try {
+        value.toMillis().toString() + " ms"
+    } catch (_: ArithmeticException) {
+        value.toString()
+    }
     is Iterable<*> -> value.joinToString(", ") { formatTextValue(it) }
     is Array<*> -> value.joinToString(", ") { formatTextValue(it) }
     else -> value.toString()

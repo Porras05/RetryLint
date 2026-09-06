@@ -1,0 +1,17 @@
+# Gradle-generated state and outputs
+.gradle/
+.kotlin/
+**/build/
+
+# IntelliJ local state
+.idea/
+*.iml
+out/
+
+# Local manual report outputs
+/report.json
+/report.txt
+
+# OS metadata
+.DS_Store
+Thumbs.db

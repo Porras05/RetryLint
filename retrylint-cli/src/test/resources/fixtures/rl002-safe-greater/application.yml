@@ -1,0 +1,9 @@
+resilience4j:
+  retry:
+    instances:
+      incoming: { maxAttempts: 1 }
+      downstream: { maxAttempts: 3, waitDuration: 50ms }
+  timelimiter:
+    instances:
+      incoming: { timeoutDuration: 1400ms }
+      downstream: { timeoutDuration: 400ms }

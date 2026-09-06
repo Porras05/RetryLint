@@ -9,16 +9,19 @@ import retrylint.model.Resolution
 import retrylint.model.RuleAnalysisResult
 import retrylint.model.Severity
 import java.time.Duration
+import retrylint.input.InputLimits
 
 class TimeoutBudgetAnalyzer(
-    private val maximumAdjacentPairsPerOperation: Long = 10_000,
+    private val maximumAdjacentPairsPerOperation: Long = InputLimits.MAX_ADJACENT_PAIRS_PER_OPERATION,
+    private val maximumTotalAdjacentPairs: Long = InputLimits.MAX_TOTAL_ADJACENT_PAIRS,
 ) {
     fun analyze(project: LoadedRetryLintProject): RuleAnalysisResult {
         val incomingCalls = project.manifest.calls.groupBy { it.to }
         val findings = mutableListOf<Finding>()
         val gaps = mutableListOf<CompletenessGap>()
 
-        project.topology.topologicalOrder.forEach { operation ->
+        var totalPairs = 0L
+        for (operation in project.topology.topologicalOrder) {
             val incoming = incomingCalls[operation].orEmpty()
             val outgoing = project.topology.outgoingCalls.getValue(operation)
             val pairCount = incoming.size.toLong() * outgoing.size.toLong()
@@ -29,8 +32,18 @@ class TimeoutBudgetAnalyzer(
                     callPath = emptyList(),
                     reason = "skipped $pairCount adjacent call pairs; limit is $maximumAdjacentPairsPerOperation",
                 )
-                return@forEach
+                continue
             }
+            if (totalPairs + pairCount > maximumTotalAdjacentPairs) {
+                gaps += CompletenessGap(
+                    ruleId = "RL002",
+                    operationId = operation,
+                    callPath = emptyList(),
+                    reason = "stopped adjacent timeout checks at total-pair limit $maximumTotalAdjacentPairs",
+                )
+                break
+            }
+            totalPairs += pairCount
 
             incoming.forEach { incomingCall ->
                 outgoing.forEach { downstreamCall ->
@@ -168,6 +181,12 @@ class TimeoutBudgetAnalyzer(
         }
     }
 
-    private fun formatDuration(duration: Duration): String =
-        if (duration.nano % 1_000_000 == 0) "${duration.toMillis()} ms" else duration.toString()
+    private fun formatDuration(duration: Duration): String {
+        if (duration.nano % 1_000_000 != 0) return duration.toString()
+        return try {
+            "${duration.toMillis()} ms"
+        } catch (_: ArithmeticException) {
+            duration.toString()
+        }
+    }
 }

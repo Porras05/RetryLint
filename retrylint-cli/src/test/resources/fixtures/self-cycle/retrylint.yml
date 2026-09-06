@@ -1,0 +1,6 @@
+version: 1
+name: self-cycle
+services: [{ id: service, config: application.yml }]
+operations: [{ id: service.a, service: service, idempotency: idempotent }]
+calls: [{ id: self, from: service.a, to: service.a }]
+analysis: { roots: [service.a] }

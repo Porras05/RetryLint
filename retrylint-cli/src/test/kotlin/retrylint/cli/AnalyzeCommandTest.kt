@@ -174,7 +174,26 @@ class AnalyzeCommandTest {
         val result = executeRoot("version")
 
         assertEquals(0, result.exitCode)
-        assertEquals("RetryLint 0.1.0-SNAPSHOT", result.output.trim())
+        assertEquals("RetryLint 0.1.0", result.output.trim())
+    }
+
+    @Test
+    fun `output files equal stdout and presentation flags do not change analysis facts`() {
+        val stdoutJson = executeFixture("week5-mixed", "--format", "json", "--fail-on", "never")
+        val verboseJson = executeFixture(
+            "week5-mixed", "--format", "json", "--fail-on", "never", "--verbose", "--no-color",
+        )
+        val destination = temporaryDirectory.resolve("same-report.json")
+        executeFixture(
+            "week5-mixed", "--format", "json", "--fail-on", "never", "--output", destination.toString(),
+        )
+
+        assertEquals(stdoutJson.output, verboseJson.output)
+        assertEquals(stdoutJson.output, destination.readText(StandardCharsets.UTF_8))
+
+        val normalText = executeFixture("rl001-safe", "--fail-on", "never")
+        val noColorText = executeFixture("rl001-safe", "--fail-on", "never", "--no-color")
+        assertEquals(normalText.output, noColorText.output)
     }
 
     private fun createInvalidConfigurationFixture(): Path {

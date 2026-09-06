@@ -3,6 +3,7 @@ package retrylint.config
 import org.junit.jupiter.api.io.TempDir
 import retrylint.model.AspectOrder
 import retrylint.model.Resolution
+import retrylint.input.InputLimits
 import java.nio.file.Path
 import java.time.Duration
 import kotlin.io.path.writeText
@@ -200,6 +201,68 @@ class ServiceConfigurationResolverTest {
         val aspect = assertIs<Resolution.Unsupported>(resolved.aspectOrder)
         assertTrue(aspect.reason.contains("custom retry aspect order"))
         assertTrue(aspect.reason.contains("time-limiter aspect order"))
+    }
+
+    @Test
+    fun `non-positive attempts malformed values and duplicate aliases fail clearly`() {
+        listOf("0", "-1").forEach { attempts ->
+            val error = assertFailsWith<ConfigurationException> {
+                resolve("resilience4j:\n  retry:\n    instances:\n      client:\n        maxAttempts: $attempts")
+            }
+            assertTrue(error.message.orEmpty().contains("positive integer"))
+        }
+        assertFailsWith<ConfigurationException> {
+            resolve(
+                """
+                resilience4j:
+                  retry:
+                    instances:
+                      client:
+                        maxAttempts: 2
+                        max-attempts: 3
+                """,
+            )
+        }
+        assertFailsWith<ConfigurationException> {
+            resolve(
+                """
+                resilience4j:
+                  timelimiter:
+                    instances:
+                      client:
+                        timeoutDuration: 100
+                """,
+            )
+        }
+    }
+
+    @Test
+    fun `maximum base depth resolves and excessive depth fails`() {
+        fun configuration(depth: Int): String {
+            val configs = (1..depth).joinToString("\n") { index ->
+                val base = if (index == depth) "default" else "base-${index + 1}"
+                "      base-$index:\n        baseConfig: $base"
+            }
+            return "resilience4j:\n  retry:\n    configs:\n$configs\n" +
+                "    instances:\n      client:\n        baseConfig: base-1"
+        }
+
+        assertEquals(3, resolve(configuration(InputLimits.MAX_BASE_CONFIG_DEPTH)).retries.getValue("client").maxAttempts)
+        val error = assertFailsWith<ConfigurationException> {
+            resolve(configuration(InputLimits.MAX_BASE_CONFIG_DEPTH + 1))
+        }
+        assertTrue(error.message.orEmpty().contains("exceeds depth"))
+    }
+
+    @Test
+    fun `named policy count is bounded`() {
+        val instances = (0..InputLimits.MAX_NAMED_POLICIES_PER_SECTION).joinToString("\n") {
+            "      policy-$it: {}"
+        }
+        val error = assertFailsWith<ConfigurationException> {
+            resolve("resilience4j:\n  retry:\n    instances:\n$instances")
+        }
+        assertTrue(error.message.orEmpty().contains("policies; limit"))
     }
 
     private fun resolve(yaml: String) =

@@ -3,11 +3,16 @@ package retrylint.report
 import com.fasterxml.jackson.databind.ObjectMapper
 import retrylint.analysis.RetryLintAnalyzer
 import java.nio.file.Path
+import java.nio.file.Files
+import org.junit.jupiter.api.io.TempDir
 import kotlin.test.Test
 import kotlin.test.assertContains
 import kotlin.test.assertEquals
 
 class AnalysisReportRendererTest {
+    @TempDir
+    lateinit var temporaryDirectory: Path
+
     private val analyzer = RetryLintAnalyzer()
 
     @Test
@@ -51,7 +56,36 @@ class AnalysisReportRendererTest {
         }
     }
 
+    @Test
+    fun `reports are checkout independent because configuration evidence paths are relative`() {
+        val source = resourcePath("/fixtures/week5-mixed")
+        val copies = listOf(temporaryDirectory.resolve("first"), temporaryDirectory.resolve("second"))
+        copies.forEach { destination ->
+            Files.walk(source).use { paths ->
+                paths.forEach { current ->
+                    val target = destination.resolve(source.relativize(current).toString())
+                    if (Files.isDirectory(current)) Files.createDirectories(target) else Files.copy(current, target)
+                }
+            }
+        }
+
+        val reports = copies.map { analyzer.analyze(it.resolve("retrylint.yml")) }
+        assertEquals(
+            JsonAnalysisReportRenderer().render(reports[0]),
+            JsonAnalysisReportRenderer().render(reports[1]),
+        )
+        reports[0].findings.forEach { finding ->
+            finding.evidence.filterKeys { it.contains("configurationFile", ignoreCase = true) }
+                .values.forEach { value ->
+                    val paths = if (value is Iterable<*>) value else listOf(value)
+                    paths.forEach { assertEquals(false, Path.of(it.toString()).isAbsolute) }
+                }
+        }
+    }
+
     private fun analyzeFixture(name: String) = analyzer.analyze(
         Path.of(requireNotNull(javaClass.getResource("/fixtures/$name/retrylint.yml")).toURI()),
     )
+
+    private fun resourcePath(name: String): Path = Path.of(requireNotNull(javaClass.getResource(name)).toURI())
 }

@@ -2,6 +2,7 @@ package retrylint.graph
 
 import retrylint.input.CallDeclaration
 import retrylint.input.TopologyManifest
+import retrylint.input.InputLimits
 import java.nio.file.InvalidPathException
 import java.nio.file.Path
 import java.util.ArrayDeque
@@ -9,6 +10,7 @@ import java.util.ArrayDeque
 class TopologyValidator {
     fun validate(manifest: TopologyManifest): ValidatedTopology {
         requireValidVersion(manifest)
+        requireInputLimits(manifest)
         val services = uniqueById("service", manifest.services) { it.id }
         val operations = uniqueById("operation", manifest.operations) { it.id }
         val calls = uniqueById("call", manifest.calls) { it.id }
@@ -49,6 +51,40 @@ class TopologyValidator {
 
     private fun requireValidVersion(manifest: TopologyManifest) {
         if (manifest.version != 1) invalid("unsupported manifest version '${manifest.version}'; expected 1")
+    }
+
+    private fun requireInputLimits(manifest: TopologyManifest) {
+        requireMaximum("services", manifest.services.size, InputLimits.MAX_SERVICES)
+        requireMaximum("operations", manifest.operations.size, InputLimits.MAX_OPERATIONS)
+        requireMaximum("calls", manifest.calls.size, InputLimits.MAX_CALLS)
+        requireMaximum("analysis roots", manifest.analysis.roots.size, InputLimits.MAX_ROOTS)
+        requireLength("project name", manifest.name, InputLimits.MAX_PROJECT_NAME_LENGTH)
+        manifest.services.forEach {
+            requireLength("service ID", it.id, InputLimits.MAX_IDENTIFIER_LENGTH)
+            requireLength("service configuration path", it.config, InputLimits.MAX_CONFIG_PATH_LENGTH)
+        }
+        manifest.operations.forEach {
+            requireLength("operation ID", it.id, InputLimits.MAX_IDENTIFIER_LENGTH)
+            requireLength("operation service reference", it.service, InputLimits.MAX_IDENTIFIER_LENGTH)
+        }
+        manifest.calls.forEach {
+            requireLength("call ID", it.id, InputLimits.MAX_IDENTIFIER_LENGTH)
+            requireLength("call source operation", it.from, InputLimits.MAX_IDENTIFIER_LENGTH)
+            requireLength("call target operation", it.to, InputLimits.MAX_IDENTIFIER_LENGTH)
+            it.retry?.let { name -> requireLength("retry policy name", name, InputLimits.MAX_IDENTIFIER_LENGTH) }
+            it.timeLimiter?.let { name ->
+                requireLength("time-limiter policy name", name, InputLimits.MAX_IDENTIFIER_LENGTH)
+            }
+        }
+        manifest.analysis.roots.forEach { requireLength("analysis root", it, InputLimits.MAX_IDENTIFIER_LENGTH) }
+    }
+
+    private fun requireMaximum(label: String, actual: Int, maximum: Int) {
+        if (actual > maximum) invalid("$label count $actual exceeds limit $maximum")
+    }
+
+    private fun requireLength(label: String, value: String, maximum: Int) {
+        if (value.length > maximum) invalid("$label exceeds length limit $maximum")
     }
 
     private fun requireRelativeConfigPath(serviceId: String, config: String) {
@@ -94,30 +130,40 @@ class TopologyValidator {
         outgoing: Map<String, List<CallDeclaration>>,
     ): List<String> {
         val state = mutableMapOf<String, Int>()
-        val path = mutableListOf<String>()
-
-        fun visit(operation: String): List<String>? {
-            state[operation] = 1
-            path += operation
-            for (call in outgoing.getValue(operation)) {
-                when (state[call.to] ?: 0) {
-                    0 -> visit(call.to)?.let { return it }
+        operationIds.forEach { start ->
+            if ((state[start] ?: 0) != 0) return@forEach
+            val stack = ArrayDeque<CycleFrame>()
+            val path = mutableListOf<String>()
+            state[start] = 1
+            stack.addLast(CycleFrame(start))
+            path += start
+            while (stack.isNotEmpty()) {
+                val frame = stack.last()
+                val edges = outgoing.getValue(frame.operation)
+                if (frame.nextEdge >= edges.size) {
+                    state[frame.operation] = 2
+                    stack.removeLast()
+                    path.removeAt(path.lastIndex)
+                    continue
+                }
+                val target = edges[frame.nextEdge++].to
+                when (state[target] ?: 0) {
+                    0 -> {
+                        state[target] = 1
+                        stack.addLast(CycleFrame(target))
+                        path += target
+                    }
                     1 -> {
-                        val cycleStart = path.indexOf(call.to)
-                        return path.subList(cycleStart, path.size).toList() + call.to
+                        val cycleStart = path.indexOf(target)
+                        return path.subList(cycleStart, path.size).toList() + target
                     }
                 }
             }
-            path.removeAt(path.lastIndex)
-            state[operation] = 2
-            return null
-        }
-
-        operationIds.forEach { operation ->
-            if ((state[operation] ?: 0) == 0) visit(operation)?.let { return it }
         }
         error("cycle expected but none found")
     }
+
+    private data class CycleFrame(val operation: String, var nextEdge: Int = 0)
 
     private fun <T> uniqueById(kind: String, values: List<T>, id: (T) -> String): Map<String, T> {
         val result = linkedMapOf<String, T>()
