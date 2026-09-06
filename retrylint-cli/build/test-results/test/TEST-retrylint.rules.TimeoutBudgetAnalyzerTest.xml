@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="retrylint.rules.TimeoutBudgetAnalyzerTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-09-06T01:53:55.321Z" hostname="DESKTOP-40LA28Q" time="0.076">
+  <properties/>
+  <testcase name="eight hundred millisecond budget conflicts with thirteen hundred millisecond retry window()" classname="retrylint.rules.TimeoutBudgetAnalyzerTest" time="0.01"/>
+  <testcase name="equal timeout budget does not produce a finding()" classname="retrylint.rules.TimeoutBudgetAnalyzerTest" time="0.012"/>
+  <testcase name="unsupported exponential wait records gap instead of guessing()" classname="retrylint.rules.TimeoutBudgetAnalyzerTest" time="0.011"/>
+  <testcase name="custom aspect order records an explicit completeness gap()" classname="retrylint.rules.TimeoutBudgetAnalyzerTest" time="0.009"/>
+  <testcase name="incompatible timeout is warning when target is idempotent()" classname="retrylint.rules.TimeoutBudgetAnalyzerTest" time="0.015"/>
+  <testcase name="missing time limiters record gaps instead of zero durations()" classname="retrylint.rules.TimeoutBudgetAnalyzerTest" time="0.015"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
