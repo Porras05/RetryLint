@@ -1,0 +1,159 @@
+{
+  "benchmarkName" : "RetryLint Week 10 sparse-DAG scalability",
+  "cases" : [ {
+    "callCount" : 17,
+    "correctnessCheckCount" : 25,
+    "expectedCompletenessGapCount" : 0,
+    "expectedFindingCount" : 0,
+    "generationSeed" : 20250910,
+    "graphShape" : "connected sparse DAG: chain plus one fixed-seed forward edge per eligible operation",
+    "manifestBytes" : 3204,
+    "manifestSha256" : "9633b62486cfa75c2363ec61cc1a58c4d544eacedcf2802fc391954409952a3c",
+    "measuredRunCount" : 20,
+    "observedCompletenessGapCount" : 0,
+    "observedFindingCount" : 0,
+    "operationCount" : 10,
+    "preflightExitCode" : 0,
+    "retryPolicy" : "once: maxAttempts=1, waitDuration=0ms",
+    "rootCount" : 1,
+    "serviceCount" : 4,
+    "status" : "success",
+    "timeLimiterPolicy" : "safe: timeoutDuration=1s on every call",
+    "timings" : {
+      "maximumNanoseconds" : 8351600,
+      "meanNanoseconds" : 5031945.0,
+      "medianNanoseconds" : 4589600.0,
+      "minimumNanoseconds" : 3421600,
+      "p95Nanoseconds" : 7889400,
+      "rawNanoseconds" : [ 7889400, 6230200, 7497000, 8351600, 5348400, 4345200, 4667500, 5320600, 4771900, 4511700, 4867100, 5471000, 4330400, 3933400, 3421600, 3996100, 4052100, 4246700, 3683500, 3703500 ]
+    },
+    "warmupRunCount" : 3
+  }, {
+    "callCount" : 197,
+    "correctnessCheckCount" : 25,
+    "expectedCompletenessGapCount" : 0,
+    "expectedFindingCount" : 0,
+    "generationSeed" : 20251000,
+    "graphShape" : "connected sparse DAG: chain plus one fixed-seed forward edge per eligible operation",
+    "manifestBytes" : 31375,
+    "manifestSha256" : "dabcdd2182d15b5d5c6b5f93619a29f631b5e7149b7bcb2d3f041df7c5443123",
+    "measuredRunCount" : 20,
+    "observedCompletenessGapCount" : 0,
+    "observedFindingCount" : 0,
+    "operationCount" : 100,
+    "preflightExitCode" : 0,
+    "retryPolicy" : "once: maxAttempts=1, waitDuration=0ms",
+    "rootCount" : 1,
+    "serviceCount" : 4,
+    "status" : "success",
+    "timeLimiterPolicy" : "safe: timeoutDuration=1s on every call",
+    "timings" : {
+      "maximumNanoseconds" : 17655300,
+      "meanNanoseconds" : 1.0934665E7,
+      "medianNanoseconds" : 1.02132E7,
+      "minimumNanoseconds" : 6736400,
+      "p95Nanoseconds" : 15052800,
+      "rawNanoseconds" : [ 17655300, 14631800, 15052800, 11645200, 9899000, 8462800, 10547200, 12836200, 10334600, 8371000, 8566900, 8326200, 6736400, 9822600, 12983300, 12710400, 14915300, 10091800, 7793600, 7310900 ]
+    },
+    "warmupRunCount" : 3
+  }, {
+    "callCount" : 997,
+    "correctnessCheckCount" : 25,
+    "expectedCompletenessGapCount" : 0,
+    "expectedFindingCount" : 0,
+    "generationSeed" : 20251400,
+    "graphShape" : "connected sparse DAG: chain plus one fixed-seed forward edge per eligible operation",
+    "manifestBytes" : 156575,
+    "manifestSha256" : "e91b70a723876c02a8dc0ad7820a029bd3491b3a4ee2f8e8a642e64795ee5ae1",
+    "measuredRunCount" : 20,
+    "observedCompletenessGapCount" : 0,
+    "observedFindingCount" : 0,
+    "operationCount" : 500,
+    "preflightExitCode" : 0,
+    "retryPolicy" : "once: maxAttempts=1, waitDuration=0ms",
+    "rootCount" : 1,
+    "serviceCount" : 4,
+    "status" : "success",
+    "timeLimiterPolicy" : "safe: timeoutDuration=1s on every call",
+    "timings" : {
+      "maximumNanoseconds" : 17532700,
+      "meanNanoseconds" : 1.2875895E7,
+      "medianNanoseconds" : 1.21923E7,
+      "minimumNanoseconds" : 10876400,
+      "p95Nanoseconds" : 16201200,
+      "rawNanoseconds" : [ 14485600, 12138900, 12724100, 11819700, 12903300, 17532700, 16201200, 12013200, 12217800, 14829300, 12166800, 12398200, 10876400, 11073500, 12657700, 11447200, 15492300, 11316300, 11151900, 12071800 ]
+    },
+    "warmupRunCount" : 3
+  }, {
+    "callCount" : 1997,
+    "correctnessCheckCount" : 25,
+    "expectedCompletenessGapCount" : 0,
+    "expectedFindingCount" : 0,
+    "generationSeed" : 20251900,
+    "graphShape" : "connected sparse DAG: chain plus one fixed-seed forward edge per eligible operation",
+    "manifestBytes" : 313076,
+    "manifestSha256" : "5192429f50ca1c970d347c1875a84c81590211c60258014b8d1720d1797ee42a",
+    "measuredRunCount" : 20,
+    "observedCompletenessGapCount" : 0,
+    "observedFindingCount" : 0,
+    "operationCount" : 1000,
+    "preflightExitCode" : 0,
+    "retryPolicy" : "once: maxAttempts=1, waitDuration=0ms",
+    "rootCount" : 1,
+    "serviceCount" : 4,
+    "status" : "success",
+    "timeLimiterPolicy" : "safe: timeoutDuration=1s on every call",
+    "timings" : {
+      "maximumNanoseconds" : 34423100,
+      "meanNanoseconds" : 2.5233645E7,
+      "medianNanoseconds" : 2.38342E7,
+      "minimumNanoseconds" : 20409000,
+      "p95Nanoseconds" : 33388900,
+      "rawNanoseconds" : [ 31418000, 23490000, 25221500, 31718700, 34423100, 23023100, 24017500, 25317900, 33388900, 24978600, 24491300, 22803200, 25132500, 22395300, 23650900, 20884200, 23065800, 23291500, 21551900, 20409000 ]
+    },
+    "warmupRunCount" : 3
+  } ],
+  "configuration" : {
+    "generationSeeds" : {
+      "10" : 20250910,
+      "100" : 20251000,
+      "500" : 20251400,
+      "1000" : 20251900
+    },
+    "graphSizes" : [ 10, 100, 500, 1000 ],
+    "measuredRuns" : 20,
+    "warmupRuns" : 3
+  },
+  "environment" : {
+    "analyzerCommit" : "ad29876202710e4ee20bb22426eb00c25e2c1a87",
+    "analyzerTag" : "v0.1.0",
+    "architecture" : "amd64",
+    "availableProcessors" : 16,
+    "javaVendor" : "Microsoft",
+    "javaVersion" : "21.0.12.1",
+    "jvmName" : "OpenJDK 64-Bit Server VM",
+    "jvmVersion" : "21.0.12.1+1-LTS",
+    "maximumHeapBytes" : 4141875200,
+    "operatingSystem" : "Windows 10",
+    "operatingSystemVersion" : "10.0",
+    "repositoryHead" : "1ebab620e84aff226828916676cd2b6a69931445",
+    "retryLintVersion" : "0.1.0"
+  },
+  "measurementBoundary" : "in-process RetryLintAnalyzer.analyze(Path): includes manifest/service YAML parsing, topology validation, configuration resolution, RL001, RL002, and RL003; excludes case generation, Gradle, JVM/process startup, CLI parsing, correctness assertions, and rendering",
+  "medianScalingRatios" : [ {
+    "fromOperations" : 10,
+    "medianRatio" : 2.225291964441346,
+    "toOperations" : 100
+  }, {
+    "fromOperations" : 100,
+    "medianRatio" : 1.1937786394078251,
+    "toOperations" : 500
+  }, {
+    "fromOperations" : 500,
+    "medianRatio" : 1.9548567538528416,
+    "toOperations" : 1000
+  } ],
+  "percentileConvention" : "nearest-rank p95: sorted[ceil(0.95 * n) - 1]; median averages the two center values for even n",
+  "runRetentionPolicy" : "3 warm-ups are excluded; all 20 measured runs per size are retained without outlier removal",
+  "schemaVersion" : 1
+}

@@ -55,3 +55,18 @@ tasks.register<JavaExec>("week9Benchmark") {
     workingDir = rootProject.projectDir
     args(rootProject.layout.projectDirectory.dir("evaluation/week9").asFile.absolutePath)
 }
+
+tasks.register<JavaExec>("week10Scalability") {
+    group = "verification"
+    description = "Run the Week 10 frozen-analyzer scalability evaluation."
+    dependsOn(tasks.named("testClasses"))
+    classpath = sourceSets["test"].runtimeClasspath
+    mainClass.set("retrylint.evaluation.Week10ScalabilityMainKt")
+    javaLauncher.set(
+        javaToolchains.launcherFor {
+            languageVersion.set(JavaLanguageVersion.of(21))
+        },
+    )
+    workingDir = rootProject.projectDir
+    args(rootProject.layout.projectDirectory.dir("evaluation/week10").asFile.absolutePath)
+}
