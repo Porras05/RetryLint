@@ -1,0 +1,9 @@
+resilience4j:
+  retry:
+    instances:
+      toB: { maxAttempts: 3, waitDuration: 0ms }
+      toC: { maxAttempts: 1, waitDuration: 0ms }
+  timelimiter:
+    instances:
+      toB: { timeoutDuration: 5s }
+      toC: { timeoutDuration: 5s }

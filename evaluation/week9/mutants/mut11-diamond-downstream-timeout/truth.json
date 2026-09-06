@@ -1,0 +1,23 @@
+{
+  "caseId": "mut11-diamond-downstream-timeout",
+  "seed": "seed09",
+  "mutations": [
+    "increase-downstream-timeout"
+  ],
+  "expectedStatus": "valid",
+  "expectedFindings": [
+    {
+      "ruleId": "RL002",
+      "severity": "warning",
+      "callPath": [
+        "root-to-b",
+        "b-to-end"
+      ],
+      "targetOperation": "end.read"
+    }
+  ],
+  "expectedCompletenessGaps": [],
+  "rationale": "Only the left branch has a downstream retry window above its 5 s incoming budget.",
+  "reviewed": true,
+  "reviewNote": "Reviewed overlay against the named seed; expected arithmetic, topology, idempotency, status, and completeness were checked manually."
+}

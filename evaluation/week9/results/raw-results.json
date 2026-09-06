@@ -1,0 +1,1497 @@
+[ {
+  "baseline" : {
+    "issues" : [ ]
+  },
+  "caseId" : "seed01",
+  "classification" : "matched",
+  "discrepancyExplanation" : null,
+  "exitCode" : 0,
+  "expectedCompletenessGaps" : [ ],
+  "expectedFindings" : [ ],
+  "expectedStatus" : "valid",
+  "metrics" : {
+    "fn" : 0,
+    "fp" : 0,
+    "tp" : 0,
+    "f1" : null,
+    "precision" : null,
+    "recall" : null
+  },
+  "mutations" : [ ],
+  "observedCompletenessGaps" : [ ],
+  "observedFindings" : [ ],
+  "observedStatus" : "valid",
+  "rationale" : "The reviewed supported seed is intentionally below all rule thresholds and has sufficient adjacent timeout budgets.",
+  "reviewNote" : "Reviewed as a supported safe seed: topology, retry products, adjacent timeout budgets, idempotency, and completeness were checked manually.",
+  "reviewed" : true,
+  "seed" : "seed01",
+  "stderr" : "",
+  "stdout" : "{\r\n  \"schemaVersion\" : 1,\r\n  \"project\" : {\r\n    \"name\" : \"seed01-linear-two\",\r\n    \"services\" : 2,\r\n    \"operations\" : 2,\r\n    \"calls\" : 1\r\n  },\r\n  \"findings\" : [ ],\r\n  \"completenessGaps\" : [ ],\r\n  \"summary\" : {\r\n    \"errors\" : 0,\r\n    \"warnings\" : 0,\r\n    \"completenessGaps\" : 0\r\n  }\r\n}"
+}, {
+  "baseline" : {
+    "issues" : [ ]
+  },
+  "caseId" : "seed02",
+  "classification" : "matched",
+  "discrepancyExplanation" : null,
+  "exitCode" : 0,
+  "expectedCompletenessGaps" : [ ],
+  "expectedFindings" : [ ],
+  "expectedStatus" : "valid",
+  "metrics" : {
+    "fn" : 0,
+    "fp" : 0,
+    "tp" : 0,
+    "f1" : null,
+    "precision" : null,
+    "recall" : null
+  },
+  "mutations" : [ ],
+  "observedCompletenessGaps" : [ ],
+  "observedFindings" : [ ],
+  "observedStatus" : "valid",
+  "rationale" : "The reviewed supported seed is intentionally below all rule thresholds and has sufficient adjacent timeout budgets.",
+  "reviewNote" : "Reviewed as a supported safe seed: topology, retry products, adjacent timeout budgets, idempotency, and completeness were checked manually.",
+  "reviewed" : true,
+  "seed" : "seed02",
+  "stderr" : "",
+  "stdout" : "{\r\n  \"schemaVersion\" : 1,\r\n  \"project\" : {\r\n    \"name\" : \"seed02-linear-three\",\r\n    \"services\" : 3,\r\n    \"operations\" : 3,\r\n    \"calls\" : 2\r\n  },\r\n  \"findings\" : [ ],\r\n  \"completenessGaps\" : [ ],\r\n  \"summary\" : {\r\n    \"errors\" : 0,\r\n    \"warnings\" : 0,\r\n    \"completenessGaps\" : 0\r\n  }\r\n}"
+}, {
+  "baseline" : {
+    "issues" : [ ]
+  },
+  "caseId" : "seed03",
+  "classification" : "matched",
+  "discrepancyExplanation" : null,
+  "exitCode" : 0,
+  "expectedCompletenessGaps" : [ ],
+  "expectedFindings" : [ ],
+  "expectedStatus" : "valid",
+  "metrics" : {
+    "fn" : 0,
+    "fp" : 0,
+    "tp" : 0,
+    "f1" : null,
+    "precision" : null,
+    "recall" : null
+  },
+  "mutations" : [ ],
+  "observedCompletenessGaps" : [ ],
+  "observedFindings" : [ ],
+  "observedStatus" : "valid",
+  "rationale" : "The reviewed supported seed is intentionally below all rule thresholds and has sufficient adjacent timeout budgets.",
+  "reviewNote" : "Reviewed as a supported safe seed: topology, retry products, adjacent timeout budgets, idempotency, and completeness were checked manually.",
+  "reviewed" : true,
+  "seed" : "seed03",
+  "stderr" : "",
+  "stdout" : "{\r\n  \"schemaVersion\" : 1,\r\n  \"project\" : {\r\n    \"name\" : \"seed03-branching\",\r\n    \"services\" : 3,\r\n    \"operations\" : 3,\r\n    \"calls\" : 2\r\n  },\r\n  \"findings\" : [ ],\r\n  \"completenessGaps\" : [ ],\r\n  \"summary\" : {\r\n    \"errors\" : 0,\r\n    \"warnings\" : 0,\r\n    \"completenessGaps\" : 0\r\n  }\r\n}"
+}, {
+  "baseline" : {
+    "issues" : [ ]
+  },
+  "caseId" : "seed04",
+  "classification" : "matched",
+  "discrepancyExplanation" : null,
+  "exitCode" : 0,
+  "expectedCompletenessGaps" : [ ],
+  "expectedFindings" : [ ],
+  "expectedStatus" : "valid",
+  "metrics" : {
+    "fn" : 0,
+    "fp" : 0,
+    "tp" : 0,
+    "f1" : null,
+    "precision" : null,
+    "recall" : null
+  },
+  "mutations" : [ ],
+  "observedCompletenessGaps" : [ ],
+  "observedFindings" : [ ],
+  "observedStatus" : "valid",
+  "rationale" : "The reviewed supported seed is intentionally below all rule thresholds and has sufficient adjacent timeout budgets.",
+  "reviewNote" : "Reviewed as a supported safe seed: topology, retry products, adjacent timeout budgets, idempotency, and completeness were checked manually.",
+  "reviewed" : true,
+  "seed" : "seed04",
+  "stderr" : "",
+  "stdout" : "{\r\n  \"schemaVersion\" : 1,\r\n  \"project\" : {\r\n    \"name\" : \"seed04-multiple-roots\",\r\n    \"services\" : 3,\r\n    \"operations\" : 3,\r\n    \"calls\" : 2\r\n  },\r\n  \"findings\" : [ ],\r\n  \"completenessGaps\" : [ ],\r\n  \"summary\" : {\r\n    \"errors\" : 0,\r\n    \"warnings\" : 0,\r\n    \"completenessGaps\" : 0\r\n  }\r\n}"
+}, {
+  "baseline" : {
+    "issues" : [ ]
+  },
+  "caseId" : "seed05",
+  "classification" : "matched",
+  "discrepancyExplanation" : null,
+  "exitCode" : 0,
+  "expectedCompletenessGaps" : [ ],
+  "expectedFindings" : [ ],
+  "expectedStatus" : "valid",
+  "metrics" : {
+    "fn" : 0,
+    "fp" : 0,
+    "tp" : 0,
+    "f1" : null,
+    "precision" : null,
+    "recall" : null
+  },
+  "mutations" : [ ],
+  "observedCompletenessGaps" : [ ],
+  "observedFindings" : [ ],
+  "observedStatus" : "valid",
+  "rationale" : "The reviewed supported seed is intentionally below all rule thresholds and has sufficient adjacent timeout budgets.",
+  "reviewNote" : "Reviewed as a supported safe seed: topology, retry products, adjacent timeout budgets, idempotency, and completeness were checked manually.",
+  "reviewed" : true,
+  "seed" : "seed05",
+  "stderr" : "",
+  "stdout" : "{\r\n  \"schemaVersion\" : 1,\r\n  \"project\" : {\r\n    \"name\" : \"seed05-single-attempt-chain\",\r\n    \"services\" : 3,\r\n    \"operations\" : 3,\r\n    \"calls\" : 2\r\n  },\r\n  \"findings\" : [ ],\r\n  \"completenessGaps\" : [ ],\r\n  \"summary\" : {\r\n    \"errors\" : 0,\r\n    \"warnings\" : 0,\r\n    \"completenessGaps\" : 0\r\n  }\r\n}"
+}, {
+  "baseline" : {
+    "issues" : [ ]
+  },
+  "caseId" : "seed06",
+  "classification" : "matched",
+  "discrepancyExplanation" : null,
+  "exitCode" : 0,
+  "expectedCompletenessGaps" : [ ],
+  "expectedFindings" : [ ],
+  "expectedStatus" : "valid",
+  "metrics" : {
+    "fn" : 0,
+    "fp" : 0,
+    "tp" : 0,
+    "f1" : null,
+    "precision" : null,
+    "recall" : null
+  },
+  "mutations" : [ ],
+  "observedCompletenessGaps" : [ ],
+  "observedFindings" : [ ],
+  "observedStatus" : "valid",
+  "rationale" : "The reviewed supported seed is intentionally below all rule thresholds and has sufficient adjacent timeout budgets.",
+  "reviewNote" : "Reviewed as a supported safe seed: topology, retry products, adjacent timeout budgets, idempotency, and completeness were checked manually.",
+  "reviewed" : true,
+  "seed" : "seed06",
+  "stderr" : "",
+  "stdout" : "{\r\n  \"schemaVersion\" : 1,\r\n  \"project\" : {\r\n    \"name\" : \"seed06-inheritance-kebab\",\r\n    \"services\" : 3,\r\n    \"operations\" : 3,\r\n    \"calls\" : 2\r\n  },\r\n  \"findings\" : [ ],\r\n  \"completenessGaps\" : [ ],\r\n  \"summary\" : {\r\n    \"errors\" : 0,\r\n    \"warnings\" : 0,\r\n    \"completenessGaps\" : 0\r\n  }\r\n}"
+}, {
+  "baseline" : {
+    "issues" : [ ]
+  },
+  "caseId" : "seed07",
+  "classification" : "matched",
+  "discrepancyExplanation" : null,
+  "exitCode" : 0,
+  "expectedCompletenessGaps" : [ ],
+  "expectedFindings" : [ ],
+  "expectedStatus" : "valid",
+  "metrics" : {
+    "fn" : 0,
+    "fp" : 0,
+    "tp" : 0,
+    "f1" : null,
+    "precision" : null,
+    "recall" : null
+  },
+  "mutations" : [ ],
+  "observedCompletenessGaps" : [ ],
+  "observedFindings" : [ ],
+  "observedStatus" : "valid",
+  "rationale" : "The reviewed supported seed is intentionally below all rule thresholds and has sufficient adjacent timeout budgets.",
+  "reviewNote" : "Reviewed as a supported safe seed: topology, retry products, adjacent timeout budgets, idempotency, and completeness were checked manually.",
+  "reviewed" : true,
+  "seed" : "seed07",
+  "stderr" : "",
+  "stdout" : "{\r\n  \"schemaVersion\" : 1,\r\n  \"project\" : {\r\n    \"name\" : \"seed07-linear-four\",\r\n    \"services\" : 4,\r\n    \"operations\" : 4,\r\n    \"calls\" : 3\r\n  },\r\n  \"findings\" : [ ],\r\n  \"completenessGaps\" : [ ],\r\n  \"summary\" : {\r\n    \"errors\" : 0,\r\n    \"warnings\" : 0,\r\n    \"completenessGaps\" : 0\r\n  }\r\n}"
+}, {
+  "baseline" : {
+    "issues" : [ ]
+  },
+  "caseId" : "seed08",
+  "classification" : "matched",
+  "discrepancyExplanation" : null,
+  "exitCode" : 0,
+  "expectedCompletenessGaps" : [ ],
+  "expectedFindings" : [ ],
+  "expectedStatus" : "valid",
+  "metrics" : {
+    "fn" : 0,
+    "fp" : 0,
+    "tp" : 0,
+    "f1" : null,
+    "precision" : null,
+    "recall" : null
+  },
+  "mutations" : [ ],
+  "observedCompletenessGaps" : [ ],
+  "observedFindings" : [ ],
+  "observedStatus" : "valid",
+  "rationale" : "The reviewed supported seed is intentionally below all rule thresholds and has sufficient adjacent timeout budgets.",
+  "reviewNote" : "Reviewed as a supported safe seed: topology, retry products, adjacent timeout budgets, idempotency, and completeness were checked manually.",
+  "reviewed" : true,
+  "seed" : "seed08",
+  "stderr" : "",
+  "stdout" : "{\r\n  \"schemaVersion\" : 1,\r\n  \"project\" : {\r\n    \"name\" : \"seed08-disconnected-roots\",\r\n    \"services\" : 2,\r\n    \"operations\" : 3,\r\n    \"calls\" : 1\r\n  },\r\n  \"findings\" : [ ],\r\n  \"completenessGaps\" : [ ],\r\n  \"summary\" : {\r\n    \"errors\" : 0,\r\n    \"warnings\" : 0,\r\n    \"completenessGaps\" : 0\r\n  }\r\n}"
+}, {
+  "baseline" : {
+    "issues" : [ ]
+  },
+  "caseId" : "seed09",
+  "classification" : "matched",
+  "discrepancyExplanation" : null,
+  "exitCode" : 0,
+  "expectedCompletenessGaps" : [ ],
+  "expectedFindings" : [ ],
+  "expectedStatus" : "valid",
+  "metrics" : {
+    "fn" : 0,
+    "fp" : 0,
+    "tp" : 0,
+    "f1" : null,
+    "precision" : null,
+    "recall" : null
+  },
+  "mutations" : [ ],
+  "observedCompletenessGaps" : [ ],
+  "observedFindings" : [ ],
+  "observedStatus" : "valid",
+  "rationale" : "The reviewed supported seed is intentionally below all rule thresholds and has sufficient adjacent timeout budgets.",
+  "reviewNote" : "Reviewed as a supported safe seed: topology, retry products, adjacent timeout budgets, idempotency, and completeness were checked manually.",
+  "reviewed" : true,
+  "seed" : "seed09",
+  "stderr" : "",
+  "stdout" : "{\r\n  \"schemaVersion\" : 1,\r\n  \"project\" : {\r\n    \"name\" : \"seed09-diamond\",\r\n    \"services\" : 4,\r\n    \"operations\" : 4,\r\n    \"calls\" : 4\r\n  },\r\n  \"findings\" : [ ],\r\n  \"completenessGaps\" : [ ],\r\n  \"summary\" : {\r\n    \"errors\" : 0,\r\n    \"warnings\" : 0,\r\n    \"completenessGaps\" : 0\r\n  }\r\n}"
+}, {
+  "baseline" : {
+    "issues" : [ ]
+  },
+  "caseId" : "seed10",
+  "classification" : "matched",
+  "discrepancyExplanation" : null,
+  "exitCode" : 0,
+  "expectedCompletenessGaps" : [ ],
+  "expectedFindings" : [ ],
+  "expectedStatus" : "valid",
+  "metrics" : {
+    "fn" : 0,
+    "fp" : 0,
+    "tp" : 0,
+    "f1" : null,
+    "precision" : null,
+    "recall" : null
+  },
+  "mutations" : [ ],
+  "observedCompletenessGaps" : [ ],
+  "observedFindings" : [ ],
+  "observedStatus" : "valid",
+  "rationale" : "The reviewed supported seed is intentionally below all rule thresholds and has sufficient adjacent timeout budgets.",
+  "reviewNote" : "Reviewed as a supported safe seed: topology, retry products, adjacent timeout budgets, idempotency, and completeness were checked manually.",
+  "reviewed" : true,
+  "seed" : "seed10",
+  "stderr" : "",
+  "stdout" : "{\r\n  \"schemaVersion\" : 1,\r\n  \"project\" : {\r\n    \"name\" : \"seed10-supported-key-mix\",\r\n    \"services\" : 3,\r\n    \"operations\" : 3,\r\n    \"calls\" : 2\r\n  },\r\n  \"findings\" : [ ],\r\n  \"completenessGaps\" : [ ],\r\n  \"summary\" : {\r\n    \"errors\" : 0,\r\n    \"warnings\" : 0,\r\n    \"completenessGaps\" : 0\r\n  }\r\n}"
+}, {
+  "baseline" : {
+    "issues" : [ ]
+  },
+  "caseId" : "mut01-one-call-attempts",
+  "classification" : "matched",
+  "discrepancyExplanation" : null,
+  "exitCode" : 0,
+  "expectedCompletenessGaps" : [ ],
+  "expectedFindings" : [ {
+    "callPath" : [ "frontend-to-backend" ],
+    "ruleId" : "RL001",
+    "severity" : "warning",
+    "targetOperation" : "backend.fetch"
+  } ],
+  "expectedStatus" : "valid",
+  "metrics" : {
+    "fn" : 0,
+    "fp" : 0,
+    "tp" : 1,
+    "f1" : 1.0,
+    "precision" : 1.0,
+    "recall" : 1.0
+  },
+  "mutations" : [ "increase-attempts-one-call" ],
+  "observedCompletenessGaps" : [ ],
+  "observedFindings" : [ {
+    "callPath" : [ "frontend-to-backend" ],
+    "ruleId" : "RL001",
+    "severity" : "warning",
+    "targetOperation" : "backend.fetch"
+  } ],
+  "observedStatus" : "valid",
+  "rationale" : "Increasing one retry from 2 to 9 reaches the 9x warning threshold.",
+  "reviewNote" : "Reviewed overlay against the named seed; expected arithmetic, topology, idempotency, status, and completeness were checked manually.",
+  "reviewed" : true,
+  "seed" : "seed01",
+  "stderr" : "",
+  "stdout" : "{\r\n  \"schemaVersion\" : 1,\r\n  \"project\" : {\r\n    \"name\" : \"seed01-linear-two\",\r\n    \"services\" : 2,\r\n    \"operations\" : 2,\r\n    \"calls\" : 1\r\n  },\r\n  \"findings\" : [ {\r\n    \"ruleId\" : \"RL001\",\r\n    \"severity\" : \"warning\",\r\n    \"title\" : \"Retry amplification of 9x\",\r\n    \"message\" : \"frontend.get -> backend.fetch: 9 = 9.\",\r\n    \"callPath\" : [ \"frontend-to-backend\" ],\r\n    \"evidence\" : {\r\n      \"rootOperation\" : \"frontend.get\",\r\n      \"targetOperation\" : \"backend.fetch\",\r\n      \"operationPath\" : [ \"frontend.get\", \"backend.fetch\" ],\r\n      \"attempts\" : [ 9 ],\r\n      \"expression\" : \"9 = 9\",\r\n      \"multiplier\" : \"9\",\r\n      \"configurationFiles\" : [ \"services//frontend//application.yml\" ]\r\n    }\r\n  } ],\r\n  \"completenessGaps\" : [ ],\r\n  \"summary\" : {\r\n    \"errors\" : 0,\r\n    \"warnings\" : 1,\r\n    \"completenessGaps\" : 0\r\n  }\r\n}"
+}, {
+  "baseline" : {
+    "issues" : [ ]
+  },
+  "caseId" : "mut02-consecutive-attempts",
+  "classification" : "matched",
+  "discrepancyExplanation" : null,
+  "exitCode" : 0,
+  "expectedCompletenessGaps" : [ ],
+  "expectedFindings" : [ {
+    "callPath" : [ "edge-to-core", "core-to-store" ],
+    "ruleId" : "RL001",
+    "severity" : "warning",
+    "targetOperation" : "store.read"
+  } ],
+  "expectedStatus" : "valid",
+  "metrics" : {
+    "fn" : 0,
+    "fp" : 0,
+    "tp" : 1,
+    "f1" : 1.0,
+    "precision" : 1.0,
+    "recall" : 1.0
+  },
+  "mutations" : [ "increase-attempts-consecutive-calls" ],
+  "observedCompletenessGaps" : [ ],
+  "observedFindings" : [ {
+    "callPath" : [ "edge-to-core", "core-to-store" ],
+    "ruleId" : "RL001",
+    "severity" : "warning",
+    "targetOperation" : "store.read"
+  } ],
+  "observedStatus" : "valid",
+  "rationale" : "Three attempts on each of two consecutive calls yields 3 x 3 = 9.",
+  "reviewNote" : "Reviewed overlay against the named seed; expected arithmetic, topology, idempotency, status, and completeness were checked manually.",
+  "reviewed" : true,
+  "seed" : "seed02",
+  "stderr" : "",
+  "stdout" : "{\r\n  \"schemaVersion\" : 1,\r\n  \"project\" : {\r\n    \"name\" : \"seed02-linear-three\",\r\n    \"services\" : 3,\r\n    \"operations\" : 3,\r\n    \"calls\" : 2\r\n  },\r\n  \"findings\" : [ {\r\n    \"ruleId\" : \"RL001\",\r\n    \"severity\" : \"warning\",\r\n    \"title\" : \"Retry amplification of 9x\",\r\n    \"message\" : \"edge.request -> core.lookup -> store.read: 3 x 3 = 9. Two layers independently own retries on this path.\",\r\n    \"callPath\" : [ \"edge-to-core\", \"core-to-store\" ],\r\n    \"evidence\" : {\r\n      \"rootOperation\" : \"edge.request\",\r\n      \"targetOperation\" : \"store.read\",\r\n      \"operationPath\" : [ \"edge.request\", \"core.lookup\", \"store.read\" ],\r\n      \"attempts\" : [ 3, 3 ],\r\n      \"expression\" : \"3 x 3 = 9\",\r\n      \"multiplier\" : \"9\",\r\n      \"configurationFiles\" : [ \"services//edge//application.yml\", \"services//core//application.yml\" ]\r\n    }\r\n  } ],\r\n  \"completenessGaps\" : [ ],\r\n  \"summary\" : {\r\n    \"errors\" : 0,\r\n    \"warnings\" : 1,\r\n    \"completenessGaps\" : 0\r\n  }\r\n}"
+}, {
+  "baseline" : {
+    "issues" : [ ]
+  },
+  "caseId" : "mut03-branch-attempts",
+  "classification" : "matched",
+  "discrepancyExplanation" : null,
+  "exitCode" : 0,
+  "expectedCompletenessGaps" : [ ],
+  "expectedFindings" : [ {
+    "callPath" : [ "gateway-to-catalog" ],
+    "ruleId" : "RL001",
+    "severity" : "warning",
+    "targetOperation" : "catalog.search"
+  } ],
+  "expectedStatus" : "valid",
+  "metrics" : {
+    "fn" : 0,
+    "fp" : 0,
+    "tp" : 1,
+    "f1" : 1.0,
+    "precision" : 1.0,
+    "recall" : 1.0
+  },
+  "mutations" : [ "increase-attempts-one-call" ],
+  "observedCompletenessGaps" : [ ],
+  "observedFindings" : [ {
+    "callPath" : [ "gateway-to-catalog" ],
+    "ruleId" : "RL001",
+    "severity" : "warning",
+    "targetOperation" : "catalog.search"
+  } ],
+  "observedStatus" : "valid",
+  "rationale" : "One branch is raised to 9 attempts while the other remains safe.",
+  "reviewNote" : "Reviewed overlay against the named seed; expected arithmetic, topology, idempotency, status, and completeness were checked manually.",
+  "reviewed" : true,
+  "seed" : "seed03",
+  "stderr" : "",
+  "stdout" : "{\r\n  \"schemaVersion\" : 1,\r\n  \"project\" : {\r\n    \"name\" : \"seed03-branching\",\r\n    \"services\" : 3,\r\n    \"operations\" : 3,\r\n    \"calls\" : 2\r\n  },\r\n  \"findings\" : [ {\r\n    \"ruleId\" : \"RL001\",\r\n    \"severity\" : \"warning\",\r\n    \"title\" : \"Retry amplification of 9x\",\r\n    \"message\" : \"gateway.root -> catalog.search: 9 = 9.\",\r\n    \"callPath\" : [ \"gateway-to-catalog\" ],\r\n    \"evidence\" : {\r\n      \"rootOperation\" : \"gateway.root\",\r\n      \"targetOperation\" : \"catalog.search\",\r\n      \"operationPath\" : [ \"gateway.root\", \"catalog.search\" ],\r\n      \"attempts\" : [ 9 ],\r\n      \"expression\" : \"9 = 9\",\r\n      \"multiplier\" : \"9\",\r\n      \"configurationFiles\" : [ \"services//gateway//application.yml\" ]\r\n    }\r\n  } ],\r\n  \"completenessGaps\" : [ ],\r\n  \"summary\" : {\r\n    \"errors\" : 0,\r\n    \"warnings\" : 1,\r\n    \"completenessGaps\" : 0\r\n  }\r\n}"
+}, {
+  "baseline" : {
+    "issues" : [ ]
+  },
+  "caseId" : "mut04-multi-root-attempts",
+  "classification" : "matched",
+  "discrepancyExplanation" : null,
+  "exitCode" : 0,
+  "expectedCompletenessGaps" : [ ],
+  "expectedFindings" : [ {
+    "callPath" : [ "apiA-to-ledger" ],
+    "ruleId" : "RL001",
+    "severity" : "warning",
+    "targetOperation" : "ledger.write"
+  } ],
+  "expectedStatus" : "valid",
+  "metrics" : {
+    "fn" : 0,
+    "fp" : 0,
+    "tp" : 1,
+    "f1" : 1.0,
+    "precision" : 1.0,
+    "recall" : 1.0
+  },
+  "mutations" : [ "increase-attempts-one-call" ],
+  "observedCompletenessGaps" : [ ],
+  "observedFindings" : [ {
+    "callPath" : [ "apiA-to-ledger" ],
+    "ruleId" : "RL001",
+    "severity" : "warning",
+    "targetOperation" : "ledger.write"
+  } ],
+  "observedStatus" : "valid",
+  "rationale" : "Only the first root has a 9-attempt path to the shared target.",
+  "reviewNote" : "Reviewed overlay against the named seed; expected arithmetic, topology, idempotency, status, and completeness were checked manually.",
+  "reviewed" : true,
+  "seed" : "seed04",
+  "stderr" : "",
+  "stdout" : "{\r\n  \"schemaVersion\" : 1,\r\n  \"project\" : {\r\n    \"name\" : \"seed04-multiple-roots\",\r\n    \"services\" : 3,\r\n    \"operations\" : 3,\r\n    \"calls\" : 2\r\n  },\r\n  \"findings\" : [ {\r\n    \"ruleId\" : \"RL001\",\r\n    \"severity\" : \"warning\",\r\n    \"title\" : \"Retry amplification of 9x\",\r\n    \"message\" : \"apiA.root -> ledger.write: 9 = 9.\",\r\n    \"callPath\" : [ \"apiA-to-ledger\" ],\r\n    \"evidence\" : {\r\n      \"rootOperation\" : \"apiA.root\",\r\n      \"targetOperation\" : \"ledger.write\",\r\n      \"operationPath\" : [ \"apiA.root\", \"ledger.write\" ],\r\n      \"attempts\" : [ 9 ],\r\n      \"expression\" : \"9 = 9\",\r\n      \"multiplier\" : \"9\",\r\n      \"configurationFiles\" : [ \"services//apiA//application.yml\" ]\r\n    }\r\n  } ],\r\n  \"completenessGaps\" : [ ],\r\n  \"summary\" : {\r\n    \"errors\" : 0,\r\n    \"warnings\" : 1,\r\n    \"completenessGaps\" : 0\r\n  }\r\n}"
+}, {
+  "baseline" : {
+    "issues" : [ ]
+  },
+  "caseId" : "mut05-three-layer-attempts",
+  "classification" : "matched",
+  "discrepancyExplanation" : null,
+  "exitCode" : 0,
+  "expectedCompletenessGaps" : [ ],
+  "expectedFindings" : [ {
+    "callPath" : [ "a-to-b", "b-to-c", "c-to-d" ],
+    "ruleId" : "RL001",
+    "severity" : "error",
+    "targetOperation" : "d.finish"
+  } ],
+  "expectedStatus" : "valid",
+  "metrics" : {
+    "fn" : 0,
+    "fp" : 0,
+    "tp" : 1,
+    "f1" : 1.0,
+    "precision" : 1.0,
+    "recall" : 1.0
+  },
+  "mutations" : [ "increase-attempts-consecutive-calls" ],
+  "observedCompletenessGaps" : [ ],
+  "observedFindings" : [ {
+    "callPath" : [ "a-to-b", "b-to-c", "c-to-d" ],
+    "ruleId" : "RL001",
+    "severity" : "error",
+    "targetOperation" : "d.finish"
+  } ],
+  "observedStatus" : "valid",
+  "rationale" : "Three attempts on three consecutive calls yields 27x.",
+  "reviewNote" : "Reviewed overlay against the named seed; expected arithmetic, topology, idempotency, status, and completeness were checked manually.",
+  "reviewed" : true,
+  "seed" : "seed07",
+  "stderr" : "",
+  "stdout" : "{\r\n  \"schemaVersion\" : 1,\r\n  \"project\" : {\r\n    \"name\" : \"seed07-linear-four\",\r\n    \"services\" : 4,\r\n    \"operations\" : 4,\r\n    \"calls\" : 3\r\n  },\r\n  \"findings\" : [ {\r\n    \"ruleId\" : \"RL001\",\r\n    \"severity\" : \"error\",\r\n    \"title\" : \"Retry amplification of 27x\",\r\n    \"message\" : \"a.start -> b.step -> c.step -> d.finish: 3 x 3 x 3 = 27. Three layers independently own retries on this path.\",\r\n    \"callPath\" : [ \"a-to-b\", \"b-to-c\", \"c-to-d\" ],\r\n    \"evidence\" : {\r\n      \"rootOperation\" : \"a.start\",\r\n      \"targetOperation\" : \"d.finish\",\r\n      \"operationPath\" : [ \"a.start\", \"b.step\", \"c.step\", \"d.finish\" ],\r\n      \"attempts\" : [ 3, 3, 3 ],\r\n      \"expression\" : \"3 x 3 x 3 = 27\",\r\n      \"multiplier\" : \"27\",\r\n      \"configurationFiles\" : [ \"services//a//application.yml\", \"services//b//application.yml\", \"services//c//application.yml\" ]\r\n    }\r\n  } ],\r\n  \"completenessGaps\" : [ ],\r\n  \"summary\" : {\r\n    \"errors\" : 1,\r\n    \"warnings\" : 0,\r\n    \"completenessGaps\" : 0\r\n  }\r\n}"
+}, {
+  "baseline" : {
+    "issues" : [ ]
+  },
+  "caseId" : "mut06-diamond-attempts",
+  "classification" : "matched",
+  "discrepancyExplanation" : null,
+  "exitCode" : 0,
+  "expectedCompletenessGaps" : [ ],
+  "expectedFindings" : [ {
+    "callPath" : [ "root-to-b", "b-to-end" ],
+    "ruleId" : "RL001",
+    "severity" : "warning",
+    "targetOperation" : "end.read"
+  } ],
+  "expectedStatus" : "valid",
+  "metrics" : {
+    "fn" : 0,
+    "fp" : 0,
+    "tp" : 1,
+    "f1" : 1.0,
+    "precision" : 1.0,
+    "recall" : 1.0
+  },
+  "mutations" : [ "increase-attempts-consecutive-calls" ],
+  "observedCompletenessGaps" : [ ],
+  "observedFindings" : [ {
+    "callPath" : [ "root-to-b", "b-to-end" ],
+    "ruleId" : "RL001",
+    "severity" : "warning",
+    "targetOperation" : "end.read"
+  } ],
+  "observedStatus" : "valid",
+  "rationale" : "The left diamond branch becomes a 3 x 3 = 9 path.",
+  "reviewNote" : "Reviewed overlay against the named seed; expected arithmetic, topology, idempotency, status, and completeness were checked manually.",
+  "reviewed" : true,
+  "seed" : "seed09",
+  "stderr" : "",
+  "stdout" : "{\r\n  \"schemaVersion\" : 1,\r\n  \"project\" : {\r\n    \"name\" : \"seed09-diamond\",\r\n    \"services\" : 4,\r\n    \"operations\" : 4,\r\n    \"calls\" : 4\r\n  },\r\n  \"findings\" : [ {\r\n    \"ruleId\" : \"RL001\",\r\n    \"severity\" : \"warning\",\r\n    \"title\" : \"Retry amplification of 9x\",\r\n    \"message\" : \"root.start -> branchB.work -> end.read: 3 x 3 = 9. Two layers independently own retries on this path.\",\r\n    \"callPath\" : [ \"root-to-b\", \"b-to-end\" ],\r\n    \"evidence\" : {\r\n      \"rootOperation\" : \"root.start\",\r\n      \"targetOperation\" : \"end.read\",\r\n      \"operationPath\" : [ \"root.start\", \"branchB.work\", \"end.read\" ],\r\n      \"attempts\" : [ 3, 3 ],\r\n      \"expression\" : \"3 x 3 = 9\",\r\n      \"multiplier\" : \"9\",\r\n      \"configurationFiles\" : [ \"services//root//application.yml\", \"services//branchB//application.yml\" ]\r\n    }\r\n  } ],\r\n  \"completenessGaps\" : [ ],\r\n  \"summary\" : {\r\n    \"errors\" : 0,\r\n    \"warnings\" : 1,\r\n    \"completenessGaps\" : 0\r\n  }\r\n}"
+}, {
+  "baseline" : {
+    "issues" : [ ]
+  },
+  "caseId" : "mut07-reduce-incoming-timeout",
+  "classification" : "matched",
+  "discrepancyExplanation" : null,
+  "exitCode" : 0,
+  "expectedCompletenessGaps" : [ ],
+  "expectedFindings" : [ {
+    "callPath" : [ "edge-to-core", "core-to-store" ],
+    "ruleId" : "RL002",
+    "severity" : "warning",
+    "targetOperation" : "store.read"
+  } ],
+  "expectedStatus" : "valid",
+  "metrics" : {
+    "fn" : 0,
+    "fp" : 0,
+    "tp" : 1,
+    "f1" : 1.0,
+    "precision" : 1.0,
+    "recall" : 1.0
+  },
+  "mutations" : [ "reduce-incoming-timeout" ],
+  "observedCompletenessGaps" : [ ],
+  "observedFindings" : [ {
+    "callPath" : [ "edge-to-core", "core-to-store" ],
+    "ruleId" : "RL002",
+    "severity" : "warning",
+    "targetOperation" : "store.read"
+  } ],
+  "observedStatus" : "valid",
+  "rationale" : "An 800 ms incoming budget is below the reviewed 1.1 s downstream retry window.",
+  "reviewNote" : "Reviewed overlay against the named seed; expected arithmetic, topology, idempotency, status, and completeness were checked manually.",
+  "reviewed" : true,
+  "seed" : "seed02",
+  "stderr" : "",
+  "stdout" : "{\r\n  \"schemaVersion\" : 1,\r\n  \"project\" : {\r\n    \"name\" : \"seed02-linear-three\",\r\n    \"services\" : 3,\r\n    \"operations\" : 3,\r\n    \"calls\" : 2\r\n  },\r\n  \"findings\" : [ {\r\n    \"ruleId\" : \"RL002\",\r\n    \"severity\" : \"warning\",\r\n    \"title\" : \"Timeout budget may be exceeded by 300 ms\",\r\n    \"message\" : \"Incoming call 'edge-to-core' waits 800 ms, but 'core-to-store' permits a configured worst-case retry window of 1100 ms.\",\r\n    \"callPath\" : [ \"edge-to-core\", \"core-to-store\" ],\r\n    \"evidence\" : {\r\n      \"middleOperation\" : \"core.lookup\",\r\n      \"targetOperation\" : \"store.read\",\r\n      \"incomingTimeout\" : \"PT0.8S\",\r\n      \"attempts\" : 2,\r\n      \"timeoutPerAttempt\" : \"PT0.5S\",\r\n      \"fixedWait\" : \"PT0.1S\",\r\n      \"retryWindow\" : \"PT1.1S\",\r\n      \"overrun\" : \"PT0.3S\",\r\n      \"incomingConfigurationFile\" : \"services//edge//application.yml\",\r\n      \"downstreamConfigurationFile\" : \"services//core//application.yml\"\r\n    }\r\n  } ],\r\n  \"completenessGaps\" : [ ],\r\n  \"summary\" : {\r\n    \"errors\" : 0,\r\n    \"warnings\" : 1,\r\n    \"completenessGaps\" : 0\r\n  }\r\n}"
+}, {
+  "baseline" : {
+    "issues" : [ ]
+  },
+  "caseId" : "mut08-increase-downstream-timeout",
+  "classification" : "matched",
+  "discrepancyExplanation" : null,
+  "exitCode" : 0,
+  "expectedCompletenessGaps" : [ ],
+  "expectedFindings" : [ {
+    "callPath" : [ "edge-to-core", "core-to-store" ],
+    "ruleId" : "RL002",
+    "severity" : "warning",
+    "targetOperation" : "store.read"
+  } ],
+  "expectedStatus" : "valid",
+  "metrics" : {
+    "fn" : 0,
+    "fp" : 0,
+    "tp" : 1,
+    "f1" : 1.0,
+    "precision" : 1.0,
+    "recall" : 1.0
+  },
+  "mutations" : [ "increase-downstream-timeout" ],
+  "observedCompletenessGaps" : [ ],
+  "observedFindings" : [ {
+    "callPath" : [ "edge-to-core", "core-to-store" ],
+    "ruleId" : "RL002",
+    "severity" : "warning",
+    "targetOperation" : "store.read"
+  } ],
+  "observedStatus" : "valid",
+  "rationale" : "Two 3 s attempts plus one 100 ms wait exceeds the 5 s caller budget.",
+  "reviewNote" : "Reviewed overlay against the named seed; expected arithmetic, topology, idempotency, status, and completeness were checked manually.",
+  "reviewed" : true,
+  "seed" : "seed02",
+  "stderr" : "",
+  "stdout" : "{\r\n  \"schemaVersion\" : 1,\r\n  \"project\" : {\r\n    \"name\" : \"seed02-linear-three\",\r\n    \"services\" : 3,\r\n    \"operations\" : 3,\r\n    \"calls\" : 2\r\n  },\r\n  \"findings\" : [ {\r\n    \"ruleId\" : \"RL002\",\r\n    \"severity\" : \"warning\",\r\n    \"title\" : \"Timeout budget may be exceeded by 1100 ms\",\r\n    \"message\" : \"Incoming call 'edge-to-core' waits 5000 ms, but 'core-to-store' permits a configured worst-case retry window of 6100 ms.\",\r\n    \"callPath\" : [ \"edge-to-core\", \"core-to-store\" ],\r\n    \"evidence\" : {\r\n      \"middleOperation\" : \"core.lookup\",\r\n      \"targetOperation\" : \"store.read\",\r\n      \"incomingTimeout\" : \"PT5S\",\r\n      \"attempts\" : 2,\r\n      \"timeoutPerAttempt\" : \"PT3S\",\r\n      \"fixedWait\" : \"PT0.1S\",\r\n      \"retryWindow\" : \"PT6.1S\",\r\n      \"overrun\" : \"PT1.1S\",\r\n      \"incomingConfigurationFile\" : \"services//edge//application.yml\",\r\n      \"downstreamConfigurationFile\" : \"services//core//application.yml\"\r\n    }\r\n  } ],\r\n  \"completenessGaps\" : [ ],\r\n  \"summary\" : {\r\n    \"errors\" : 0,\r\n    \"warnings\" : 1,\r\n    \"completenessGaps\" : 0\r\n  }\r\n}"
+}, {
+  "baseline" : {
+    "issues" : [ ]
+  },
+  "caseId" : "mut09-increase-fixed-wait",
+  "classification" : "matched",
+  "discrepancyExplanation" : null,
+  "exitCode" : 0,
+  "expectedCompletenessGaps" : [ ],
+  "expectedFindings" : [ {
+    "callPath" : [ "caller-to-middle", "middle-to-target" ],
+    "ruleId" : "RL002",
+    "severity" : "warning",
+    "targetOperation" : "target.read"
+  } ],
+  "expectedStatus" : "valid",
+  "metrics" : {
+    "fn" : 0,
+    "fp" : 0,
+    "tp" : 1,
+    "f1" : 1.0,
+    "precision" : 1.0,
+    "recall" : 1.0
+  },
+  "mutations" : [ "increase-fixed-wait" ],
+  "observedCompletenessGaps" : [ ],
+  "observedFindings" : [ {
+    "callPath" : [ "caller-to-middle", "middle-to-target" ],
+    "ruleId" : "RL002",
+    "severity" : "warning",
+    "targetOperation" : "target.read"
+  } ],
+  "observedStatus" : "valid",
+  "rationale" : "Two 500 ms attempts plus a 5 s fixed wait exceeds the 5 s incoming budget.",
+  "reviewNote" : "Reviewed overlay against the named seed; expected arithmetic, topology, idempotency, status, and completeness were checked manually.",
+  "reviewed" : true,
+  "seed" : "seed06",
+  "stderr" : "",
+  "stdout" : "{\r\n  \"schemaVersion\" : 1,\r\n  \"project\" : {\r\n    \"name\" : \"seed06-inheritance-kebab\",\r\n    \"services\" : 3,\r\n    \"operations\" : 3,\r\n    \"calls\" : 2\r\n  },\r\n  \"findings\" : [ {\r\n    \"ruleId\" : \"RL002\",\r\n    \"severity\" : \"warning\",\r\n    \"title\" : \"Timeout budget may be exceeded by 1000 ms\",\r\n    \"message\" : \"Incoming call 'caller-to-middle' waits 5000 ms, but 'middle-to-target' permits a configured worst-case retry window of 6000 ms.\",\r\n    \"callPath\" : [ \"caller-to-middle\", \"middle-to-target\" ],\r\n    \"evidence\" : {\r\n      \"middleOperation\" : \"middle.work\",\r\n      \"targetOperation\" : \"target.read\",\r\n      \"incomingTimeout\" : \"PT5S\",\r\n      \"attempts\" : 2,\r\n      \"timeoutPerAttempt\" : \"PT0.5S\",\r\n      \"fixedWait\" : \"PT5S\",\r\n      \"retryWindow\" : \"PT6S\",\r\n      \"overrun\" : \"PT1S\",\r\n      \"incomingConfigurationFile\" : \"services//caller//application.yml\",\r\n      \"downstreamConfigurationFile\" : \"services//middle//application.yml\"\r\n    }\r\n  } ],\r\n  \"completenessGaps\" : [ ],\r\n  \"summary\" : {\r\n    \"errors\" : 0,\r\n    \"warnings\" : 1,\r\n    \"completenessGaps\" : 0\r\n  }\r\n}"
+}, {
+  "baseline" : {
+    "issues" : [ ]
+  },
+  "caseId" : "mut10-reduce-middle-budget",
+  "classification" : "matched",
+  "discrepancyExplanation" : null,
+  "exitCode" : 0,
+  "expectedCompletenessGaps" : [ ],
+  "expectedFindings" : [ {
+    "callPath" : [ "a-to-b", "b-to-c" ],
+    "ruleId" : "RL002",
+    "severity" : "warning",
+    "targetOperation" : "c.step"
+  } ],
+  "expectedStatus" : "valid",
+  "metrics" : {
+    "fn" : 0,
+    "fp" : 0,
+    "tp" : 1,
+    "f1" : 1.0,
+    "precision" : 1.0,
+    "recall" : 1.0
+  },
+  "mutations" : [ "reduce-incoming-timeout" ],
+  "observedCompletenessGaps" : [ ],
+  "observedFindings" : [ {
+    "callPath" : [ "a-to-b", "b-to-c" ],
+    "ruleId" : "RL002",
+    "severity" : "warning",
+    "targetOperation" : "c.step"
+  } ],
+  "observedStatus" : "valid",
+  "rationale" : "A 1 s outer budget is below the 1.1 s retry window on b-to-c.",
+  "reviewNote" : "Reviewed overlay against the named seed; expected arithmetic, topology, idempotency, status, and completeness were checked manually.",
+  "reviewed" : true,
+  "seed" : "seed07",
+  "stderr" : "",
+  "stdout" : "{\r\n  \"schemaVersion\" : 1,\r\n  \"project\" : {\r\n    \"name\" : \"seed07-linear-four\",\r\n    \"services\" : 4,\r\n    \"operations\" : 4,\r\n    \"calls\" : 3\r\n  },\r\n  \"findings\" : [ {\r\n    \"ruleId\" : \"RL002\",\r\n    \"severity\" : \"warning\",\r\n    \"title\" : \"Timeout budget may be exceeded by 100 ms\",\r\n    \"message\" : \"Incoming call 'a-to-b' waits 1000 ms, but 'b-to-c' permits a configured worst-case retry window of 1100 ms.\",\r\n    \"callPath\" : [ \"a-to-b\", \"b-to-c\" ],\r\n    \"evidence\" : {\r\n      \"middleOperation\" : \"b.step\",\r\n      \"targetOperation\" : \"c.step\",\r\n      \"incomingTimeout\" : \"PT1S\",\r\n      \"attempts\" : 2,\r\n      \"timeoutPerAttempt\" : \"PT0.5S\",\r\n      \"fixedWait\" : \"PT0.1S\",\r\n      \"retryWindow\" : \"PT1.1S\",\r\n      \"overrun\" : \"PT0.1S\",\r\n      \"incomingConfigurationFile\" : \"services//a//application.yml\",\r\n      \"downstreamConfigurationFile\" : \"services//b//application.yml\"\r\n    }\r\n  } ],\r\n  \"completenessGaps\" : [ ],\r\n  \"summary\" : {\r\n    \"errors\" : 0,\r\n    \"warnings\" : 1,\r\n    \"completenessGaps\" : 0\r\n  }\r\n}"
+}, {
+  "baseline" : {
+    "issues" : [ ]
+  },
+  "caseId" : "mut11-diamond-downstream-timeout",
+  "classification" : "matched",
+  "discrepancyExplanation" : null,
+  "exitCode" : 0,
+  "expectedCompletenessGaps" : [ ],
+  "expectedFindings" : [ {
+    "callPath" : [ "root-to-b", "b-to-end" ],
+    "ruleId" : "RL002",
+    "severity" : "warning",
+    "targetOperation" : "end.read"
+  } ],
+  "expectedStatus" : "valid",
+  "metrics" : {
+    "fn" : 0,
+    "fp" : 0,
+    "tp" : 1,
+    "f1" : 1.0,
+    "precision" : 1.0,
+    "recall" : 1.0
+  },
+  "mutations" : [ "increase-downstream-timeout" ],
+  "observedCompletenessGaps" : [ ],
+  "observedFindings" : [ {
+    "callPath" : [ "root-to-b", "b-to-end" ],
+    "ruleId" : "RL002",
+    "severity" : "warning",
+    "targetOperation" : "end.read"
+  } ],
+  "observedStatus" : "valid",
+  "rationale" : "Only the left branch has a downstream retry window above its 5 s incoming budget.",
+  "reviewNote" : "Reviewed overlay against the named seed; expected arithmetic, topology, idempotency, status, and completeness were checked manually.",
+  "reviewed" : true,
+  "seed" : "seed09",
+  "stderr" : "",
+  "stdout" : "{\r\n  \"schemaVersion\" : 1,\r\n  \"project\" : {\r\n    \"name\" : \"seed09-diamond\",\r\n    \"services\" : 4,\r\n    \"operations\" : 4,\r\n    \"calls\" : 4\r\n  },\r\n  \"findings\" : [ {\r\n    \"ruleId\" : \"RL002\",\r\n    \"severity\" : \"warning\",\r\n    \"title\" : \"Timeout budget may be exceeded by 1100 ms\",\r\n    \"message\" : \"Incoming call 'root-to-b' waits 5000 ms, but 'b-to-end' permits a configured worst-case retry window of 6100 ms.\",\r\n    \"callPath\" : [ \"root-to-b\", \"b-to-end\" ],\r\n    \"evidence\" : {\r\n      \"middleOperation\" : \"branchB.work\",\r\n      \"targetOperation\" : \"end.read\",\r\n      \"incomingTimeout\" : \"PT5S\",\r\n      \"attempts\" : 2,\r\n      \"timeoutPerAttempt\" : \"PT3S\",\r\n      \"fixedWait\" : \"PT0.1S\",\r\n      \"retryWindow\" : \"PT6.1S\",\r\n      \"overrun\" : \"PT1.1S\",\r\n      \"incomingConfigurationFile\" : \"services//root//application.yml\",\r\n      \"downstreamConfigurationFile\" : \"services//branchB//application.yml\"\r\n    }\r\n  } ],\r\n  \"completenessGaps\" : [ ],\r\n  \"summary\" : {\r\n    \"errors\" : 0,\r\n    \"warnings\" : 1,\r\n    \"completenessGaps\" : 0\r\n  }\r\n}"
+}, {
+  "baseline" : {
+    "issues" : [ ]
+  },
+  "caseId" : "mut12-timeout-boundary",
+  "classification" : "matched",
+  "discrepancyExplanation" : null,
+  "exitCode" : 0,
+  "expectedCompletenessGaps" : [ ],
+  "expectedFindings" : [ {
+    "callPath" : [ "client-to-worker", "worker-to-database" ],
+    "ruleId" : "RL002",
+    "severity" : "warning",
+    "targetOperation" : "database.read"
+  } ],
+  "expectedStatus" : "valid",
+  "metrics" : {
+    "fn" : 0,
+    "fp" : 0,
+    "tp" : 1,
+    "f1" : 1.0,
+    "precision" : 1.0,
+    "recall" : 1.0
+  },
+  "mutations" : [ "reduce-incoming-timeout" ],
+  "observedCompletenessGaps" : [ ],
+  "observedFindings" : [ {
+    "callPath" : [ "client-to-worker", "worker-to-database" ],
+    "ruleId" : "RL002",
+    "severity" : "warning",
+    "targetOperation" : "database.read"
+  } ],
+  "observedStatus" : "valid",
+  "rationale" : "A 2 s incoming timeout is below the 2.1 s downstream retry window.",
+  "reviewNote" : "Reviewed overlay against the named seed; expected arithmetic, topology, idempotency, status, and completeness were checked manually.",
+  "reviewed" : true,
+  "seed" : "seed10",
+  "stderr" : "",
+  "stdout" : "{\r\n  \"schemaVersion\" : 1,\r\n  \"project\" : {\r\n    \"name\" : \"seed10-supported-key-mix\",\r\n    \"services\" : 3,\r\n    \"operations\" : 3,\r\n    \"calls\" : 2\r\n  },\r\n  \"findings\" : [ {\r\n    \"ruleId\" : \"RL002\",\r\n    \"severity\" : \"warning\",\r\n    \"title\" : \"Timeout budget may be exceeded by 100 ms\",\r\n    \"message\" : \"Incoming call 'client-to-worker' waits 2000 ms, but 'worker-to-database' permits a configured worst-case retry window of 2100 ms.\",\r\n    \"callPath\" : [ \"client-to-worker\", \"worker-to-database\" ],\r\n    \"evidence\" : {\r\n      \"middleOperation\" : \"worker.query\",\r\n      \"targetOperation\" : \"database.read\",\r\n      \"incomingTimeout\" : \"PT2S\",\r\n      \"attempts\" : 2,\r\n      \"timeoutPerAttempt\" : \"PT1S\",\r\n      \"fixedWait\" : \"PT0.1S\",\r\n      \"retryWindow\" : \"PT2.1S\",\r\n      \"overrun\" : \"PT0.1S\",\r\n      \"incomingConfigurationFile\" : \"services//client//application.yml\",\r\n      \"downstreamConfigurationFile\" : \"services//worker//application.yml\"\r\n    }\r\n  } ],\r\n  \"completenessGaps\" : [ ],\r\n  \"summary\" : {\r\n    \"errors\" : 0,\r\n    \"warnings\" : 1,\r\n    \"completenessGaps\" : 0\r\n  }\r\n}"
+}, {
+  "baseline" : {
+    "issues" : [ ]
+  },
+  "caseId" : "mut13-idempotency-unknown",
+  "classification" : "matched",
+  "discrepancyExplanation" : null,
+  "exitCode" : 0,
+  "expectedCompletenessGaps" : [ ],
+  "expectedFindings" : [ {
+    "callPath" : [ "frontend-to-backend" ],
+    "ruleId" : "RL003",
+    "severity" : "warning",
+    "targetOperation" : "backend.fetch"
+  } ],
+  "expectedStatus" : "valid",
+  "metrics" : {
+    "fn" : 0,
+    "fp" : 0,
+    "tp" : 1,
+    "f1" : 1.0,
+    "precision" : 1.0,
+    "recall" : 1.0
+  },
+  "mutations" : [ "idempotent-to-unknown" ],
+  "observedCompletenessGaps" : [ ],
+  "observedFindings" : [ {
+    "callPath" : [ "frontend-to-backend" ],
+    "ruleId" : "RL003",
+    "severity" : "warning",
+    "targetOperation" : "backend.fetch"
+  } ],
+  "observedStatus" : "valid",
+  "rationale" : "A two-attempt call can repeat a target whose idempotency is unknown.",
+  "reviewNote" : "Reviewed overlay against the named seed; expected arithmetic, topology, idempotency, status, and completeness were checked manually.",
+  "reviewed" : true,
+  "seed" : "seed01",
+  "stderr" : "",
+  "stdout" : "{\r\n  \"schemaVersion\" : 1,\r\n  \"project\" : {\r\n    \"name\" : \"seed01-linear-two\",\r\n    \"services\" : 2,\r\n    \"operations\" : 2,\r\n    \"calls\" : 1\r\n  },\r\n  \"findings\" : [ {\r\n    \"ruleId\" : \"RL003\",\r\n    \"severity\" : \"warning\",\r\n    \"title\" : \"backend.fetch may be repeated\",\r\n    \"message\" : \"Call 'frontend-to-backend' may invoke backend.fetch up to 2 times; idempotency is unknown.\",\r\n    \"callPath\" : [ \"frontend-to-backend\" ],\r\n    \"evidence\" : {\r\n      \"callId\" : \"frontend-to-backend\",\r\n      \"targetOperation\" : \"backend.fetch\",\r\n      \"idempotency\" : \"unknown\",\r\n      \"maxAttempts\" : 2,\r\n      \"configurationFile\" : \"services//frontend//application.yml\"\r\n    }\r\n  } ],\r\n  \"completenessGaps\" : [ ],\r\n  \"summary\" : {\r\n    \"errors\" : 0,\r\n    \"warnings\" : 1,\r\n    \"completenessGaps\" : 0\r\n  }\r\n}"
+}, {
+  "baseline" : {
+    "issues" : [ ]
+  },
+  "caseId" : "mut14-idempotency-non-idempotent",
+  "classification" : "matched",
+  "discrepancyExplanation" : null,
+  "exitCode" : 0,
+  "expectedCompletenessGaps" : [ ],
+  "expectedFindings" : [ {
+    "callPath" : [ "frontend-to-backend" ],
+    "ruleId" : "RL003",
+    "severity" : "error",
+    "targetOperation" : "backend.fetch"
+  } ],
+  "expectedStatus" : "valid",
+  "metrics" : {
+    "fn" : 0,
+    "fp" : 0,
+    "tp" : 1,
+    "f1" : 1.0,
+    "precision" : 1.0,
+    "recall" : 1.0
+  },
+  "mutations" : [ "idempotent-to-non-idempotent" ],
+  "observedCompletenessGaps" : [ ],
+  "observedFindings" : [ {
+    "callPath" : [ "frontend-to-backend" ],
+    "ruleId" : "RL003",
+    "severity" : "error",
+    "targetOperation" : "backend.fetch"
+  } ],
+  "observedStatus" : "valid",
+  "rationale" : "A two-attempt call can repeat a non-idempotent target.",
+  "reviewNote" : "Reviewed overlay against the named seed; expected arithmetic, topology, idempotency, status, and completeness were checked manually.",
+  "reviewed" : true,
+  "seed" : "seed01",
+  "stderr" : "",
+  "stdout" : "{\r\n  \"schemaVersion\" : 1,\r\n  \"project\" : {\r\n    \"name\" : \"seed01-linear-two\",\r\n    \"services\" : 2,\r\n    \"operations\" : 2,\r\n    \"calls\" : 1\r\n  },\r\n  \"findings\" : [ {\r\n    \"ruleId\" : \"RL003\",\r\n    \"severity\" : \"error\",\r\n    \"title\" : \"backend.fetch may be repeated\",\r\n    \"message\" : \"Call 'frontend-to-backend' may invoke backend.fetch up to 2 times; idempotency is non-idempotent.\",\r\n    \"callPath\" : [ \"frontend-to-backend\" ],\r\n    \"evidence\" : {\r\n      \"callId\" : \"frontend-to-backend\",\r\n      \"targetOperation\" : \"backend.fetch\",\r\n      \"idempotency\" : \"non-idempotent\",\r\n      \"maxAttempts\" : 2,\r\n      \"configurationFile\" : \"services//frontend//application.yml\"\r\n    }\r\n  } ],\r\n  \"completenessGaps\" : [ ],\r\n  \"summary\" : {\r\n    \"errors\" : 1,\r\n    \"warnings\" : 0,\r\n    \"completenessGaps\" : 0\r\n  }\r\n}"
+}, {
+  "baseline" : {
+    "issues" : [ ]
+  },
+  "caseId" : "mut15-branch-idempotency-unknown",
+  "classification" : "matched",
+  "discrepancyExplanation" : null,
+  "exitCode" : 0,
+  "expectedCompletenessGaps" : [ ],
+  "expectedFindings" : [ {
+    "callPath" : [ "gateway-to-catalog" ],
+    "ruleId" : "RL003",
+    "severity" : "warning",
+    "targetOperation" : "catalog.search"
+  } ],
+  "expectedStatus" : "valid",
+  "metrics" : {
+    "fn" : 0,
+    "fp" : 0,
+    "tp" : 1,
+    "f1" : 1.0,
+    "precision" : 1.0,
+    "recall" : 1.0
+  },
+  "mutations" : [ "idempotent-to-unknown" ],
+  "observedCompletenessGaps" : [ ],
+  "observedFindings" : [ {
+    "callPath" : [ "gateway-to-catalog" ],
+    "ruleId" : "RL003",
+    "severity" : "warning",
+    "targetOperation" : "catalog.search"
+  } ],
+  "observedStatus" : "valid",
+  "rationale" : "Only the catalog branch target becomes unknown and remains retried twice.",
+  "reviewNote" : "Reviewed overlay against the named seed; expected arithmetic, topology, idempotency, status, and completeness were checked manually.",
+  "reviewed" : true,
+  "seed" : "seed03",
+  "stderr" : "",
+  "stdout" : "{\r\n  \"schemaVersion\" : 1,\r\n  \"project\" : {\r\n    \"name\" : \"seed03-branching\",\r\n    \"services\" : 3,\r\n    \"operations\" : 3,\r\n    \"calls\" : 2\r\n  },\r\n  \"findings\" : [ {\r\n    \"ruleId\" : \"RL003\",\r\n    \"severity\" : \"warning\",\r\n    \"title\" : \"catalog.search may be repeated\",\r\n    \"message\" : \"Call 'gateway-to-catalog' may invoke catalog.search up to 2 times; idempotency is unknown.\",\r\n    \"callPath\" : [ \"gateway-to-catalog\" ],\r\n    \"evidence\" : {\r\n      \"callId\" : \"gateway-to-catalog\",\r\n      \"targetOperation\" : \"catalog.search\",\r\n      \"idempotency\" : \"unknown\",\r\n      \"maxAttempts\" : 2,\r\n      \"configurationFile\" : \"services//gateway//application.yml\"\r\n    }\r\n  } ],\r\n  \"completenessGaps\" : [ ],\r\n  \"summary\" : {\r\n    \"errors\" : 0,\r\n    \"warnings\" : 1,\r\n    \"completenessGaps\" : 0\r\n  }\r\n}"
+}, {
+  "baseline" : {
+    "issues" : [ ]
+  },
+  "caseId" : "mut16-shared-non-idempotent",
+  "classification" : "matched",
+  "discrepancyExplanation" : null,
+  "exitCode" : 0,
+  "expectedCompletenessGaps" : [ ],
+  "expectedFindings" : [ {
+    "callPath" : [ "apiA-to-ledger" ],
+    "ruleId" : "RL003",
+    "severity" : "error",
+    "targetOperation" : "ledger.write"
+  }, {
+    "callPath" : [ "apiB-to-ledger" ],
+    "ruleId" : "RL003",
+    "severity" : "error",
+    "targetOperation" : "ledger.write"
+  } ],
+  "expectedStatus" : "valid",
+  "metrics" : {
+    "fn" : 0,
+    "fp" : 0,
+    "tp" : 2,
+    "f1" : 1.0,
+    "precision" : 1.0,
+    "recall" : 1.0
+  },
+  "mutations" : [ "idempotent-to-non-idempotent" ],
+  "observedCompletenessGaps" : [ ],
+  "observedFindings" : [ {
+    "callPath" : [ "apiA-to-ledger" ],
+    "ruleId" : "RL003",
+    "severity" : "error",
+    "targetOperation" : "ledger.write"
+  }, {
+    "callPath" : [ "apiB-to-ledger" ],
+    "ruleId" : "RL003",
+    "severity" : "error",
+    "targetOperation" : "ledger.write"
+  } ],
+  "observedStatus" : "valid",
+  "rationale" : "Both two-attempt calls can repeat the now non-idempotent shared target.",
+  "reviewNote" : "Reviewed overlay against the named seed; expected arithmetic, topology, idempotency, status, and completeness were checked manually.",
+  "reviewed" : true,
+  "seed" : "seed04",
+  "stderr" : "",
+  "stdout" : "{\r\n  \"schemaVersion\" : 1,\r\n  \"project\" : {\r\n    \"name\" : \"seed04-multiple-roots\",\r\n    \"services\" : 3,\r\n    \"operations\" : 3,\r\n    \"calls\" : 2\r\n  },\r\n  \"findings\" : [ {\r\n    \"ruleId\" : \"RL003\",\r\n    \"severity\" : \"error\",\r\n    \"title\" : \"ledger.write may be repeated\",\r\n    \"message\" : \"Call 'apiA-to-ledger' may invoke ledger.write up to 2 times; idempotency is non-idempotent.\",\r\n    \"callPath\" : [ \"apiA-to-ledger\" ],\r\n    \"evidence\" : {\r\n      \"callId\" : \"apiA-to-ledger\",\r\n      \"targetOperation\" : \"ledger.write\",\r\n      \"idempotency\" : \"non-idempotent\",\r\n      \"maxAttempts\" : 2,\r\n      \"configurationFile\" : \"services//apiA//application.yml\"\r\n    }\r\n  }, {\r\n    \"ruleId\" : \"RL003\",\r\n    \"severity\" : \"error\",\r\n    \"title\" : \"ledger.write may be repeated\",\r\n    \"message\" : \"Call 'apiB-to-ledger' may invoke ledger.write up to 2 times; idempotency is non-idempotent.\",\r\n    \"callPath\" : [ \"apiB-to-ledger\" ],\r\n    \"evidence\" : {\r\n      \"callId\" : \"apiB-to-ledger\",\r\n      \"targetOperation\" : \"ledger.write\",\r\n      \"idempotency\" : \"non-idempotent\",\r\n      \"maxAttempts\" : 2,\r\n      \"configurationFile\" : \"services//apiB//application.yml\"\r\n    }\r\n  } ],\r\n  \"completenessGaps\" : [ ],\r\n  \"summary\" : {\r\n    \"errors\" : 2,\r\n    \"warnings\" : 0,\r\n    \"completenessGaps\" : 0\r\n  }\r\n}"
+}, {
+  "baseline" : {
+    "issues" : [ ]
+  },
+  "caseId" : "mut17-inherited-idempotency-unknown",
+  "classification" : "matched",
+  "discrepancyExplanation" : null,
+  "exitCode" : 0,
+  "expectedCompletenessGaps" : [ ],
+  "expectedFindings" : [ {
+    "callPath" : [ "middle-to-target" ],
+    "ruleId" : "RL003",
+    "severity" : "warning",
+    "targetOperation" : "target.read"
+  } ],
+  "expectedStatus" : "valid",
+  "metrics" : {
+    "fn" : 0,
+    "fp" : 0,
+    "tp" : 1,
+    "f1" : 1.0,
+    "precision" : 1.0,
+    "recall" : 1.0
+  },
+  "mutations" : [ "idempotent-to-unknown" ],
+  "observedCompletenessGaps" : [ ],
+  "observedFindings" : [ {
+    "callPath" : [ "middle-to-target" ],
+    "ruleId" : "RL003",
+    "severity" : "warning",
+    "targetOperation" : "target.read"
+  } ],
+  "observedStatus" : "valid",
+  "rationale" : "The inherited two-attempt retry can repeat a target of unknown idempotency.",
+  "reviewNote" : "Reviewed overlay against the named seed; expected arithmetic, topology, idempotency, status, and completeness were checked manually.",
+  "reviewed" : true,
+  "seed" : "seed06",
+  "stderr" : "",
+  "stdout" : "{\r\n  \"schemaVersion\" : 1,\r\n  \"project\" : {\r\n    \"name\" : \"seed06-inheritance-kebab\",\r\n    \"services\" : 3,\r\n    \"operations\" : 3,\r\n    \"calls\" : 2\r\n  },\r\n  \"findings\" : [ {\r\n    \"ruleId\" : \"RL003\",\r\n    \"severity\" : \"warning\",\r\n    \"title\" : \"target.read may be repeated\",\r\n    \"message\" : \"Call 'middle-to-target' may invoke target.read up to 2 times; idempotency is unknown.\",\r\n    \"callPath\" : [ \"middle-to-target\" ],\r\n    \"evidence\" : {\r\n      \"callId\" : \"middle-to-target\",\r\n      \"targetOperation\" : \"target.read\",\r\n      \"idempotency\" : \"unknown\",\r\n      \"maxAttempts\" : 2,\r\n      \"configurationFile\" : \"services//middle//application.yml\"\r\n    }\r\n  } ],\r\n  \"completenessGaps\" : [ ],\r\n  \"summary\" : {\r\n    \"errors\" : 0,\r\n    \"warnings\" : 1,\r\n    \"completenessGaps\" : 0\r\n  }\r\n}"
+}, {
+  "baseline" : {
+    "issues" : [ ]
+  },
+  "caseId" : "mut18-mixed-key-non-idempotent",
+  "classification" : "matched",
+  "discrepancyExplanation" : null,
+  "exitCode" : 0,
+  "expectedCompletenessGaps" : [ ],
+  "expectedFindings" : [ {
+    "callPath" : [ "worker-to-database" ],
+    "ruleId" : "RL003",
+    "severity" : "error",
+    "targetOperation" : "database.read"
+  } ],
+  "expectedStatus" : "valid",
+  "metrics" : {
+    "fn" : 0,
+    "fp" : 0,
+    "tp" : 1,
+    "f1" : 1.0,
+    "precision" : 1.0,
+    "recall" : 1.0
+  },
+  "mutations" : [ "idempotent-to-non-idempotent" ],
+  "observedCompletenessGaps" : [ ],
+  "observedFindings" : [ {
+    "callPath" : [ "worker-to-database" ],
+    "ruleId" : "RL003",
+    "severity" : "error",
+    "targetOperation" : "database.read"
+  } ],
+  "observedStatus" : "valid",
+  "rationale" : "The kebab-configured two-attempt retry targets a non-idempotent operation.",
+  "reviewNote" : "Reviewed overlay against the named seed; expected arithmetic, topology, idempotency, status, and completeness were checked manually.",
+  "reviewed" : true,
+  "seed" : "seed10",
+  "stderr" : "",
+  "stdout" : "{\r\n  \"schemaVersion\" : 1,\r\n  \"project\" : {\r\n    \"name\" : \"seed10-supported-key-mix\",\r\n    \"services\" : 3,\r\n    \"operations\" : 3,\r\n    \"calls\" : 2\r\n  },\r\n  \"findings\" : [ {\r\n    \"ruleId\" : \"RL003\",\r\n    \"severity\" : \"error\",\r\n    \"title\" : \"database.read may be repeated\",\r\n    \"message\" : \"Call 'worker-to-database' may invoke database.read up to 2 times; idempotency is non-idempotent.\",\r\n    \"callPath\" : [ \"worker-to-database\" ],\r\n    \"evidence\" : {\r\n      \"callId\" : \"worker-to-database\",\r\n      \"targetOperation\" : \"database.read\",\r\n      \"idempotency\" : \"non-idempotent\",\r\n      \"maxAttempts\" : 2,\r\n      \"configurationFile\" : \"services//worker//application.yml\"\r\n    }\r\n  } ],\r\n  \"completenessGaps\" : [ ],\r\n  \"summary\" : {\r\n    \"errors\" : 1,\r\n    \"warnings\" : 0,\r\n    \"completenessGaps\" : 0\r\n  }\r\n}"
+}, {
+  "baseline" : {
+    "issues" : [ ]
+  },
+  "caseId" : "mut19-amplification-and-unknown",
+  "classification" : "matched",
+  "discrepancyExplanation" : null,
+  "exitCode" : 0,
+  "expectedCompletenessGaps" : [ ],
+  "expectedFindings" : [ {
+    "callPath" : [ "edge-to-core", "core-to-store" ],
+    "ruleId" : "RL001",
+    "severity" : "warning",
+    "targetOperation" : "store.read"
+  }, {
+    "callPath" : [ "core-to-store" ],
+    "ruleId" : "RL003",
+    "severity" : "warning",
+    "targetOperation" : "store.read"
+  } ],
+  "expectedStatus" : "valid",
+  "metrics" : {
+    "fn" : 0,
+    "fp" : 0,
+    "tp" : 2,
+    "f1" : 1.0,
+    "precision" : 1.0,
+    "recall" : 1.0
+  },
+  "mutations" : [ "increase-attempts-consecutive-calls", "idempotent-to-unknown" ],
+  "observedCompletenessGaps" : [ ],
+  "observedFindings" : [ {
+    "callPath" : [ "edge-to-core", "core-to-store" ],
+    "ruleId" : "RL001",
+    "severity" : "warning",
+    "targetOperation" : "store.read"
+  }, {
+    "callPath" : [ "core-to-store" ],
+    "ruleId" : "RL003",
+    "severity" : "warning",
+    "targetOperation" : "store.read"
+  } ],
+  "observedStatus" : "valid",
+  "rationale" : "The path reaches 9x and the final three-attempt call targets unknown idempotency.",
+  "reviewNote" : "Reviewed overlay against the named seed; expected arithmetic, topology, idempotency, status, and completeness were checked manually.",
+  "reviewed" : true,
+  "seed" : "seed02",
+  "stderr" : "",
+  "stdout" : "{\r\n  \"schemaVersion\" : 1,\r\n  \"project\" : {\r\n    \"name\" : \"seed02-linear-three\",\r\n    \"services\" : 3,\r\n    \"operations\" : 3,\r\n    \"calls\" : 2\r\n  },\r\n  \"findings\" : [ {\r\n    \"ruleId\" : \"RL001\",\r\n    \"severity\" : \"warning\",\r\n    \"title\" : \"Retry amplification of 9x\",\r\n    \"message\" : \"edge.request -> core.lookup -> store.read: 3 x 3 = 9. Two layers independently own retries on this path.\",\r\n    \"callPath\" : [ \"edge-to-core\", \"core-to-store\" ],\r\n    \"evidence\" : {\r\n      \"rootOperation\" : \"edge.request\",\r\n      \"targetOperation\" : \"store.read\",\r\n      \"operationPath\" : [ \"edge.request\", \"core.lookup\", \"store.read\" ],\r\n      \"attempts\" : [ 3, 3 ],\r\n      \"expression\" : \"3 x 3 = 9\",\r\n      \"multiplier\" : \"9\",\r\n      \"configurationFiles\" : [ \"services//edge//application.yml\", \"services//core//application.yml\" ]\r\n    }\r\n  }, {\r\n    \"ruleId\" : \"RL003\",\r\n    \"severity\" : \"warning\",\r\n    \"title\" : \"store.read may be repeated\",\r\n    \"message\" : \"Call 'core-to-store' may invoke store.read up to 3 times; idempotency is unknown.\",\r\n    \"callPath\" : [ \"core-to-store\" ],\r\n    \"evidence\" : {\r\n      \"callId\" : \"core-to-store\",\r\n      \"targetOperation\" : \"store.read\",\r\n      \"idempotency\" : \"unknown\",\r\n      \"maxAttempts\" : 3,\r\n      \"configurationFile\" : \"services//core//application.yml\"\r\n    }\r\n  } ],\r\n  \"completenessGaps\" : [ ],\r\n  \"summary\" : {\r\n    \"errors\" : 0,\r\n    \"warnings\" : 2,\r\n    \"completenessGaps\" : 0\r\n  }\r\n}"
+}, {
+  "baseline" : {
+    "issues" : [ ]
+  },
+  "caseId" : "mut20-amplification-and-unsafe",
+  "classification" : "matched",
+  "discrepancyExplanation" : null,
+  "exitCode" : 0,
+  "expectedCompletenessGaps" : [ ],
+  "expectedFindings" : [ {
+    "callPath" : [ "a-to-b", "b-to-c" ],
+    "ruleId" : "RL001",
+    "severity" : "warning",
+    "targetOperation" : "c.step"
+  }, {
+    "callPath" : [ "b-to-c" ],
+    "ruleId" : "RL003",
+    "severity" : "error",
+    "targetOperation" : "c.step"
+  } ],
+  "expectedStatus" : "valid",
+  "metrics" : {
+    "fn" : 0,
+    "fp" : 0,
+    "tp" : 2,
+    "f1" : 1.0,
+    "precision" : 1.0,
+    "recall" : 1.0
+  },
+  "mutations" : [ "increase-attempts-consecutive-calls", "idempotent-to-non-idempotent" ],
+  "observedCompletenessGaps" : [ ],
+  "observedFindings" : [ {
+    "callPath" : [ "a-to-b", "b-to-c" ],
+    "ruleId" : "RL001",
+    "severity" : "warning",
+    "targetOperation" : "c.step"
+  }, {
+    "callPath" : [ "b-to-c" ],
+    "ruleId" : "RL003",
+    "severity" : "error",
+    "targetOperation" : "c.step"
+  } ],
+  "observedStatus" : "valid",
+  "rationale" : "The first two layers form 9x and the second repeated target is non-idempotent.",
+  "reviewNote" : "Reviewed overlay against the named seed; expected arithmetic, topology, idempotency, status, and completeness were checked manually.",
+  "reviewed" : true,
+  "seed" : "seed07",
+  "stderr" : "",
+  "stdout" : "{\r\n  \"schemaVersion\" : 1,\r\n  \"project\" : {\r\n    \"name\" : \"seed07-linear-four\",\r\n    \"services\" : 4,\r\n    \"operations\" : 4,\r\n    \"calls\" : 3\r\n  },\r\n  \"findings\" : [ {\r\n    \"ruleId\" : \"RL003\",\r\n    \"severity\" : \"error\",\r\n    \"title\" : \"c.step may be repeated\",\r\n    \"message\" : \"Call 'b-to-c' may invoke c.step up to 3 times; idempotency is non-idempotent.\",\r\n    \"callPath\" : [ \"b-to-c\" ],\r\n    \"evidence\" : {\r\n      \"callId\" : \"b-to-c\",\r\n      \"targetOperation\" : \"c.step\",\r\n      \"idempotency\" : \"non-idempotent\",\r\n      \"maxAttempts\" : 3,\r\n      \"configurationFile\" : \"services//b//application.yml\"\r\n    }\r\n  }, {\r\n    \"ruleId\" : \"RL001\",\r\n    \"severity\" : \"warning\",\r\n    \"title\" : \"Retry amplification of 9x\",\r\n    \"message\" : \"a.start -> b.step -> c.step: 3 x 3 = 9. Two layers independently own retries on this path.\",\r\n    \"callPath\" : [ \"a-to-b\", \"b-to-c\" ],\r\n    \"evidence\" : {\r\n      \"rootOperation\" : \"a.start\",\r\n      \"targetOperation\" : \"c.step\",\r\n      \"operationPath\" : [ \"a.start\", \"b.step\", \"c.step\" ],\r\n      \"attempts\" : [ 3, 3 ],\r\n      \"expression\" : \"3 x 3 = 9\",\r\n      \"multiplier\" : \"9\",\r\n      \"configurationFiles\" : [ \"services//a//application.yml\", \"services//b//application.yml\" ]\r\n    }\r\n  } ],\r\n  \"completenessGaps\" : [ ],\r\n  \"summary\" : {\r\n    \"errors\" : 1,\r\n    \"warnings\" : 1,\r\n    \"completenessGaps\" : 0\r\n  }\r\n}"
+}, {
+  "baseline" : {
+    "issues" : [ ]
+  },
+  "caseId" : "mut21-timeout-and-unknown",
+  "classification" : "matched",
+  "discrepancyExplanation" : null,
+  "exitCode" : 0,
+  "expectedCompletenessGaps" : [ ],
+  "expectedFindings" : [ {
+    "callPath" : [ "root-to-b", "b-to-end" ],
+    "ruleId" : "RL002",
+    "severity" : "warning",
+    "targetOperation" : "end.read"
+  }, {
+    "callPath" : [ "b-to-end" ],
+    "ruleId" : "RL003",
+    "severity" : "warning",
+    "targetOperation" : "end.read"
+  }, {
+    "callPath" : [ "c-to-end" ],
+    "ruleId" : "RL003",
+    "severity" : "warning",
+    "targetOperation" : "end.read"
+  } ],
+  "expectedStatus" : "valid",
+  "metrics" : {
+    "fn" : 0,
+    "fp" : 0,
+    "tp" : 3,
+    "f1" : 1.0,
+    "precision" : 1.0,
+    "recall" : 1.0
+  },
+  "mutations" : [ "reduce-incoming-timeout", "idempotent-to-unknown" ],
+  "observedCompletenessGaps" : [ ],
+  "observedFindings" : [ {
+    "callPath" : [ "root-to-b", "b-to-end" ],
+    "ruleId" : "RL002",
+    "severity" : "warning",
+    "targetOperation" : "end.read"
+  }, {
+    "callPath" : [ "b-to-end" ],
+    "ruleId" : "RL003",
+    "severity" : "warning",
+    "targetOperation" : "end.read"
+  }, {
+    "callPath" : [ "c-to-end" ],
+    "ruleId" : "RL003",
+    "severity" : "warning",
+    "targetOperation" : "end.read"
+  } ],
+  "observedStatus" : "valid",
+  "rationale" : "The left incoming budget is too small and both retried branches target unknown idempotency.",
+  "reviewNote" : "Reviewed overlay against the named seed; expected arithmetic, topology, idempotency, status, and completeness were checked manually.",
+  "reviewed" : true,
+  "seed" : "seed09",
+  "stderr" : "",
+  "stdout" : "{\r\n  \"schemaVersion\" : 1,\r\n  \"project\" : {\r\n    \"name\" : \"seed09-diamond\",\r\n    \"services\" : 4,\r\n    \"operations\" : 4,\r\n    \"calls\" : 4\r\n  },\r\n  \"findings\" : [ {\r\n    \"ruleId\" : \"RL002\",\r\n    \"severity\" : \"warning\",\r\n    \"title\" : \"Timeout budget may be exceeded by 300 ms\",\r\n    \"message\" : \"Incoming call 'root-to-b' waits 800 ms, but 'b-to-end' permits a configured worst-case retry window of 1100 ms.\",\r\n    \"callPath\" : [ \"root-to-b\", \"b-to-end\" ],\r\n    \"evidence\" : {\r\n      \"middleOperation\" : \"branchB.work\",\r\n      \"targetOperation\" : \"end.read\",\r\n      \"incomingTimeout\" : \"PT0.8S\",\r\n      \"attempts\" : 2,\r\n      \"timeoutPerAttempt\" : \"PT0.5S\",\r\n      \"fixedWait\" : \"PT0.1S\",\r\n      \"retryWindow\" : \"PT1.1S\",\r\n      \"overrun\" : \"PT0.3S\",\r\n      \"incomingConfigurationFile\" : \"services//root//application.yml\",\r\n      \"downstreamConfigurationFile\" : \"services//branchB//application.yml\"\r\n    }\r\n  }, {\r\n    \"ruleId\" : \"RL003\",\r\n    \"severity\" : \"warning\",\r\n    \"title\" : \"end.read may be repeated\",\r\n    \"message\" : \"Call 'b-to-end' may invoke end.read up to 2 times; idempotency is unknown.\",\r\n    \"callPath\" : [ \"b-to-end\" ],\r\n    \"evidence\" : {\r\n      \"callId\" : \"b-to-end\",\r\n      \"targetOperation\" : \"end.read\",\r\n      \"idempotency\" : \"unknown\",\r\n      \"maxAttempts\" : 2,\r\n      \"configurationFile\" : \"services//branchB//application.yml\"\r\n    }\r\n  }, {\r\n    \"ruleId\" : \"RL003\",\r\n    \"severity\" : \"warning\",\r\n    \"title\" : \"end.read may be repeated\",\r\n    \"message\" : \"Call 'c-to-end' may invoke end.read up to 2 times; idempotency is unknown.\",\r\n    \"callPath\" : [ \"c-to-end\" ],\r\n    \"evidence\" : {\r\n      \"callId\" : \"c-to-end\",\r\n      \"targetOperation\" : \"end.read\",\r\n      \"idempotency\" : \"unknown\",\r\n      \"maxAttempts\" : 2,\r\n      \"configurationFile\" : \"services//branchC//application.yml\"\r\n    }\r\n  } ],\r\n  \"completenessGaps\" : [ ],\r\n  \"summary\" : {\r\n    \"errors\" : 0,\r\n    \"warnings\" : 3,\r\n    \"completenessGaps\" : 0\r\n  }\r\n}"
+}, {
+  "baseline" : {
+    "issues" : [ ]
+  },
+  "caseId" : "mut22-amplification-and-non-idempotent",
+  "classification" : "matched",
+  "discrepancyExplanation" : null,
+  "exitCode" : 0,
+  "expectedCompletenessGaps" : [ ],
+  "expectedFindings" : [ {
+    "callPath" : [ "gateway-to-catalog" ],
+    "ruleId" : "RL001",
+    "severity" : "warning",
+    "targetOperation" : "catalog.search"
+  }, {
+    "callPath" : [ "gateway-to-catalog" ],
+    "ruleId" : "RL003",
+    "severity" : "error",
+    "targetOperation" : "catalog.search"
+  } ],
+  "expectedStatus" : "valid",
+  "metrics" : {
+    "fn" : 0,
+    "fp" : 0,
+    "tp" : 2,
+    "f1" : 1.0,
+    "precision" : 1.0,
+    "recall" : 1.0
+  },
+  "mutations" : [ "increase-attempts-one-call", "idempotent-to-non-idempotent" ],
+  "observedCompletenessGaps" : [ ],
+  "observedFindings" : [ {
+    "callPath" : [ "gateway-to-catalog" ],
+    "ruleId" : "RL001",
+    "severity" : "warning",
+    "targetOperation" : "catalog.search"
+  }, {
+    "callPath" : [ "gateway-to-catalog" ],
+    "ruleId" : "RL003",
+    "severity" : "error",
+    "targetOperation" : "catalog.search"
+  } ],
+  "observedStatus" : "valid",
+  "rationale" : "The catalog branch reaches 9x and repeats a non-idempotent target.",
+  "reviewNote" : "Reviewed overlay against the named seed; expected arithmetic, topology, idempotency, status, and completeness were checked manually.",
+  "reviewed" : true,
+  "seed" : "seed03",
+  "stderr" : "",
+  "stdout" : "{\r\n  \"schemaVersion\" : 1,\r\n  \"project\" : {\r\n    \"name\" : \"seed03-branching\",\r\n    \"services\" : 3,\r\n    \"operations\" : 3,\r\n    \"calls\" : 2\r\n  },\r\n  \"findings\" : [ {\r\n    \"ruleId\" : \"RL003\",\r\n    \"severity\" : \"error\",\r\n    \"title\" : \"catalog.search may be repeated\",\r\n    \"message\" : \"Call 'gateway-to-catalog' may invoke catalog.search up to 9 times; idempotency is non-idempotent.\",\r\n    \"callPath\" : [ \"gateway-to-catalog\" ],\r\n    \"evidence\" : {\r\n      \"callId\" : \"gateway-to-catalog\",\r\n      \"targetOperation\" : \"catalog.search\",\r\n      \"idempotency\" : \"non-idempotent\",\r\n      \"maxAttempts\" : 9,\r\n      \"configurationFile\" : \"services//gateway//application.yml\"\r\n    }\r\n  }, {\r\n    \"ruleId\" : \"RL001\",\r\n    \"severity\" : \"warning\",\r\n    \"title\" : \"Retry amplification of 9x\",\r\n    \"message\" : \"gateway.root -> catalog.search: 9 = 9.\",\r\n    \"callPath\" : [ \"gateway-to-catalog\" ],\r\n    \"evidence\" : {\r\n      \"rootOperation\" : \"gateway.root\",\r\n      \"targetOperation\" : \"catalog.search\",\r\n      \"operationPath\" : [ \"gateway.root\", \"catalog.search\" ],\r\n      \"attempts\" : [ 9 ],\r\n      \"expression\" : \"9 = 9\",\r\n      \"multiplier\" : \"9\",\r\n      \"configurationFiles\" : [ \"services//gateway//application.yml\" ]\r\n    }\r\n  } ],\r\n  \"completenessGaps\" : [ ],\r\n  \"summary\" : {\r\n    \"errors\" : 1,\r\n    \"warnings\" : 1,\r\n    \"completenessGaps\" : 0\r\n  }\r\n}"
+}, {
+  "baseline" : {
+    "issues" : [ ]
+  },
+  "caseId" : "mut23-timeout-and-non-idempotent",
+  "classification" : "matched",
+  "discrepancyExplanation" : null,
+  "exitCode" : 0,
+  "expectedCompletenessGaps" : [ ],
+  "expectedFindings" : [ {
+    "callPath" : [ "client-to-worker", "worker-to-database" ],
+    "ruleId" : "RL002",
+    "severity" : "error",
+    "targetOperation" : "database.read"
+  }, {
+    "callPath" : [ "worker-to-database" ],
+    "ruleId" : "RL003",
+    "severity" : "error",
+    "targetOperation" : "database.read"
+  } ],
+  "expectedStatus" : "valid",
+  "metrics" : {
+    "fn" : 0,
+    "fp" : 0,
+    "tp" : 2,
+    "f1" : 1.0,
+    "precision" : 1.0,
+    "recall" : 1.0
+  },
+  "mutations" : [ "increase-downstream-timeout", "idempotent-to-non-idempotent" ],
+  "observedCompletenessGaps" : [ ],
+  "observedFindings" : [ {
+    "callPath" : [ "client-to-worker", "worker-to-database" ],
+    "ruleId" : "RL002",
+    "severity" : "error",
+    "targetOperation" : "database.read"
+  }, {
+    "callPath" : [ "worker-to-database" ],
+    "ruleId" : "RL003",
+    "severity" : "error",
+    "targetOperation" : "database.read"
+  } ],
+  "observedStatus" : "valid",
+  "rationale" : "The 4.1 s retry window exceeds 3 s and the repeated target is non-idempotent.",
+  "reviewNote" : "Reviewed overlay against the named seed; expected arithmetic, topology, idempotency, status, and completeness were checked manually.",
+  "reviewed" : true,
+  "seed" : "seed10",
+  "stderr" : "",
+  "stdout" : "{\r\n  \"schemaVersion\" : 1,\r\n  \"project\" : {\r\n    \"name\" : \"seed10-supported-key-mix\",\r\n    \"services\" : 3,\r\n    \"operations\" : 3,\r\n    \"calls\" : 2\r\n  },\r\n  \"findings\" : [ {\r\n    \"ruleId\" : \"RL002\",\r\n    \"severity\" : \"error\",\r\n    \"title\" : \"Timeout budget may be exceeded by 1100 ms\",\r\n    \"message\" : \"Incoming call 'client-to-worker' waits 3000 ms, but 'worker-to-database' permits a configured worst-case retry window of 4100 ms.\",\r\n    \"callPath\" : [ \"client-to-worker\", \"worker-to-database\" ],\r\n    \"evidence\" : {\r\n      \"middleOperation\" : \"worker.query\",\r\n      \"targetOperation\" : \"database.read\",\r\n      \"incomingTimeout\" : \"PT3S\",\r\n      \"attempts\" : 2,\r\n      \"timeoutPerAttempt\" : \"PT2S\",\r\n      \"fixedWait\" : \"PT0.1S\",\r\n      \"retryWindow\" : \"PT4.1S\",\r\n      \"overrun\" : \"PT1.1S\",\r\n      \"incomingConfigurationFile\" : \"services//client//application.yml\",\r\n      \"downstreamConfigurationFile\" : \"services//worker//application.yml\"\r\n    }\r\n  }, {\r\n    \"ruleId\" : \"RL003\",\r\n    \"severity\" : \"error\",\r\n    \"title\" : \"database.read may be repeated\",\r\n    \"message\" : \"Call 'worker-to-database' may invoke database.read up to 2 times; idempotency is non-idempotent.\",\r\n    \"callPath\" : [ \"worker-to-database\" ],\r\n    \"evidence\" : {\r\n      \"callId\" : \"worker-to-database\",\r\n      \"targetOperation\" : \"database.read\",\r\n      \"idempotency\" : \"non-idempotent\",\r\n      \"maxAttempts\" : 2,\r\n      \"configurationFile\" : \"services//worker//application.yml\"\r\n    }\r\n  } ],\r\n  \"completenessGaps\" : [ ],\r\n  \"summary\" : {\r\n    \"errors\" : 2,\r\n    \"warnings\" : 0,\r\n    \"completenessGaps\" : 0\r\n  }\r\n}"
+}, {
+  "baseline" : {
+    "issues" : [ ]
+  },
+  "caseId" : "mut24-single-attempt-non-idempotent",
+  "classification" : "matched",
+  "discrepancyExplanation" : null,
+  "exitCode" : 0,
+  "expectedCompletenessGaps" : [ ],
+  "expectedFindings" : [ ],
+  "expectedStatus" : "valid",
+  "metrics" : {
+    "fn" : 0,
+    "fp" : 0,
+    "tp" : 0,
+    "f1" : null,
+    "precision" : null,
+    "recall" : null
+  },
+  "mutations" : [ "idempotent-to-non-idempotent" ],
+  "observedCompletenessGaps" : [ ],
+  "observedFindings" : [ ],
+  "observedStatus" : "valid",
+  "rationale" : "A non-idempotent target with maxAttempts 1 is not repeated and produces no RL003.",
+  "reviewNote" : "Reviewed overlay against the named seed; expected arithmetic, topology, idempotency, status, and completeness were checked manually.",
+  "reviewed" : true,
+  "seed" : "seed05",
+  "stderr" : "",
+  "stdout" : "{\r\n  \"schemaVersion\" : 1,\r\n  \"project\" : {\r\n    \"name\" : \"seed05-single-attempt-chain\",\r\n    \"services\" : 3,\r\n    \"operations\" : 3,\r\n    \"calls\" : 2\r\n  },\r\n  \"findings\" : [ ],\r\n  \"completenessGaps\" : [ ],\r\n  \"summary\" : {\r\n    \"errors\" : 0,\r\n    \"warnings\" : 0,\r\n    \"completenessGaps\" : 0\r\n  }\r\n}"
+}, {
+  "baseline" : {
+    "issues" : [ ]
+  },
+  "caseId" : "mut25-missing-retry-policy",
+  "classification" : "expected-rejection",
+  "discrepancyExplanation" : null,
+  "exitCode" : 2,
+  "expectedCompletenessGaps" : [ ],
+  "expectedFindings" : [ ],
+  "expectedStatus" : "invalid",
+  "metrics" : {
+    "fn" : 0,
+    "fp" : 0,
+    "tp" : 0,
+    "f1" : null,
+    "precision" : null,
+    "recall" : null
+  },
+  "mutations" : [ "reference-missing-retry-policy" ],
+  "observedCompletenessGaps" : [ ],
+  "observedFindings" : [ ],
+  "observedStatus" : "invalid",
+  "rationale" : "The call references a retry instance absent from the caller configuration.",
+  "reviewNote" : "Reviewed overlay against the named seed; expected arithmetic, topology, idempotency, status, and completeness were checked manually.",
+  "reviewed" : true,
+  "seed" : "seed01",
+  "stderr" : "INVALID_CONFIGURATION: call 'frontend-to-backend' references unknown retry policy 'missingRetry' in caller service 'frontend' at 'services/frontend/application.yml'",
+  "stdout" : ""
+}, {
+  "baseline" : {
+    "issues" : [ ]
+  },
+  "caseId" : "mut26-missing-time-limiter-policy",
+  "classification" : "expected-rejection",
+  "discrepancyExplanation" : null,
+  "exitCode" : 2,
+  "expectedCompletenessGaps" : [ ],
+  "expectedFindings" : [ ],
+  "expectedStatus" : "invalid",
+  "metrics" : {
+    "fn" : 0,
+    "fp" : 0,
+    "tp" : 0,
+    "f1" : null,
+    "precision" : null,
+    "recall" : null
+  },
+  "mutations" : [ "reference-missing-time-limiter-policy" ],
+  "observedCompletenessGaps" : [ ],
+  "observedFindings" : [ ],
+  "observedStatus" : "invalid",
+  "rationale" : "The downstream call references a TimeLimiter instance absent from the caller configuration.",
+  "reviewNote" : "Reviewed overlay against the named seed; expected arithmetic, topology, idempotency, status, and completeness were checked manually.",
+  "reviewed" : true,
+  "seed" : "seed02",
+  "stderr" : "INVALID_CONFIGURATION: call 'core-to-store' references unknown time-limiter policy 'missingTimeLimiter' in caller service 'core' at 'services/core/application.yml'",
+  "stdout" : ""
+}, {
+  "baseline" : {
+    "issues" : [ ]
+  },
+  "caseId" : "mut27-graph-cycle",
+  "classification" : "expected-rejection",
+  "discrepancyExplanation" : null,
+  "exitCode" : 2,
+  "expectedCompletenessGaps" : [ ],
+  "expectedFindings" : [ ],
+  "expectedStatus" : "invalid",
+  "metrics" : {
+    "fn" : 0,
+    "fp" : 0,
+    "tp" : 0,
+    "f1" : null,
+    "precision" : null,
+    "recall" : null
+  },
+  "mutations" : [ "introduce-graph-cycle" ],
+  "observedCompletenessGaps" : [ ],
+  "observedFindings" : [ ],
+  "observedStatus" : "invalid",
+  "rationale" : "Adding end.read -> root.start creates the concrete synchronous cycle root -> branch -> end -> root.",
+  "reviewNote" : "Reviewed overlay against the named seed; expected arithmetic, topology, idempotency, status, and completeness were checked manually.",
+  "reviewed" : true,
+  "seed" : "seed09",
+  "stderr" : "INVALID_TOPOLOGY: synchronous call cycle detected: root.start -> branchB.work -> end.read -> root.start",
+  "stdout" : ""
+}, {
+  "baseline" : {
+    "issues" : [ {
+      "kind" : "unsupported-local-retry-timing",
+      "message" : "unsupported retry timing in retry instance 'downstream': exponential backoff",
+      "serviceId" : "core"
+    } ]
+  },
+  "caseId" : "mut28-exponential-wait",
+  "classification" : "expected-partial",
+  "discrepancyExplanation" : null,
+  "exitCode" : 0,
+  "expectedCompletenessGaps" : [ {
+    "callPath" : [ "edge-to-core", "core-to-store" ],
+    "reasonContains" : "exponential backoff",
+    "ruleId" : "RL002"
+  } ],
+  "expectedFindings" : [ ],
+  "expectedStatus" : "partially-analyzable",
+  "metrics" : {
+    "fn" : 0,
+    "fp" : 0,
+    "tp" : 0,
+    "f1" : null,
+    "precision" : null,
+    "recall" : null
+  },
+  "mutations" : [ "enable-exponential-wait" ],
+  "observedCompletenessGaps" : [ {
+    "callPath" : [ "edge-to-core", "core-to-store" ],
+    "reason" : "downstream fixed wait unsupported: unsupported retry timing in retry instance 'downstream': exponential backoff",
+    "ruleId" : "RL002"
+  } ],
+  "observedFindings" : [ ],
+  "observedStatus" : "partially-analyzable",
+  "rationale" : "Exponential backoff makes only the affected RL002 adjacent-pair arithmetic unsupported.",
+  "reviewNote" : "Reviewed overlay against the named seed; expected arithmetic, topology, idempotency, status, and completeness were checked manually.",
+  "reviewed" : true,
+  "seed" : "seed02",
+  "stderr" : "",
+  "stdout" : "{\r\n  \"schemaVersion\" : 1,\r\n  \"project\" : {\r\n    \"name\" : \"seed02-linear-three\",\r\n    \"services\" : 3,\r\n    \"operations\" : 3,\r\n    \"calls\" : 2\r\n  },\r\n  \"findings\" : [ ],\r\n  \"completenessGaps\" : [ {\r\n    \"ruleId\" : \"RL002\",\r\n    \"operationId\" : \"core.lookup\",\r\n    \"callPath\" : [ \"edge-to-core\", \"core-to-store\" ],\r\n    \"reason\" : \"downstream fixed wait unsupported: unsupported retry timing in retry instance 'downstream': exponential backoff\"\r\n  } ],\r\n  \"summary\" : {\r\n    \"errors\" : 0,\r\n    \"warnings\" : 0,\r\n    \"completenessGaps\" : 1\r\n  }\r\n}"
+}, {
+  "baseline" : {
+    "issues" : [ {
+      "kind" : "unsupported-local-retry-timing",
+      "message" : "unsupported retry timing in retry config 'conservative': randomized wait",
+      "serviceId" : "middle"
+    } ]
+  },
+  "caseId" : "mut29-randomized-wait",
+  "classification" : "expected-partial",
+  "discrepancyExplanation" : null,
+  "exitCode" : 0,
+  "expectedCompletenessGaps" : [ {
+    "callPath" : [ "caller-to-middle", "middle-to-target" ],
+    "reasonContains" : "randomized wait",
+    "ruleId" : "RL002"
+  } ],
+  "expectedFindings" : [ ],
+  "expectedStatus" : "partially-analyzable",
+  "metrics" : {
+    "fn" : 0,
+    "fp" : 0,
+    "tp" : 0,
+    "f1" : null,
+    "precision" : null,
+    "recall" : null
+  },
+  "mutations" : [ "enable-randomized-wait" ],
+  "observedCompletenessGaps" : [ {
+    "callPath" : [ "caller-to-middle", "middle-to-target" ],
+    "reason" : "downstream fixed wait unsupported: unsupported retry timing in retry config 'conservative': randomized wait",
+    "ruleId" : "RL002"
+  } ],
+  "observedFindings" : [ ],
+  "observedStatus" : "partially-analyzable",
+  "rationale" : "Randomized wait makes only the affected RL002 adjacent-pair arithmetic unsupported.",
+  "reviewNote" : "Reviewed overlay against the named seed; expected arithmetic, topology, idempotency, status, and completeness were checked manually.",
+  "reviewed" : true,
+  "seed" : "seed06",
+  "stderr" : "",
+  "stdout" : "{\r\n  \"schemaVersion\" : 1,\r\n  \"project\" : {\r\n    \"name\" : \"seed06-inheritance-kebab\",\r\n    \"services\" : 3,\r\n    \"operations\" : 3,\r\n    \"calls\" : 2\r\n  },\r\n  \"findings\" : [ ],\r\n  \"completenessGaps\" : [ {\r\n    \"ruleId\" : \"RL002\",\r\n    \"operationId\" : \"middle.work\",\r\n    \"callPath\" : [ \"caller-to-middle\", \"middle-to-target\" ],\r\n    \"reason\" : \"downstream fixed wait unsupported: unsupported retry timing in retry config 'conservative': randomized wait\"\r\n  } ],\r\n  \"summary\" : {\r\n    \"errors\" : 0,\r\n    \"warnings\" : 0,\r\n    \"completenessGaps\" : 1\r\n  }\r\n}"
+}, {
+  "baseline" : {
+    "issues" : [ {
+      "kind" : "unsupported-local-retry-timing",
+      "message" : "unsupported retry timing in retry instance 'edge': exponential backoff",
+      "serviceId" : "b"
+    } ]
+  },
+  "caseId" : "mut30-exponential-linear-four",
+  "classification" : "expected-partial",
+  "discrepancyExplanation" : null,
+  "exitCode" : 0,
+  "expectedCompletenessGaps" : [ {
+    "callPath" : [ "a-to-b", "b-to-c" ],
+    "reasonContains" : "exponential backoff",
+    "ruleId" : "RL002"
+  } ],
+  "expectedFindings" : [ ],
+  "expectedStatus" : "partially-analyzable",
+  "metrics" : {
+    "fn" : 0,
+    "fp" : 0,
+    "tp" : 0,
+    "f1" : null,
+    "precision" : null,
+    "recall" : null
+  },
+  "mutations" : [ "enable-exponential-wait" ],
+  "observedCompletenessGaps" : [ {
+    "callPath" : [ "a-to-b", "b-to-c" ],
+    "reason" : "downstream fixed wait unsupported: unsupported retry timing in retry instance 'edge': exponential backoff",
+    "ruleId" : "RL002"
+  } ],
+  "observedFindings" : [ ],
+  "observedStatus" : "partially-analyzable",
+  "rationale" : "Exponential timing on b-to-c creates one explicit RL002 gap while other rule analysis remains available.",
+  "reviewNote" : "Reviewed overlay against the named seed; expected arithmetic, topology, idempotency, status, and completeness were checked manually.",
+  "reviewed" : true,
+  "seed" : "seed07",
+  "stderr" : "",
+  "stdout" : "{\r\n  \"schemaVersion\" : 1,\r\n  \"project\" : {\r\n    \"name\" : \"seed07-linear-four\",\r\n    \"services\" : 4,\r\n    \"operations\" : 4,\r\n    \"calls\" : 3\r\n  },\r\n  \"findings\" : [ ],\r\n  \"completenessGaps\" : [ {\r\n    \"ruleId\" : \"RL002\",\r\n    \"operationId\" : \"b.step\",\r\n    \"callPath\" : [ \"a-to-b\", \"b-to-c\" ],\r\n    \"reason\" : \"downstream fixed wait unsupported: unsupported retry timing in retry instance 'edge': exponential backoff\"\r\n  } ],\r\n  \"summary\" : {\r\n    \"errors\" : 0,\r\n    \"warnings\" : 0,\r\n    \"completenessGaps\" : 1\r\n  }\r\n}"
+} ]

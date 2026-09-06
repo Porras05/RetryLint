@@ -1,0 +1,11 @@
+{
+  "caseId": "seed05",
+  "seed": "seed05",
+  "mutations": [],
+  "expectedStatus": "valid",
+  "expectedFindings": [],
+  "expectedCompletenessGaps": [],
+  "rationale": "The reviewed supported seed is intentionally below all rule thresholds and has sufficient adjacent timeout budgets.",
+  "reviewed": true,
+  "reviewNote": "Reviewed as a supported safe seed: topology, retry products, adjacent timeout budgets, idempotency, and completeness were checked manually."
+}

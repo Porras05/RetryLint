@@ -1,0 +1,45 @@
+version: 1
+name: seed07-linear-four
+services:
+  - id: a
+    config: services/a/application.yml
+  - id: b
+    config: services/b/application.yml
+  - id: c
+    config: services/c/application.yml
+  - id: d
+    config: services/d/application.yml
+operations:
+  - id: a.start
+    service: a
+    idempotency: idempotent
+  - id: b.step
+    service: b
+    idempotency: idempotent
+  - id: c.step
+    service: c
+    idempotency: idempotent
+  - id: d.finish
+    service: d
+    idempotency: idempotent
+calls:
+  - id: a-to-b
+    from: a.start
+    to: b.step
+    retry: edge
+    timeLimiter: outer
+  - id: b-to-c
+    from: b.step
+    to: c.step
+    retry: edge
+    timeLimiter: middle
+  - id: c-to-d
+    from: c.step
+    to: d.finish
+    retry: edge
+    timeLimiter: inner
+analysis:
+  roots: [a.start]
+  amplificationWarning: 9
+  amplificationError: 27
+  failOn: never

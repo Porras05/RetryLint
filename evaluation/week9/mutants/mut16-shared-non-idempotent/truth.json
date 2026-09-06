@@ -1,0 +1,30 @@
+{
+  "caseId": "mut16-shared-non-idempotent",
+  "seed": "seed04",
+  "mutations": [
+    "idempotent-to-non-idempotent"
+  ],
+  "expectedStatus": "valid",
+  "expectedFindings": [
+    {
+      "ruleId": "RL003",
+      "severity": "error",
+      "callPath": [
+        "apiA-to-ledger"
+      ],
+      "targetOperation": "ledger.write"
+    },
+    {
+      "ruleId": "RL003",
+      "severity": "error",
+      "callPath": [
+        "apiB-to-ledger"
+      ],
+      "targetOperation": "ledger.write"
+    }
+  ],
+  "expectedCompletenessGaps": [],
+  "rationale": "Both two-attempt calls can repeat the now non-idempotent shared target.",
+  "reviewed": true,
+  "reviewNote": "Reviewed overlay against the named seed; expected arithmetic, topology, idempotency, status, and completeness were checked manually."
+}

@@ -1,0 +1,23 @@
+{
+  "caseId": "mut12-timeout-boundary",
+  "seed": "seed10",
+  "mutations": [
+    "reduce-incoming-timeout"
+  ],
+  "expectedStatus": "valid",
+  "expectedFindings": [
+    {
+      "ruleId": "RL002",
+      "severity": "warning",
+      "callPath": [
+        "client-to-worker",
+        "worker-to-database"
+      ],
+      "targetOperation": "database.read"
+    }
+  ],
+  "expectedCompletenessGaps": [],
+  "rationale": "A 2 s incoming timeout is below the 2.1 s downstream retry window.",
+  "reviewed": true,
+  "reviewNote": "Reviewed overlay against the named seed; expected arithmetic, topology, idempotency, status, and completeness were checked manually."
+}

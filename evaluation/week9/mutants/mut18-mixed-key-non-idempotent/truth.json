@@ -1,0 +1,22 @@
+{
+  "caseId": "mut18-mixed-key-non-idempotent",
+  "seed": "seed10",
+  "mutations": [
+    "idempotent-to-non-idempotent"
+  ],
+  "expectedStatus": "valid",
+  "expectedFindings": [
+    {
+      "ruleId": "RL003",
+      "severity": "error",
+      "callPath": [
+        "worker-to-database"
+      ],
+      "targetOperation": "database.read"
+    }
+  ],
+  "expectedCompletenessGaps": [],
+  "rationale": "The kebab-configured two-attempt retry targets a non-idempotent operation.",
+  "reviewed": true,
+  "reviewNote": "Reviewed overlay against the named seed; expected arithmetic, topology, idempotency, status, and completeness were checked manually."
+}

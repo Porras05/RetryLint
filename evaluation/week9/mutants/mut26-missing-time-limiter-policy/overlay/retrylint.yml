@@ -1,0 +1,35 @@
+version: 1
+name: seed02-linear-three
+services:
+  - id: edge
+    config: services/edge/application.yml
+  - id: core
+    config: services/core/application.yml
+  - id: store
+    config: services/store/application.yml
+operations:
+  - id: edge.request
+    service: edge
+    idempotency: idempotent
+  - id: core.lookup
+    service: core
+    idempotency: idempotent
+  - id: store.read
+    service: store
+    idempotency: idempotent
+calls:
+  - id: edge-to-core
+    from: edge.request
+    to: core.lookup
+    retry: incoming
+    timeLimiter: outer
+  - id: core-to-store
+    from: core.lookup
+    to: store.read
+    retry: downstream
+    timeLimiter: missingTimeLimiter
+analysis:
+  roots: [edge.request]
+  amplificationWarning: 9
+  amplificationError: 27
+  failOn: never

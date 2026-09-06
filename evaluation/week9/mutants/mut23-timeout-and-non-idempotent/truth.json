@@ -1,0 +1,32 @@
+{
+  "caseId": "mut23-timeout-and-non-idempotent",
+  "seed": "seed10",
+  "mutations": [
+    "increase-downstream-timeout",
+    "idempotent-to-non-idempotent"
+  ],
+  "expectedStatus": "valid",
+  "expectedFindings": [
+    {
+      "ruleId": "RL002",
+      "severity": "error",
+      "callPath": [
+        "client-to-worker",
+        "worker-to-database"
+      ],
+      "targetOperation": "database.read"
+    },
+    {
+      "ruleId": "RL003",
+      "severity": "error",
+      "callPath": [
+        "worker-to-database"
+      ],
+      "targetOperation": "database.read"
+    }
+  ],
+  "expectedCompletenessGaps": [],
+  "rationale": "The 4.1 s retry window exceeds 3 s and the repeated target is non-idempotent.",
+  "reviewed": true,
+  "reviewNote": "Reviewed overlay against the named seed; expected arithmetic, topology, idempotency, status, and completeness were checked manually."
+}

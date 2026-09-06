@@ -1,0 +1,14 @@
+{
+  "caseId": "mut25-missing-retry-policy",
+  "seed": "seed01",
+  "mutations": [
+    "reference-missing-retry-policy"
+  ],
+  "expectedStatus": "invalid",
+  "expectedFindings": [],
+  "expectedCompletenessGaps": [],
+  "rationale": "The call references a retry instance absent from the caller configuration.",
+  "reviewed": true,
+  "reviewNote": "Reviewed overlay against the named seed; expected arithmetic, topology, idempotency, status, and completeness were checked manually.",
+  "diagnosticContains": "unknown retry policy"
+}

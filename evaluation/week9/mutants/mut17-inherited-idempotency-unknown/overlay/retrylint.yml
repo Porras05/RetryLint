@@ -1,0 +1,35 @@
+version: 1
+name: seed06-inheritance-kebab
+services:
+  - id: caller
+    config: services/caller/application.yml
+  - id: middle
+    config: services/middle/application.yml
+  - id: target
+    config: services/target/application.yml
+operations:
+  - id: caller.start
+    service: caller
+    idempotency: idempotent
+  - id: middle.work
+    service: middle
+    idempotency: idempotent
+  - id: target.read
+    service: target
+    idempotency: unknown
+calls:
+  - id: caller-to-middle
+    from: caller.start
+    to: middle.work
+    retry: incoming
+    timeLimiter: outer
+  - id: middle-to-target
+    from: middle.work
+    to: target.read
+    retry: inherited
+    timeLimiter: inherited
+analysis:
+  roots: [caller.start]
+  amplificationWarning: 9
+  amplificationError: 27
+  failOn: never

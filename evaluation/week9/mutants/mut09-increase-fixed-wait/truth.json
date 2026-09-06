@@ -1,0 +1,23 @@
+{
+  "caseId": "mut09-increase-fixed-wait",
+  "seed": "seed06",
+  "mutations": [
+    "increase-fixed-wait"
+  ],
+  "expectedStatus": "valid",
+  "expectedFindings": [
+    {
+      "ruleId": "RL002",
+      "severity": "warning",
+      "callPath": [
+        "caller-to-middle",
+        "middle-to-target"
+      ],
+      "targetOperation": "target.read"
+    }
+  ],
+  "expectedCompletenessGaps": [],
+  "rationale": "Two 500 ms attempts plus a 5 s fixed wait exceeds the 5 s incoming budget.",
+  "reviewed": true,
+  "reviewNote": "Reviewed overlay against the named seed; expected arithmetic, topology, idempotency, status, and completeness were checked manually."
+}

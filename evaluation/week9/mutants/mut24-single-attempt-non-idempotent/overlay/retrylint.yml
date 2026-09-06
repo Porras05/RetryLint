@@ -1,0 +1,35 @@
+version: 1
+name: seed05-single-attempt-chain
+services:
+  - id: alpha
+    config: services/alpha/application.yml
+  - id: beta
+    config: services/beta/application.yml
+  - id: gamma
+    config: services/gamma/application.yml
+operations:
+  - id: alpha.start
+    service: alpha
+    idempotency: idempotent
+  - id: beta.step
+    service: beta
+    idempotency: idempotent
+  - id: gamma.finish
+    service: gamma
+    idempotency: non-idempotent
+calls:
+  - id: alpha-to-beta
+    from: alpha.start
+    to: beta.step
+    retry: once
+    timeLimiter: outer
+  - id: beta-to-gamma
+    from: beta.step
+    to: gamma.finish
+    retry: once
+    timeLimiter: inner
+analysis:
+  roots: [alpha.start]
+  amplificationWarning: 9
+  amplificationError: 27
+  failOn: never

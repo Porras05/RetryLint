@@ -1,0 +1,14 @@
+{
+  "caseId": "mut26-missing-time-limiter-policy",
+  "seed": "seed02",
+  "mutations": [
+    "reference-missing-time-limiter-policy"
+  ],
+  "expectedStatus": "invalid",
+  "expectedFindings": [],
+  "expectedCompletenessGaps": [],
+  "rationale": "The downstream call references a TimeLimiter instance absent from the caller configuration.",
+  "reviewed": true,
+  "reviewNote": "Reviewed overlay against the named seed; expected arithmetic, topology, idempotency, status, and completeness were checked manually.",
+  "diagnosticContains": "unknown time-limiter policy"
+}

@@ -1,0 +1,22 @@
+{
+  "caseId": "mut17-inherited-idempotency-unknown",
+  "seed": "seed06",
+  "mutations": [
+    "idempotent-to-unknown"
+  ],
+  "expectedStatus": "valid",
+  "expectedFindings": [
+    {
+      "ruleId": "RL003",
+      "severity": "warning",
+      "callPath": [
+        "middle-to-target"
+      ],
+      "targetOperation": "target.read"
+    }
+  ],
+  "expectedCompletenessGaps": [],
+  "rationale": "The inherited two-attempt retry can repeat a target of unknown idempotency.",
+  "reviewed": true,
+  "reviewNote": "Reviewed overlay against the named seed; expected arithmetic, topology, idempotency, status, and completeness were checked manually."
+}

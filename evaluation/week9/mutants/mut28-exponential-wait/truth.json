@@ -1,0 +1,22 @@
+{
+  "caseId": "mut28-exponential-wait",
+  "seed": "seed02",
+  "mutations": [
+    "enable-exponential-wait"
+  ],
+  "expectedStatus": "partially-analyzable",
+  "expectedFindings": [],
+  "expectedCompletenessGaps": [
+    {
+      "ruleId": "RL002",
+      "callPath": [
+        "edge-to-core",
+        "core-to-store"
+      ],
+      "reasonContains": "exponential backoff"
+    }
+  ],
+  "rationale": "Exponential backoff makes only the affected RL002 adjacent-pair arithmetic unsupported.",
+  "reviewed": true,
+  "reviewNote": "Reviewed overlay against the named seed; expected arithmetic, topology, idempotency, status, and completeness were checked manually."
+}

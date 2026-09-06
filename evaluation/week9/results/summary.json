@@ -1,0 +1,70 @@
+{
+  "baselineIssueCount" : 3,
+  "executedCaseCount" : 40,
+  "falseResultCount" : 0,
+  "falseResults" : [ ],
+  "invalidRejectedCount" : 3,
+  "mutantCount" : 30,
+  "mutationOperatorDistribution" : {
+    "enable-exponential-wait" : 2,
+    "enable-randomized-wait" : 1,
+    "idempotent-to-non-idempotent" : 7,
+    "idempotent-to-unknown" : 5,
+    "increase-attempts-consecutive-calls" : 5,
+    "increase-attempts-one-call" : 4,
+    "increase-downstream-timeout" : 3,
+    "increase-fixed-wait" : 1,
+    "introduce-graph-cycle" : 1,
+    "reduce-incoming-timeout" : 4,
+    "reference-missing-retry-policy" : 1,
+    "reference-missing-time-limiter-policy" : 1
+  },
+  "overall" : {
+    "fn" : 0,
+    "fp" : 0,
+    "tp" : 30,
+    "f1" : 1.0,
+    "precision" : 1.0,
+    "recall" : 1.0
+  },
+  "partialAnalysisCount" : 3,
+  "perRule" : [ {
+    "metrics" : {
+      "fn" : 0,
+      "fp" : 0,
+      "tp" : 9,
+      "f1" : 1.0,
+      "precision" : 1.0,
+      "recall" : 1.0
+    },
+    "ruleId" : "RL001"
+  }, {
+    "metrics" : {
+      "fn" : 0,
+      "fp" : 0,
+      "tp" : 8,
+      "f1" : 1.0,
+      "precision" : 1.0,
+      "recall" : 1.0
+    },
+    "ruleId" : "RL002"
+  }, {
+    "metrics" : {
+      "fn" : 0,
+      "fp" : 0,
+      "tp" : 13,
+      "f1" : 1.0,
+      "precision" : 1.0,
+      "recall" : 1.0
+    },
+    "ruleId" : "RL003"
+  } ],
+  "retryLintVersion" : "0.1.0",
+  "schemaVersion" : 1,
+  "scoringUnit" : "(ruleId, severity, ordered callPath, targetOperation)",
+  "seedCount" : 10,
+  "skippedCaseCount" : 0,
+  "totalCaseCount" : 40,
+  "validFullAnalysisCount" : 34,
+  "zeroDenominatorConvention" : "undefined metrics are serialized as null"
+}

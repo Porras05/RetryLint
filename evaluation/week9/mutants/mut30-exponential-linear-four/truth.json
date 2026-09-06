@@ -1,0 +1,22 @@
+{
+  "caseId": "mut30-exponential-linear-four",
+  "seed": "seed07",
+  "mutations": [
+    "enable-exponential-wait"
+  ],
+  "expectedStatus": "partially-analyzable",
+  "expectedFindings": [],
+  "expectedCompletenessGaps": [
+    {
+      "ruleId": "RL002",
+      "callPath": [
+        "a-to-b",
+        "b-to-c"
+      ],
+      "reasonContains": "exponential backoff"
+    }
+  ],
+  "rationale": "Exponential timing on b-to-c creates one explicit RL002 gap while other rule analysis remains available.",
+  "reviewed": true,
+  "reviewNote": "Reviewed overlay against the named seed; expected arithmetic, topology, idempotency, status, and completeness were checked manually."
+}

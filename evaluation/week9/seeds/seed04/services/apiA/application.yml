@@ -1,0 +1,10 @@
+resilience4j:
+  retry:
+    instances:
+      ledgerRetry:
+        maxAttempts: 2
+        waitDuration: 100ms
+  timelimiter:
+    instances:
+      ledgerTimeout:
+        timeoutDuration: 2s

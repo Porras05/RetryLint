@@ -1,0 +1,22 @@
+{
+  "caseId": "mut04-multi-root-attempts",
+  "seed": "seed04",
+  "mutations": [
+    "increase-attempts-one-call"
+  ],
+  "expectedStatus": "valid",
+  "expectedFindings": [
+    {
+      "ruleId": "RL001",
+      "severity": "warning",
+      "callPath": [
+        "apiA-to-ledger"
+      ],
+      "targetOperation": "ledger.write"
+    }
+  ],
+  "expectedCompletenessGaps": [],
+  "rationale": "Only the first root has a 9-attempt path to the shared target.",
+  "reviewed": true,
+  "reviewNote": "Reviewed overlay against the named seed; expected arithmetic, topology, idempotency, status, and completeness were checked manually."
+}

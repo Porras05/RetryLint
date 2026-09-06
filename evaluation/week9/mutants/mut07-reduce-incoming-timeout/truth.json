@@ -1,0 +1,23 @@
+{
+  "caseId": "mut07-reduce-incoming-timeout",
+  "seed": "seed02",
+  "mutations": [
+    "reduce-incoming-timeout"
+  ],
+  "expectedStatus": "valid",
+  "expectedFindings": [
+    {
+      "ruleId": "RL002",
+      "severity": "warning",
+      "callPath": [
+        "edge-to-core",
+        "core-to-store"
+      ],
+      "targetOperation": "store.read"
+    }
+  ],
+  "expectedCompletenessGaps": [],
+  "rationale": "An 800 ms incoming budget is below the reviewed 1.1 s downstream retry window.",
+  "reviewed": true,
+  "reviewNote": "Reviewed overlay against the named seed; expected arithmetic, topology, idempotency, status, and completeness were checked manually."
+}

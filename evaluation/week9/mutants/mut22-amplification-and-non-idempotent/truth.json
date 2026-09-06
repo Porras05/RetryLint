@@ -1,0 +1,31 @@
+{
+  "caseId": "mut22-amplification-and-non-idempotent",
+  "seed": "seed03",
+  "mutations": [
+    "increase-attempts-one-call",
+    "idempotent-to-non-idempotent"
+  ],
+  "expectedStatus": "valid",
+  "expectedFindings": [
+    {
+      "ruleId": "RL001",
+      "severity": "warning",
+      "callPath": [
+        "gateway-to-catalog"
+      ],
+      "targetOperation": "catalog.search"
+    },
+    {
+      "ruleId": "RL003",
+      "severity": "error",
+      "callPath": [
+        "gateway-to-catalog"
+      ],
+      "targetOperation": "catalog.search"
+    }
+  ],
+  "expectedCompletenessGaps": [],
+  "rationale": "The catalog branch reaches 9x and repeats a non-idempotent target.",
+  "reviewed": true,
+  "reviewNote": "Reviewed overlay against the named seed; expected arithmetic, topology, idempotency, status, and completeness were checked manually."
+}

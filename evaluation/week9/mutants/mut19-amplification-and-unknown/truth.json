@@ -1,0 +1,32 @@
+{
+  "caseId": "mut19-amplification-and-unknown",
+  "seed": "seed02",
+  "mutations": [
+    "increase-attempts-consecutive-calls",
+    "idempotent-to-unknown"
+  ],
+  "expectedStatus": "valid",
+  "expectedFindings": [
+    {
+      "ruleId": "RL001",
+      "severity": "warning",
+      "callPath": [
+        "edge-to-core",
+        "core-to-store"
+      ],
+      "targetOperation": "store.read"
+    },
+    {
+      "ruleId": "RL003",
+      "severity": "warning",
+      "callPath": [
+        "core-to-store"
+      ],
+      "targetOperation": "store.read"
+    }
+  ],
+  "expectedCompletenessGaps": [],
+  "rationale": "The path reaches 9x and the final three-attempt call targets unknown idempotency.",
+  "reviewed": true,
+  "reviewNote": "Reviewed overlay against the named seed; expected arithmetic, topology, idempotency, status, and completeness were checked manually."
+}

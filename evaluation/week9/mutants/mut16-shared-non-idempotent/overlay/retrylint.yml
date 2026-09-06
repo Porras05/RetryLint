@@ -1,0 +1,35 @@
+version: 1
+name: seed04-multiple-roots
+services:
+  - id: apiA
+    config: services/apiA/application.yml
+  - id: apiB
+    config: services/apiB/application.yml
+  - id: ledger
+    config: services/ledger/application.yml
+operations:
+  - id: apiA.root
+    service: apiA
+    idempotency: idempotent
+  - id: apiB.root
+    service: apiB
+    idempotency: idempotent
+  - id: ledger.write
+    service: ledger
+    idempotency: non-idempotent
+calls:
+  - id: apiA-to-ledger
+    from: apiA.root
+    to: ledger.write
+    retry: ledgerRetry
+    timeLimiter: ledgerTimeout
+  - id: apiB-to-ledger
+    from: apiB.root
+    to: ledger.write
+    retry: ledgerRetry
+    timeLimiter: ledgerTimeout
+analysis:
+  roots: [apiA.root, apiB.root]
+  amplificationWarning: 9
+  amplificationError: 27
+  failOn: never

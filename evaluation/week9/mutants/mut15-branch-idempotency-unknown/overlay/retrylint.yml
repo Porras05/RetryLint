@@ -1,0 +1,35 @@
+version: 1
+name: seed03-branching
+services:
+  - id: gateway
+    config: services/gateway/application.yml
+  - id: catalog
+    config: services/catalog/application.yml
+  - id: pricing
+    config: services/pricing/application.yml
+operations:
+  - id: gateway.root
+    service: gateway
+    idempotency: idempotent
+  - id: catalog.search
+    service: catalog
+    idempotency: unknown
+  - id: pricing.quote
+    service: pricing
+    idempotency: idempotent
+calls:
+  - id: gateway-to-catalog
+    from: gateway.root
+    to: catalog.search
+    retry: catalogRetry
+    timeLimiter: catalogTimeout
+  - id: gateway-to-pricing
+    from: gateway.root
+    to: pricing.quote
+    retry: pricingRetry
+    timeLimiter: pricingTimeout
+analysis:
+  roots: [gateway.root]
+  amplificationWarning: 9
+  amplificationError: 27
+  failOn: never

@@ -1,0 +1,10 @@
+resilience4j:
+  retry:
+    instances:
+      quick:
+        maxAttempts: 2
+        waitDuration: 100ms
+  timelimiter:
+    instances:
+      client:
+        timeoutDuration: 2s

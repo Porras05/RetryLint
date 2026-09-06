@@ -1,0 +1,23 @@
+{
+  "caseId": "mut06-diamond-attempts",
+  "seed": "seed09",
+  "mutations": [
+    "increase-attempts-consecutive-calls"
+  ],
+  "expectedStatus": "valid",
+  "expectedFindings": [
+    {
+      "ruleId": "RL001",
+      "severity": "warning",
+      "callPath": [
+        "root-to-b",
+        "b-to-end"
+      ],
+      "targetOperation": "end.read"
+    }
+  ],
+  "expectedCompletenessGaps": [],
+  "rationale": "The left diamond branch becomes a 3 x 3 = 9 path.",
+  "reviewed": true,
+  "reviewNote": "Reviewed overlay against the named seed; expected arithmetic, topology, idempotency, status, and completeness were checked manually."
+}

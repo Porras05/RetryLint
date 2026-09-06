@@ -1,0 +1,35 @@
+version: 1
+name: seed10-supported-key-mix
+services:
+  - id: client
+    config: services/client/application.yml
+  - id: worker
+    config: services/worker/application.yml
+  - id: database
+    config: services/database/application.yml
+operations:
+  - id: client.request
+    service: client
+    idempotency: idempotent
+  - id: worker.query
+    service: worker
+    idempotency: idempotent
+  - id: database.read
+    service: database
+    idempotency: idempotent
+calls:
+  - id: client-to-worker
+    from: client.request
+    to: worker.query
+    retry: incoming
+    timeLimiter: incoming
+  - id: worker-to-database
+    from: worker.query
+    to: database.read
+    retry: downstream
+    timeLimiter: downstream
+analysis:
+  roots: [client.request]
+  amplificationWarning: 9
+  amplificationError: 27
+  failOn: never

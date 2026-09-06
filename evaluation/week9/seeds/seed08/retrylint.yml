@@ -1,0 +1,28 @@
+version: 1
+name: seed08-disconnected-roots
+services:
+  - id: left
+    config: services/left/application.yml
+  - id: right
+    config: services/right/application.yml
+operations:
+  - id: left.root
+    service: left
+    idempotency: idempotent
+  - id: left.leaf
+    service: left
+    idempotency: idempotent
+  - id: right.root
+    service: right
+    idempotency: idempotent
+calls:
+  - id: left-root-to-leaf
+    from: left.root
+    to: left.leaf
+    retry: local
+    timeLimiter: local
+analysis:
+  roots: [left.root, right.root]
+  amplificationWarning: 9
+  amplificationError: 27
+  failOn: never

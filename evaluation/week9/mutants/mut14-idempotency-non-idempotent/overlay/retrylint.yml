@@ -1,0 +1,25 @@
+version: 1
+name: seed01-linear-two
+services:
+  - id: frontend
+    config: services/frontend/application.yml
+  - id: backend
+    config: services/backend/application.yml
+operations:
+  - id: frontend.get
+    service: frontend
+    idempotency: idempotent
+  - id: backend.fetch
+    service: backend
+    idempotency: non-idempotent
+calls:
+  - id: frontend-to-backend
+    from: frontend.get
+    to: backend.fetch
+    retry: quick
+    timeLimiter: client
+analysis:
+  roots: [frontend.get]
+  amplificationWarning: 9
+  amplificationError: 27
+  failOn: never

@@ -1,0 +1,23 @@
+{
+  "caseId": "mut08-increase-downstream-timeout",
+  "seed": "seed02",
+  "mutations": [
+    "increase-downstream-timeout"
+  ],
+  "expectedStatus": "valid",
+  "expectedFindings": [
+    {
+      "ruleId": "RL002",
+      "severity": "warning",
+      "callPath": [
+        "edge-to-core",
+        "core-to-store"
+      ],
+      "targetOperation": "store.read"
+    }
+  ],
+  "expectedCompletenessGaps": [],
+  "rationale": "Two 3 s attempts plus one 100 ms wait exceeds the 5 s caller budget.",
+  "reviewed": true,
+  "reviewNote": "Reviewed overlay against the named seed; expected arithmetic, topology, idempotency, status, and completeness were checked manually."
+}

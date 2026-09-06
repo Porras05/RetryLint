@@ -1,0 +1,50 @@
+version: 1
+name: seed09-diamond
+services:
+  - id: root
+    config: services/root/application.yml
+  - id: branchB
+    config: services/branchB/application.yml
+  - id: branchC
+    config: services/branchC/application.yml
+  - id: end
+    config: services/end/application.yml
+operations:
+  - id: root.start
+    service: root
+    idempotency: idempotent
+  - id: branchB.work
+    service: branchB
+    idempotency: idempotent
+  - id: branchC.work
+    service: branchC
+    idempotency: idempotent
+  - id: end.read
+    service: end
+    idempotency: unknown
+calls:
+  - id: root-to-b
+    from: root.start
+    to: branchB.work
+    retry: toB
+    timeLimiter: toB
+  - id: root-to-c
+    from: root.start
+    to: branchC.work
+    retry: toC
+    timeLimiter: toC
+  - id: b-to-end
+    from: branchB.work
+    to: end.read
+    retry: end
+    timeLimiter: end
+  - id: c-to-end
+    from: branchC.work
+    to: end.read
+    retry: end
+    timeLimiter: end
+analysis:
+  roots: [root.start]
+  amplificationWarning: 9
+  amplificationError: 27
+  failOn: never

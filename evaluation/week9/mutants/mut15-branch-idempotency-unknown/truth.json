@@ -1,0 +1,22 @@
+{
+  "caseId": "mut15-branch-idempotency-unknown",
+  "seed": "seed03",
+  "mutations": [
+    "idempotent-to-unknown"
+  ],
+  "expectedStatus": "valid",
+  "expectedFindings": [
+    {
+      "ruleId": "RL003",
+      "severity": "warning",
+      "callPath": [
+        "gateway-to-catalog"
+      ],
+      "targetOperation": "catalog.search"
+    }
+  ],
+  "expectedCompletenessGaps": [],
+  "rationale": "Only the catalog branch target becomes unknown and remains retried twice.",
+  "reviewed": true,
+  "reviewNote": "Reviewed overlay against the named seed; expected arithmetic, topology, idempotency, status, and completeness were checked manually."
+}

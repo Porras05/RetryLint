@@ -1,0 +1,23 @@
+{
+  "caseId": "mut02-consecutive-attempts",
+  "seed": "seed02",
+  "mutations": [
+    "increase-attempts-consecutive-calls"
+  ],
+  "expectedStatus": "valid",
+  "expectedFindings": [
+    {
+      "ruleId": "RL001",
+      "severity": "warning",
+      "callPath": [
+        "edge-to-core",
+        "core-to-store"
+      ],
+      "targetOperation": "store.read"
+    }
+  ],
+  "expectedCompletenessGaps": [],
+  "rationale": "Three attempts on each of two consecutive calls yields 3 x 3 = 9.",
+  "reviewed": true,
+  "reviewNote": "Reviewed overlay against the named seed; expected arithmetic, topology, idempotency, status, and completeness were checked manually."
+}

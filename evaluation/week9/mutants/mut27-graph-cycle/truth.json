@@ -1,0 +1,14 @@
+{
+  "caseId": "mut27-graph-cycle",
+  "seed": "seed09",
+  "mutations": [
+    "introduce-graph-cycle"
+  ],
+  "expectedStatus": "invalid",
+  "expectedFindings": [],
+  "expectedCompletenessGaps": [],
+  "rationale": "Adding end.read -> root.start creates the concrete synchronous cycle root -> branch -> end -> root.",
+  "reviewed": true,
+  "reviewNote": "Reviewed overlay against the named seed; expected arithmetic, topology, idempotency, status, and completeness were checked manually.",
+  "diagnosticContains": "cycle"
+}

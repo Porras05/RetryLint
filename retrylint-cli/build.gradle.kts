@@ -45,3 +45,13 @@ application {
 tasks.named<JavaExec>("run") {
     workingDir = rootProject.projectDir
 }
+
+tasks.register<JavaExec>("week9Benchmark") {
+    group = "verification"
+    description = "Run the checked-in Week 9 mutation benchmark."
+    dependsOn(tasks.named("testClasses"))
+    classpath = sourceSets["test"].runtimeClasspath
+    mainClass.set("retrylint.evaluation.Week9BenchmarkMainKt")
+    workingDir = rootProject.projectDir
+    args(rootProject.layout.projectDirectory.dir("evaluation/week9").asFile.absolutePath)
+}

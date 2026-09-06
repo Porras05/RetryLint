@@ -1,0 +1,40 @@
+{
+  "caseId": "mut21-timeout-and-unknown",
+  "seed": "seed09",
+  "mutations": [
+    "reduce-incoming-timeout",
+    "idempotent-to-unknown"
+  ],
+  "expectedStatus": "valid",
+  "expectedFindings": [
+    {
+      "ruleId": "RL002",
+      "severity": "warning",
+      "callPath": [
+        "root-to-b",
+        "b-to-end"
+      ],
+      "targetOperation": "end.read"
+    },
+    {
+      "ruleId": "RL003",
+      "severity": "warning",
+      "callPath": [
+        "b-to-end"
+      ],
+      "targetOperation": "end.read"
+    },
+    {
+      "ruleId": "RL003",
+      "severity": "warning",
+      "callPath": [
+        "c-to-end"
+      ],
+      "targetOperation": "end.read"
+    }
+  ],
+  "expectedCompletenessGaps": [],
+  "rationale": "The left incoming budget is too small and both retried branches target unknown idempotency.",
+  "reviewed": true,
+  "reviewNote": "Reviewed overlay against the named seed; expected arithmetic, topology, idempotency, status, and completeness were checked manually."
+}

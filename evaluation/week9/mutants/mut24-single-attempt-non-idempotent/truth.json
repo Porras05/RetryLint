@@ -1,0 +1,13 @@
+{
+  "caseId": "mut24-single-attempt-non-idempotent",
+  "seed": "seed05",
+  "mutations": [
+    "idempotent-to-non-idempotent"
+  ],
+  "expectedStatus": "valid",
+  "expectedFindings": [],
+  "expectedCompletenessGaps": [],
+  "rationale": "A non-idempotent target with maxAttempts 1 is not repeated and produces no RL003.",
+  "reviewed": true,
+  "reviewNote": "Reviewed overlay against the named seed; expected arithmetic, topology, idempotency, status, and completeness were checked manually."
+}

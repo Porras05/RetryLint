@@ -1,0 +1,22 @@
+{
+  "caseId": "mut01-one-call-attempts",
+  "seed": "seed01",
+  "mutations": [
+    "increase-attempts-one-call"
+  ],
+  "expectedStatus": "valid",
+  "expectedFindings": [
+    {
+      "ruleId": "RL001",
+      "severity": "warning",
+      "callPath": [
+        "frontend-to-backend"
+      ],
+      "targetOperation": "backend.fetch"
+    }
+  ],
+  "expectedCompletenessGaps": [],
+  "rationale": "Increasing one retry from 2 to 9 reaches the 9x warning threshold.",
+  "reviewed": true,
+  "reviewNote": "Reviewed overlay against the named seed; expected arithmetic, topology, idempotency, status, and completeness were checked manually."
+}

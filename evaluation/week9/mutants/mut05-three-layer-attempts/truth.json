@@ -1,0 +1,24 @@
+{
+  "caseId": "mut05-three-layer-attempts",
+  "seed": "seed07",
+  "mutations": [
+    "increase-attempts-consecutive-calls"
+  ],
+  "expectedStatus": "valid",
+  "expectedFindings": [
+    {
+      "ruleId": "RL001",
+      "severity": "error",
+      "callPath": [
+        "a-to-b",
+        "b-to-c",
+        "c-to-d"
+      ],
+      "targetOperation": "d.finish"
+    }
+  ],
+  "expectedCompletenessGaps": [],
+  "rationale": "Three attempts on three consecutive calls yields 27x.",
+  "reviewed": true,
+  "reviewNote": "Reviewed overlay against the named seed; expected arithmetic, topology, idempotency, status, and completeness were checked manually."
+}

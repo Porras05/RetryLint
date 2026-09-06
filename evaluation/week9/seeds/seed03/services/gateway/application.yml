@@ -1,0 +1,15 @@
+resilience4j:
+  retry:
+    instances:
+      catalogRetry:
+        maxAttempts: 2
+        waitDuration: 50ms
+      pricingRetry:
+        maxAttempts: 2
+        waitDuration: 50ms
+  timelimiter:
+    instances:
+      catalogTimeout:
+        timeoutDuration: 2s
+      pricingTimeout:
+        timeoutDuration: 2s

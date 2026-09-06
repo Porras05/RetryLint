@@ -1,0 +1,210 @@
+{
+  "schemaVersion": 1,
+  "retryLintVersion": "0.1.0",
+  "expectedSeedCount": 10,
+  "expectedMutantCount": 30,
+  "seeds": [
+    {
+      "id": "seed01",
+      "path": "seeds/seed01",
+      "truth": "truth.json"
+    },
+    {
+      "id": "seed02",
+      "path": "seeds/seed02",
+      "truth": "truth.json"
+    },
+    {
+      "id": "seed03",
+      "path": "seeds/seed03",
+      "truth": "truth.json"
+    },
+    {
+      "id": "seed04",
+      "path": "seeds/seed04",
+      "truth": "truth.json"
+    },
+    {
+      "id": "seed05",
+      "path": "seeds/seed05",
+      "truth": "truth.json"
+    },
+    {
+      "id": "seed06",
+      "path": "seeds/seed06",
+      "truth": "truth.json"
+    },
+    {
+      "id": "seed07",
+      "path": "seeds/seed07",
+      "truth": "truth.json"
+    },
+    {
+      "id": "seed08",
+      "path": "seeds/seed08",
+      "truth": "truth.json"
+    },
+    {
+      "id": "seed09",
+      "path": "seeds/seed09",
+      "truth": "truth.json"
+    },
+    {
+      "id": "seed10",
+      "path": "seeds/seed10",
+      "truth": "truth.json"
+    }
+  ],
+  "mutants": [
+    {
+      "id": "mut01-one-call-attempts",
+      "path": "mutants/mut01-one-call-attempts",
+      "truth": "truth.json"
+    },
+    {
+      "id": "mut02-consecutive-attempts",
+      "path": "mutants/mut02-consecutive-attempts",
+      "truth": "truth.json"
+    },
+    {
+      "id": "mut03-branch-attempts",
+      "path": "mutants/mut03-branch-attempts",
+      "truth": "truth.json"
+    },
+    {
+      "id": "mut04-multi-root-attempts",
+      "path": "mutants/mut04-multi-root-attempts",
+      "truth": "truth.json"
+    },
+    {
+      "id": "mut05-three-layer-attempts",
+      "path": "mutants/mut05-three-layer-attempts",
+      "truth": "truth.json"
+    },
+    {
+      "id": "mut06-diamond-attempts",
+      "path": "mutants/mut06-diamond-attempts",
+      "truth": "truth.json"
+    },
+    {
+      "id": "mut07-reduce-incoming-timeout",
+      "path": "mutants/mut07-reduce-incoming-timeout",
+      "truth": "truth.json"
+    },
+    {
+      "id": "mut08-increase-downstream-timeout",
+      "path": "mutants/mut08-increase-downstream-timeout",
+      "truth": "truth.json"
+    },
+    {
+      "id": "mut09-increase-fixed-wait",
+      "path": "mutants/mut09-increase-fixed-wait",
+      "truth": "truth.json"
+    },
+    {
+      "id": "mut10-reduce-middle-budget",
+      "path": "mutants/mut10-reduce-middle-budget",
+      "truth": "truth.json"
+    },
+    {
+      "id": "mut11-diamond-downstream-timeout",
+      "path": "mutants/mut11-diamond-downstream-timeout",
+      "truth": "truth.json"
+    },
+    {
+      "id": "mut12-timeout-boundary",
+      "path": "mutants/mut12-timeout-boundary",
+      "truth": "truth.json"
+    },
+    {
+      "id": "mut13-idempotency-unknown",
+      "path": "mutants/mut13-idempotency-unknown",
+      "truth": "truth.json"
+    },
+    {
+      "id": "mut14-idempotency-non-idempotent",
+      "path": "mutants/mut14-idempotency-non-idempotent",
+      "truth": "truth.json"
+    },
+    {
+      "id": "mut15-branch-idempotency-unknown",
+      "path": "mutants/mut15-branch-idempotency-unknown",
+      "truth": "truth.json"
+    },
+    {
+      "id": "mut16-shared-non-idempotent",
+      "path": "mutants/mut16-shared-non-idempotent",
+      "truth": "truth.json"
+    },
+    {
+      "id": "mut17-inherited-idempotency-unknown",
+      "path": "mutants/mut17-inherited-idempotency-unknown",
+      "truth": "truth.json"
+    },
+    {
+      "id": "mut18-mixed-key-non-idempotent",
+      "path": "mutants/mut18-mixed-key-non-idempotent",
+      "truth": "truth.json"
+    },
+    {
+      "id": "mut19-amplification-and-unknown",
+      "path": "mutants/mut19-amplification-and-unknown",
+      "truth": "truth.json"
+    },
+    {
+      "id": "mut20-amplification-and-unsafe",
+      "path": "mutants/mut20-amplification-and-unsafe",
+      "truth": "truth.json"
+    },
+    {
+      "id": "mut21-timeout-and-unknown",
+      "path": "mutants/mut21-timeout-and-unknown",
+      "truth": "truth.json"
+    },
+    {
+      "id": "mut22-amplification-and-non-idempotent",
+      "path": "mutants/mut22-amplification-and-non-idempotent",
+      "truth": "truth.json"
+    },
+    {
+      "id": "mut23-timeout-and-non-idempotent",
+      "path": "mutants/mut23-timeout-and-non-idempotent",
+      "truth": "truth.json"
+    },
+    {
+      "id": "mut24-single-attempt-non-idempotent",
+      "path": "mutants/mut24-single-attempt-non-idempotent",
+      "truth": "truth.json"
+    },
+    {
+      "id": "mut25-missing-retry-policy",
+      "path": "mutants/mut25-missing-retry-policy",
+      "truth": "truth.json"
+    },
+    {
+      "id": "mut26-missing-time-limiter-policy",
+      "path": "mutants/mut26-missing-time-limiter-policy",
+      "truth": "truth.json"
+    },
+    {
+      "id": "mut27-graph-cycle",
+      "path": "mutants/mut27-graph-cycle",
+      "truth": "truth.json"
+    },
+    {
+      "id": "mut28-exponential-wait",
+      "path": "mutants/mut28-exponential-wait",
+      "truth": "truth.json"
+    },
+    {
+      "id": "mut29-randomized-wait",
+      "path": "mutants/mut29-randomized-wait",
+      "truth": "truth.json"
+    },
+    {
+      "id": "mut30-exponential-linear-four",
+      "path": "mutants/mut30-exponential-linear-four",
+      "truth": "truth.json"
+    }
+  ]
+}

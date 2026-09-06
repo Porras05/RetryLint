@@ -1,0 +1,22 @@
+{
+  "caseId": "mut13-idempotency-unknown",
+  "seed": "seed01",
+  "mutations": [
+    "idempotent-to-unknown"
+  ],
+  "expectedStatus": "valid",
+  "expectedFindings": [
+    {
+      "ruleId": "RL003",
+      "severity": "warning",
+      "callPath": [
+        "frontend-to-backend"
+      ],
+      "targetOperation": "backend.fetch"
+    }
+  ],
+  "expectedCompletenessGaps": [],
+  "rationale": "A two-attempt call can repeat a target whose idempotency is unknown.",
+  "reviewed": true,
+  "reviewNote": "Reviewed overlay against the named seed; expected arithmetic, topology, idempotency, status, and completeness were checked manually."
+}

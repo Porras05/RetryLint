@@ -1,0 +1,17 @@
+resilience4j:
+  retry:
+    configs:
+      conservative:
+        max-attempts: 2
+        wait-duration: 100ms
+        enable-randomized-wait: true
+    instances:
+      inherited:
+        base-config: conservative
+  timelimiter:
+    configs:
+      short:
+        timeout-duration: 500ms
+    instances:
+      inherited:
+        base-config: short

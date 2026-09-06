@@ -1,0 +1,22 @@
+{
+  "caseId": "mut29-randomized-wait",
+  "seed": "seed06",
+  "mutations": [
+    "enable-randomized-wait"
+  ],
+  "expectedStatus": "partially-analyzable",
+  "expectedFindings": [],
+  "expectedCompletenessGaps": [
+    {
+      "ruleId": "RL002",
+      "callPath": [
+        "caller-to-middle",
+        "middle-to-target"
+      ],
+      "reasonContains": "randomized wait"
+    }
+  ],
+  "rationale": "Randomized wait makes only the affected RL002 adjacent-pair arithmetic unsupported.",
+  "reviewed": true,
+  "reviewNote": "Reviewed overlay against the named seed; expected arithmetic, topology, idempotency, status, and completeness were checked manually."
+}

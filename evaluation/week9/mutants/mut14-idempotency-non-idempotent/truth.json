@@ -1,0 +1,22 @@
+{
+  "caseId": "mut14-idempotency-non-idempotent",
+  "seed": "seed01",
+  "mutations": [
+    "idempotent-to-non-idempotent"
+  ],
+  "expectedStatus": "valid",
+  "expectedFindings": [
+    {
+      "ruleId": "RL003",
+      "severity": "error",
+      "callPath": [
+        "frontend-to-backend"
+      ],
+      "targetOperation": "backend.fetch"
+    }
+  ],
+  "expectedCompletenessGaps": [],
+  "rationale": "A two-attempt call can repeat a non-idempotent target.",
+  "reviewed": true,
+  "reviewNote": "Reviewed overlay against the named seed; expected arithmetic, topology, idempotency, status, and completeness were checked manually."
+}

@@ -1,0 +1,23 @@
+{
+  "caseId": "mut10-reduce-middle-budget",
+  "seed": "seed07",
+  "mutations": [
+    "reduce-incoming-timeout"
+  ],
+  "expectedStatus": "valid",
+  "expectedFindings": [
+    {
+      "ruleId": "RL002",
+      "severity": "warning",
+      "callPath": [
+        "a-to-b",
+        "b-to-c"
+      ],
+      "targetOperation": "c.step"
+    }
+  ],
+  "expectedCompletenessGaps": [],
+  "rationale": "A 1 s outer budget is below the 1.1 s retry window on b-to-c.",
+  "reviewed": true,
+  "reviewNote": "Reviewed overlay against the named seed; expected arithmetic, topology, idempotency, status, and completeness were checked manually."
+}

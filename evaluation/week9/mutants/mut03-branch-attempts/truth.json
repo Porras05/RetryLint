@@ -1,0 +1,22 @@
+{
+  "caseId": "mut03-branch-attempts",
+  "seed": "seed03",
+  "mutations": [
+    "increase-attempts-one-call"
+  ],
+  "expectedStatus": "valid",
+  "expectedFindings": [
+    {
+      "ruleId": "RL001",
+      "severity": "warning",
+      "callPath": [
+        "gateway-to-catalog"
+      ],
+      "targetOperation": "catalog.search"
+    }
+  ],
+  "expectedCompletenessGaps": [],
+  "rationale": "One branch is raised to 9 attempts while the other remains safe.",
+  "reviewed": true,
+  "reviewNote": "Reviewed overlay against the named seed; expected arithmetic, topology, idempotency, status, and completeness were checked manually."
+}
