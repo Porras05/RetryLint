@@ -1,0 +1,118 @@
+{
+  "scenarioId": "27-persistent-failure",
+  "retryLintVersion": "0.1.0",
+  "retryLintCommit": "85ffebc",
+  "analyzerManifest": "retrylint-cli/src/test/resources/fixtures/complete-example/retrylint.yml",
+  "predictedMultiplier": 27,
+  "expectedCounts": {
+    "checkout": 1,
+    "orders": 3,
+    "payments": 9,
+    "bank": 27
+  },
+  "runs": 10,
+  "observedRuns": [
+    {
+      "Scenario": "27",
+      "Run": 1,
+      "Checkout": 1,
+      "Orders": 3,
+      "Payments": 9,
+      "Bank": 27,
+      "Result": "PASS",
+      "TraceId": "week8-27-1-821a0bc8dbff45b7963c85d88b558e09"
+    },
+    {
+      "Scenario": "27",
+      "Run": 2,
+      "Checkout": 1,
+      "Orders": 3,
+      "Payments": 9,
+      "Bank": 27,
+      "Result": "PASS",
+      "TraceId": "week8-27-2-cbd71fc041a04eb6846440549b4c7b51"
+    },
+    {
+      "Scenario": "27",
+      "Run": 3,
+      "Checkout": 1,
+      "Orders": 3,
+      "Payments": 9,
+      "Bank": 27,
+      "Result": "PASS",
+      "TraceId": "week8-27-3-cb7b06c0d598485ea1ffb3ce52deca46"
+    },
+    {
+      "Scenario": "27",
+      "Run": 4,
+      "Checkout": 1,
+      "Orders": 3,
+      "Payments": 9,
+      "Bank": 27,
+      "Result": "PASS",
+      "TraceId": "week8-27-4-09fd9a3e80f54bb8a38b171ba6afd737"
+    },
+    {
+      "Scenario": "27",
+      "Run": 5,
+      "Checkout": 1,
+      "Orders": 3,
+      "Payments": 9,
+      "Bank": 27,
+      "Result": "PASS",
+      "TraceId": "week8-27-5-f17a2593573d4559bdca64209d6ea7fe"
+    },
+    {
+      "Scenario": "27",
+      "Run": 6,
+      "Checkout": 1,
+      "Orders": 3,
+      "Payments": 9,
+      "Bank": 27,
+      "Result": "PASS",
+      "TraceId": "week8-27-6-ce90a0ae275043cca5a39d29ce9a64d6"
+    },
+    {
+      "Scenario": "27",
+      "Run": 7,
+      "Checkout": 1,
+      "Orders": 3,
+      "Payments": 9,
+      "Bank": 27,
+      "Result": "PASS",
+      "TraceId": "week8-27-7-949e2d841bb64fecbe2a267278128f13"
+    },
+    {
+      "Scenario": "27",
+      "Run": 8,
+      "Checkout": 1,
+      "Orders": 3,
+      "Payments": 9,
+      "Bank": 27,
+      "Result": "PASS",
+      "TraceId": "week8-27-8-82693035ac0a43a5bc927b84af438f48"
+    },
+    {
+      "Scenario": "27",
+      "Run": 9,
+      "Checkout": 1,
+      "Orders": 3,
+      "Payments": 9,
+      "Bank": 27,
+      "Result": "PASS",
+      "TraceId": "week8-27-9-795d0f3eaa9d4faa9af9e371f60748a2"
+    },
+    {
+      "Scenario": "27",
+      "Run": 10,
+      "Checkout": 1,
+      "Orders": 3,
+      "Payments": 9,
+      "Bank": 27,
+      "Result": "PASS",
+      "TraceId": "week8-27-10-fa8584625291431d823ec69bd17ef99c"
+    }
+  ],
+  "result": "PASS",
+  "recordedAtUtc": "2026-09-06T17:47:23.2934157Z"
+}

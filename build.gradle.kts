@@ -1,5 +1,7 @@
 plugins {
     kotlin("jvm") version "2.1.21" apply false
+    kotlin("plugin.spring") version "2.1.21" apply false
+    id("org.springframework.boot") version "3.5.0" apply false
 }
 
 allprojects {

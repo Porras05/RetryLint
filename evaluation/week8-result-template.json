@@ -1,0 +1,17 @@
+{
+  "scenarioId": "27-persistent-failure",
+  "retryLintVersion": "0.1.0",
+  "retryLintCommit": "85ffebc",
+  "analyzerManifest": "retrylint-cli/src/test/resources/fixtures/complete-example/retrylint.yml",
+  "predictedMultiplier": 27,
+  "expectedCounts": {
+    "checkout": 1,
+    "orders": 3,
+    "payments": 9,
+    "bank": 27
+  },
+  "runs": 10,
+  "observedRuns": [],
+  "result": "NOT_RUN",
+  "recordedAtUtc": null
+}

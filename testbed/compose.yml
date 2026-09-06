@@ -1,0 +1,88 @@
+name: retrylint-week8
+
+x-testbed-service: &testbed-service
+  image: retrylint-testbed-service:week8
+  environment: &common-environment
+    SPRING_PROFILES_ACTIVE: testbed
+    SPRING_CONFIG_ADDITIONAL_LOCATION: file:/config/application.yml
+    MANAGEMENT_ENDPOINTS_WEB_EXPOSURE_INCLUDE: health
+  healthcheck:
+    test: ["CMD-SHELL", "wget -q -O - http://localhost:8080/actuator/health | grep -q UP"]
+    interval: 2s
+    timeout: 2s
+    retries: 30
+    start_period: 10s
+  restart: "no"
+
+services:
+  bank:
+    <<: *testbed-service
+    environment:
+      <<: *common-environment
+      RETRYLINT_SERVICE_ID: bank
+      RETRYLINT_FAILURE_MODE: ${BANK_FAILURE_MODE:-always-fail}
+      RETRYLINT_FAIL_FIRST_N: ${BANK_FAIL_FIRST_N:-0}
+    volumes:
+      - type: bind
+        source: ${CONFIG_ROOT:-../retrylint-cli/src/test/resources/fixtures/complete-example/services}/bank/application.yml
+        target: /config/application.yml
+        read_only: true
+    ports:
+      - "18083:8080"
+
+  payments:
+    <<: *testbed-service
+    environment:
+      <<: *common-environment
+      RETRYLINT_SERVICE_ID: payments
+      RETRYLINT_DOWNSTREAM_URL: http://bank:8080/invoke
+      RETRYLINT_RETRY_POLICY: bank-client
+    volumes:
+      - type: bind
+        source: ${CONFIG_ROOT:-../retrylint-cli/src/test/resources/fixtures/complete-example/services}/payments/application.yml
+        target: /config/application.yml
+        read_only: true
+    ports:
+      - "18082:8080"
+    depends_on:
+      bank:
+        condition: service_healthy
+
+  orders:
+    <<: *testbed-service
+    environment:
+      <<: *common-environment
+      RETRYLINT_SERVICE_ID: orders
+      RETRYLINT_DOWNSTREAM_URL: http://payments:8080/invoke
+      RETRYLINT_RETRY_POLICY: payments-client
+    volumes:
+      - type: bind
+        source: ${CONFIG_ROOT:-../retrylint-cli/src/test/resources/fixtures/complete-example/services}/orders/application.yml
+        target: /config/application.yml
+        read_only: true
+    ports:
+      - "18081:8080"
+    depends_on:
+      payments:
+        condition: service_healthy
+
+  checkout:
+    <<: *testbed-service
+    build:
+      context: ..
+      dockerfile: testbed-service/Dockerfile
+    environment:
+      <<: *common-environment
+      RETRYLINT_SERVICE_ID: checkout
+      RETRYLINT_DOWNSTREAM_URL: http://orders:8080/invoke
+      RETRYLINT_RETRY_POLICY: orders-client
+    volumes:
+      - type: bind
+        source: ${CONFIG_ROOT:-../retrylint-cli/src/test/resources/fixtures/complete-example/services}/checkout/application.yml
+        target: /config/application.yml
+        read_only: true
+    ports:
+      - "18080:8080"
+    depends_on:
+      orders:
+        condition: service_healthy

@@ -1,0 +1,21 @@
+version: 1
+name: testbed-9-calls
+services:
+  - { id: checkout, config: services/checkout/application.yml }
+  - { id: orders, config: services/orders/application.yml }
+  - { id: payments, config: services/payments/application.yml }
+  - { id: bank, config: services/bank/application.yml }
+operations:
+  - { id: checkout.place-order, service: checkout, idempotency: idempotent }
+  - { id: orders.create-order, service: orders, idempotency: idempotent }
+  - { id: payments.charge, service: payments, idempotency: idempotent }
+  - { id: bank.authorize, service: bank, idempotency: idempotent }
+calls:
+  - { id: checkout-to-orders, from: checkout.place-order, to: orders.create-order, retry: orders-client }
+  - { id: orders-to-payments, from: orders.create-order, to: payments.charge, retry: payments-client }
+  - { id: payments-to-bank, from: payments.charge, to: bank.authorize, retry: bank-client }
+analysis:
+  roots: [checkout.place-order]
+  amplificationWarning: 3
+  amplificationError: 27
+  failOn: never

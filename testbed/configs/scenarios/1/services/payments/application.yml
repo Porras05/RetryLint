@@ -1,0 +1,6 @@
+resilience4j:
+  retry:
+    configs:
+      default: { maxAttempts: 1, waitDuration: 1ms }
+    instances:
+      bank-client: { baseConfig: default }

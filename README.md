@@ -41,3 +41,10 @@ The available analysis controls are:
 Exit code `0` means analysis completed without meeting the selected failure
 threshold, `1` means a finding met it, `2` means invalid input prevented the
 requested analysis, and `3` means an unexpected internal failure.
+
+## Four-service testbed
+
+Week 8 adds a controlled Spring Boot + Resilience4j experiment that runs one
+parameterized image as checkout, orders, payments, and bank. See
+[`testbed/README.md`](testbed/README.md) for the exact build, analyzer,
+1/3/9/27, ten-run, reset, and cleanup commands.

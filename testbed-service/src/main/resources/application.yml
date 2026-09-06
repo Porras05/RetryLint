@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: retrylint-testbed-service
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+
+retrylint:
+  testbed:
+    service-id: ${RETRYLINT_SERVICE_ID:testbed-service}
+    downstream-url: ${RETRYLINT_DOWNSTREAM_URL:}
+    retry-policy: ${RETRYLINT_RETRY_POLICY:}
+    failure-mode: ${RETRYLINT_FAILURE_MODE:success}
+    fail-first-n: ${RETRYLINT_FAIL_FIRST_N:0}

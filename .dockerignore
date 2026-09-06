@@ -1,0 +1,12 @@
+.git
+.gradle
+.kotlin
+.idea
+**/build
+**/.gradle
+**/.kotlin
+evaluation
+fixtures
+testbed
+docs
+README.md
