@@ -1,0 +1,93 @@
+{
+  "schemaVersion" : 1,
+  "project" : {
+    "name" : "checkout-demo",
+    "services" : 4,
+    "operations" : 4,
+    "calls" : 3
+  },
+  "findings" : [ {
+    "ruleId" : "RL001",
+    "severity" : "error",
+    "title" : "Retry amplification of 27x",
+    "message" : "checkout.place-order -> orders.create-order -> payments.charge -> bank.authorize: 3 x 3 x 3 = 27. Three layers independently own retries on this path.",
+    "callPath" : [ "checkout-to-orders", "orders-to-payments", "payments-to-bank" ],
+    "evidence" : {
+      "rootOperation" : "checkout.place-order",
+      "targetOperation" : "bank.authorize",
+      "operationPath" : [ "checkout.place-order", "orders.create-order", "payments.charge", "bank.authorize" ],
+      "attempts" : [ 3, 3, 3 ],
+      "expression" : "3 x 3 x 3 = 27",
+      "multiplier" : "27",
+      "configurationFiles" : [ "services\\checkout\\application.yml", "services\\orders\\application.yml", "services\\payments\\application.yml" ]
+    }
+  }, {
+    "ruleId" : "RL002",
+    "severity" : "error",
+    "title" : "Timeout budget may be exceeded by 1700 ms",
+    "message" : "Incoming call 'checkout-to-orders' waits 500 ms, but 'orders-to-payments' permits a configured worst-case retry window of 2200 ms.",
+    "callPath" : [ "checkout-to-orders", "orders-to-payments" ],
+    "evidence" : {
+      "middleOperation" : "orders.create-order",
+      "targetOperation" : "payments.charge",
+      "incomingTimeout" : "PT0.5S",
+      "attempts" : 3,
+      "timeoutPerAttempt" : "PT0.6S",
+      "fixedWait" : "PT0.2S",
+      "retryWindow" : "PT2.2S",
+      "overrun" : "PT1.7S",
+      "incomingConfigurationFile" : "services\\checkout\\application.yml",
+      "downstreamConfigurationFile" : "services\\orders\\application.yml"
+    }
+  }, {
+    "ruleId" : "RL003",
+    "severity" : "error",
+    "title" : "payments.charge may be repeated",
+    "message" : "Call 'orders-to-payments' may invoke payments.charge up to 3 times; idempotency is non-idempotent.",
+    "callPath" : [ "orders-to-payments" ],
+    "evidence" : {
+      "callId" : "orders-to-payments",
+      "targetOperation" : "payments.charge",
+      "idempotency" : "non-idempotent",
+      "maxAttempts" : 3,
+      "configurationFile" : "services\\orders\\application.yml"
+    }
+  }, {
+    "ruleId" : "RL002",
+    "severity" : "warning",
+    "title" : "Timeout budget may be exceeded by 400 ms",
+    "message" : "Incoming call 'orders-to-payments' waits 600 ms, but 'payments-to-bank' permits a configured worst-case retry window of 1000 ms.",
+    "callPath" : [ "orders-to-payments", "payments-to-bank" ],
+    "evidence" : {
+      "middleOperation" : "payments.charge",
+      "targetOperation" : "bank.authorize",
+      "incomingTimeout" : "PT0.6S",
+      "attempts" : 3,
+      "timeoutPerAttempt" : "PT0.3S",
+      "fixedWait" : "PT0.05S",
+      "retryWindow" : "PT1S",
+      "overrun" : "PT0.4S",
+      "incomingConfigurationFile" : "services\\orders\\application.yml",
+      "downstreamConfigurationFile" : "services\\payments\\application.yml"
+    }
+  }, {
+    "ruleId" : "RL003",
+    "severity" : "warning",
+    "title" : "bank.authorize may be repeated",
+    "message" : "Call 'payments-to-bank' may invoke bank.authorize up to 3 times; idempotency is unknown.",
+    "callPath" : [ "payments-to-bank" ],
+    "evidence" : {
+      "callId" : "payments-to-bank",
+      "targetOperation" : "bank.authorize",
+      "idempotency" : "unknown",
+      "maxAttempts" : 3,
+      "configurationFile" : "services\\payments\\application.yml"
+    }
+  } ],
+  "completenessGaps" : [ ],
+  "summary" : {
+    "errors" : 3,
+    "warnings" : 2,
+    "completenessGaps" : 0
+  }
+}

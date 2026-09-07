@@ -31,7 +31,7 @@ Verify that post-freeze work did not change production analyzer code:
 git diff v0.1.0 -- retrylint-cli/src/main
 ```
 
-The last command should print nothing.
+The last command should print nothing. The historical analyzer core and the final project delivery have separate identifiers: `v0.1.0` is the evaluated analyzer implementation, while `v0.1.1` is the final delivery tag. The packaged command therefore continues to report `RetryLint 0.1.0`.
 
 ## Validate and analyze the complete example
 
@@ -51,7 +51,7 @@ Start Docker Desktop, ensure the required ports are free, then run:
 powershell -ExecutionPolicy Bypass -File testbed/scripts/verify-week8.ps1
 ```
 
-This is the expensive integration experiment: it builds/starts the four-service Compose system, runs the scenarios, and writes an evidence result. Read [the testbed guide](../testbed/README.md) before running it. The checked-in result is [`evaluation/week8-results.json`](../evaluation/week8-results.json). Week 11 does not require rerunning Docker because it changes no executable testbed code.
+This is the expensive integration experiment: it builds/starts the four-service Compose system, runs the scenarios, and writes an evidence result. Read [the testbed guide](../testbed/README.md) before running it. The checked-in historical result is [`evaluation/week8-results.json`](../evaluation/week8-results.json). Preserve that file when performing a separate final smoke run.
 
 ## Week 9: mutation benchmark
 
@@ -87,3 +87,15 @@ git status --short
 ```
 
 Use the [evidence index](EVIDENCE_INDEX.md) to trace each report claim. Build output under `build/` and IntelliJ metadata are not evidence sources.
+
+## Build and use the packaged CLI
+
+```powershell
+.\gradlew.bat :retrylint-cli:distZip
+Expand-Archive retrylint-cli/build/distributions/retrylint-cli-0.1.0.zip -DestinationPath retrylint-package
+.\retrylint-package\retrylint-cli-0.1.0\bin\retrylint-cli.bat version
+.\retrylint-package\retrylint-cli-0.1.0\bin\retrylint-cli.bat validate retrylint-cli/src/test/resources/fixtures/complete-example/retrylint.yml
+.\retrylint-package\retrylint-cli-0.1.0\bin\retrylint-cli.bat analyze retrylint-cli/src/test/resources/fixtures/complete-example/retrylint.yml --format text --fail-on never
+```
+
+The ZIP contains the Windows and Unix launchers plus all runtime JARs. It requires Java 21 but does not require Gradle, repository classes, or IntelliJ after extraction. Verify a release download with [`release/SHA256SUMS.txt`](../release/SHA256SUMS.txt).

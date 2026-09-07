@@ -1,0 +1,67 @@
+RetryLint — checkout-demo
+4 services, 4 operations, 3 calls
+
+ERROR RL001 — Retry amplification of 27x
+checkout.place-order -> orders.create-order -> payments.charge -> bank.authorize: 3 x 3 x 3 = 27. Three layers independently own retries on this path.
+Calls: checkout-to-orders -> orders-to-payments -> payments-to-bank
+Evidence:
+  rootOperation: checkout.place-order
+  targetOperation: bank.authorize
+  operationPath: checkout.place-order, orders.create-order, payments.charge, bank.authorize
+  attempts: 3, 3, 3
+  expression: 3 x 3 x 3 = 27
+  multiplier: 27
+  configurationFiles: services\checkout\application.yml, services\orders\application.yml, services\payments\application.yml
+
+ERROR RL002 — Timeout budget may be exceeded by 1700 ms
+Incoming call 'checkout-to-orders' waits 500 ms, but 'orders-to-payments' permits a configured worst-case retry window of 2200 ms.
+Calls: checkout-to-orders -> orders-to-payments
+Evidence:
+  middleOperation: orders.create-order
+  targetOperation: payments.charge
+  incomingTimeout: 500 ms
+  attempts: 3
+  timeoutPerAttempt: 600 ms
+  fixedWait: 200 ms
+  retryWindow: 2200 ms
+  overrun: 1700 ms
+  incomingConfigurationFile: services\checkout\application.yml
+  downstreamConfigurationFile: services\orders\application.yml
+
+ERROR RL003 — payments.charge may be repeated
+Call 'orders-to-payments' may invoke payments.charge up to 3 times; idempotency is non-idempotent.
+Calls: orders-to-payments
+Evidence:
+  callId: orders-to-payments
+  targetOperation: payments.charge
+  idempotency: non-idempotent
+  maxAttempts: 3
+  configurationFile: services\orders\application.yml
+
+WARNING RL002 — Timeout budget may be exceeded by 400 ms
+Incoming call 'orders-to-payments' waits 600 ms, but 'payments-to-bank' permits a configured worst-case retry window of 1000 ms.
+Calls: orders-to-payments -> payments-to-bank
+Evidence:
+  middleOperation: payments.charge
+  targetOperation: bank.authorize
+  incomingTimeout: 600 ms
+  attempts: 3
+  timeoutPerAttempt: 300 ms
+  fixedWait: 50 ms
+  retryWindow: 1000 ms
+  overrun: 400 ms
+  incomingConfigurationFile: services\orders\application.yml
+  downstreamConfigurationFile: services\payments\application.yml
+
+WARNING RL003 — bank.authorize may be repeated
+Call 'payments-to-bank' may invoke bank.authorize up to 3 times; idempotency is unknown.
+Calls: payments-to-bank
+Evidence:
+  callId: payments-to-bank
+  targetOperation: bank.authorize
+  idempotency: unknown
+  maxAttempts: 3
+  configurationFile: services\payments\application.yml
+
+Completeness: RL001 complete, RL002 complete, RL003 complete
+3 errors, 2 warnings

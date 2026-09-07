@@ -63,3 +63,12 @@ The numbers above link to primary evidence and their scope in [Evaluation](docs/
 - [Evidence index](docs/EVIDENCE_INDEX.md)
 - [Five-minute demo and defense guide](docs/DEFENSE_GUIDE.md)
 - [Week 8 testbed](testbed/README.md)
+
+## Final delivery
+
+The version references have intentionally different scopes:
+
+- **Analyzer core `v0.1.0`:** the frozen CLI implementation evaluated in Weeks 8–10; `retrylint-cli version` reports `RetryLint 0.1.0`.
+- **Project delivery `v0.1.1`:** the final documentation, evaluation, packaging, checksum, backup instructions, and release record. It does not change analyzer semantics.
+
+See the [v0.1.1 release notes](release/RELEASE_NOTES_v0.1.1.md), [final verification record](release/FINAL_VERIFICATION.md), and [offline backup guide](release/OFFLINE_BACKUP.md). Binary archives under `release/artifacts/` are intentionally ignored because they are reproducible release outputs rather than source.

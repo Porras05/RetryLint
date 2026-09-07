@@ -1,0 +1,22 @@
+resilience4j:
+  retry:
+    configs:
+      default:
+        max-attempts: 2
+        wait-duration: 150ms
+      downstream:
+        base-config: default
+        max-attempts: 3
+    instances:
+      payments-client:
+        base-config: downstream
+        wait-duration: 200ms
+  timelimiter:
+    configs:
+      default:
+        timeout-duration: 600ms
+      downstream:
+        base-config: default
+    instances:
+      payments-client:
+        base-config: downstream

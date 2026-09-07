@@ -6,10 +6,10 @@ Prepare the repository and terminal before presenting; keep the checked-in Week 
 
 1. **0:00-0:35 — Problem and input.** Show [`complete-example/retrylint.yml`](../retrylint-cli/src/test/resources/fixtures/complete-example/retrylint.yml). Point out services, operations, synchronous calls, roots, and idempotency.
 2. **0:35-1:00 — Configuration ownership.** Show the three caller-side Retry policies in the adjacent service `application.yml` files and explain that each permits three total attempts.
-3. **1:00-1:40 — Live analyzer.** Run:
+3. **1:00-1:40 — Live packaged analyzer.** From the prepared offline package, run:
 
    ```powershell
-   .\gradlew.bat :retrylint-cli:run --args="analyze retrylint-cli/src/test/resources/fixtures/complete-example/retrylint.yml --format text --fail-on never"
+   .\retrylint-cli-0.1.0\bin\retrylint-cli.bat analyze .\complete-example\retrylint.yml --format text --fail-on never
    ```
 
 4. **1:40-2:20 — Rules.** Point to RL001's `3 x 3 x 3 = 27` envelope, RL002's adjacent timeout comparison, and RL003's “may be repeated” warning/error. Emphasize possible behavior, not observed duplication.
@@ -18,7 +18,7 @@ Prepare the repository and terminal before presenting; keep the checked-in Week 
 7. **3:50-4:30 — Scalability evidence.** Open the [Week 10 summary](../evaluation/week10/results/summary.md), show the four successful sizes and current median/p95 columns, and identify the in-process measurement boundary.
 8. **4:30-5:00 — Boundaries.** Close with explicit completeness gaps and the main limits: static synchronous DAG, supported Resilience4j subset, manifest-declared idempotency, and no probability/traffic model.
 
-Fallback: if the live invocation is unavailable, show the command and use the checked-in evidence. Do not rebuild Docker containers during the five-minute sequence.
+Fallback: if the live invocation is unavailable, show the command and use the checked-in text/JSON demo outputs under `release/demo/`. Do not rebuild Docker containers during the five-minute sequence.
 
 ## Likely questions and evidence-based answers
 

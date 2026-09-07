@@ -12,6 +12,9 @@ out/
 /report.json
 /report.txt
 
+# Rebuildable final-delivery binaries and offline archives
+/release/artifacts/
+
 # OS metadata
 .DS_Store
 Thumbs.db
