@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="280" viewBox="0 0 960 280" role="img" aria-labelledby="title desc">
+  <title id="title">Week 8 retry amplification chain</title>
+  <desc id="desc">Source: evaluation/week8-results.json. All 10 recorded runs matched the displayed counts; predicted multiplier 27.</desc>
+  <style>.box{fill:#eef5ff;stroke:#1967b3;stroke-width:2}.name{font:600 18px system-ui,sans-serif;fill:#172b4d}.count{font:700 28px system-ui,sans-serif;fill:#0747a6}.times{font:600 15px system-ui,sans-serif;fill:#42526e}.arrow{stroke:#596780;stroke-width:2;marker-end:url(#a)}.note{font:13px system-ui,sans-serif;fill:#596780}</style>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#596780"/></marker></defs>
+  <rect class="box" x="40" y="105" width="170" height="90" rx="10"/><text class="name" x="125" y="140" text-anchor="middle">checkout</text><text class="count" x="125" y="175" text-anchor="middle">1</text>
+  <rect class="box" x="285" y="105" width="170" height="90" rx="10"/><text class="name" x="370" y="140" text-anchor="middle">orders</text><text class="count" x="370" y="175" text-anchor="middle">3</text>
+  <rect class="box" x="530" y="105" width="170" height="90" rx="10"/><text class="name" x="615" y="140" text-anchor="middle">payments</text><text class="count" x="615" y="175" text-anchor="middle">9</text>
+  <rect class="box" x="775" y="105" width="170" height="90" rx="10"/><text class="name" x="860" y="140" text-anchor="middle">bank</text><text class="count" x="860" y="175" text-anchor="middle">27</text>
+  <line class="arrow" x1="210" y1="150" x2="280" y2="150"/><text class="times" x="245" y="136" text-anchor="middle">x3</text>
+  <line class="arrow" x1="455" y1="150" x2="525" y2="150"/><text class="times" x="490" y="136" text-anchor="middle">x3</text>
+  <line class="arrow" x1="700" y1="150" x2="770" y2="150"/><text class="times" x="735" y="136" text-anchor="middle">x3</text>
+  <text class="note" x="480" y="235" text-anchor="middle">Static prediction and controlled runtime observation matched in 10/10 recorded runs</text>
+  <text class="note" x="480" y="258" text-anchor="middle">Source: evaluation/week8-results.json</text>
+</svg>

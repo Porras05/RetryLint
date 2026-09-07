@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="360" viewBox="0 0 900 360" role="img" aria-labelledby="title desc">
+  <title id="title">Week 9 mutation benchmark composition and results</title>
+  <desc id="desc">Source: evaluation/week9/results/summary.json. 10 seeds, 30 mutants, TP 30, FP 0, FN 0.</desc>
+  <style>.h{font:700 21px system-ui,sans-serif;fill:#172b4d}.label{font:600 16px system-ui,sans-serif;fill:#172b4d}.value{font:700 26px system-ui,sans-serif;fill:#0747a6}.small{font:13px system-ui,sans-serif;fill:#596780}.seed{fill:#79c2ff}.mutant{fill:#6554c0}.metric{fill:#f4f5f7;stroke:#97a0af}</style>
+  <text class="h" x="450" y="38" text-anchor="middle">Controlled reviewed corpus: 40 cases</text>
+  <rect class="seed" x="90" y="70" width="180" height="55"/><rect class="mutant" x="270" y="70" width="540" height="55"/>
+  <text class="label" x="180" y="104" text-anchor="middle">10 seeds</text><text class="label" x="540" y="104" text-anchor="middle" fill="white">30 mutants</text>
+  <rect class="metric" x="90" y="165" width="210" height="105" rx="8"/><text class="label" x="195" y="195" text-anchor="middle">TP / FP / FN</text><text class="value" x="195" y="238" text-anchor="middle">30 / 0 / 0</text>
+  <rect class="metric" x="345" y="165" width="210" height="105" rx="8"/><text class="label" x="450" y="195" text-anchor="middle">Precision / Recall</text><text class="value" x="450" y="238" text-anchor="middle">1.000 / 1.000</text>
+  <rect class="metric" x="600" y="165" width="210" height="105" rx="8"/><text class="label" x="705" y="195" text-anchor="middle">F1</text><text class="value" x="705" y="238" text-anchor="middle">1.000</text>
+  <text class="small" x="450" y="310" text-anchor="middle">Applies to this controlled corpus; 40 executed, 0 skipped</text>
+  <text class="small" x="450" y="334" text-anchor="middle">Source: evaluation/week9/results/summary.json</text>
+</svg>

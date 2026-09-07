@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="360" viewBox="0 0 1120 360" role="img" aria-labelledby="title desc">
+  <title id="title">RetryLint processing pipeline</title>
+  <desc id="desc">Static architecture diagram derived from the frozen RetryLint source packages.</desc>
+  <style>.box{fill:#f7f9fc;stroke:#344563;stroke-width:2}.rule{fill:#e9f2ff;stroke:#1967b3;stroke-width:2}.label{font:600 15px system-ui,sans-serif;fill:#172b4d}.small{font:13px system-ui,sans-serif;fill:#42526e}.arrow{stroke:#596780;stroke-width:2;marker-end:url(#a)}</style>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#596780"/></marker></defs>
+  <rect class="box" x="20" y="135" width="130" height="70" rx="8"/><text class="label" x="85" y="165" text-anchor="middle">retrylint.yml</text><text class="small" x="85" y="186" text-anchor="middle">+ service YAML</text>
+  <line class="arrow" x1="150" y1="170" x2="185" y2="170"/>
+  <rect class="box" x="190" y="105" width="160" height="130" rx="8"/><text class="label" x="270" y="137" text-anchor="middle">Input + graph</text><text class="small" x="270" y="161" text-anchor="middle">parse manifest</text><text class="small" x="270" y="182" text-anchor="middle">validate topology</text><text class="small" x="270" y="203" text-anchor="middle">topological order</text>
+  <line class="arrow" x1="350" y1="170" x2="385" y2="170"/>
+  <rect class="box" x="390" y="105" width="175" height="130" rx="8"/><text class="label" x="477" y="137" text-anchor="middle">Configuration</text><text class="small" x="477" y="161" text-anchor="middle">caller ownership</text><text class="small" x="477" y="182" text-anchor="middle">defaults + inheritance</text><text class="small" x="477" y="203" text-anchor="middle">known / gap</text>
+  <line class="arrow" x1="565" y1="170" x2="600" y2="170"/>
+  <rect class="rule" x="605" y="35" width="145" height="65" rx="8"/><text class="label" x="677" y="63" text-anchor="middle">RL001</text><text class="small" x="677" y="84" text-anchor="middle">amplification</text>
+  <rect class="rule" x="605" y="137" width="145" height="65" rx="8"/><text class="label" x="677" y="165" text-anchor="middle">RL002</text><text class="small" x="677" y="186" text-anchor="middle">timeout budget</text>
+  <rect class="rule" x="605" y="239" width="145" height="65" rx="8"/><text class="label" x="677" y="267" text-anchor="middle">RL003</text><text class="small" x="677" y="288" text-anchor="middle">unsafe retry</text>
+  <line class="arrow" x1="750" y1="68" x2="785" y2="145"/><line class="arrow" x1="750" y1="170" x2="785" y2="170"/><line class="arrow" x1="750" y1="271" x2="785" y2="195"/>
+  <rect class="box" x="790" y="105" width="135" height="130" rx="8"/><text class="label" x="857" y="148" text-anchor="middle">AnalysisReport</text><text class="small" x="857" y="174" text-anchor="middle">findings</text><text class="small" x="857" y="195" text-anchor="middle">completeness gaps</text>
+  <line class="arrow" x1="925" y1="170" x2="960" y2="170"/>
+  <rect class="box" x="965" y="105" width="135" height="130" rx="8"/><text class="label" x="1032" y="146" text-anchor="middle">CLI</text><text class="small" x="1032" y="171" text-anchor="middle">text / JSON</text><text class="small" x="1032" y="192" text-anchor="middle">exit code</text>
+</svg>
