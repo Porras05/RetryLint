@@ -1,0 +1,25 @@
+# Nine named configs chained c1 -> c2 -> ... -> c9 exceed the supported depth of 8.
+resilience4j:
+  retry:
+    configs:
+      c1:
+        baseConfig: c2
+      c2:
+        baseConfig: c3
+      c3:
+        baseConfig: c4
+      c4:
+        baseConfig: c5
+      c5:
+        baseConfig: c6
+      c6:
+        baseConfig: c7
+      c7:
+        baseConfig: c8
+      c8:
+        baseConfig: c9
+      c9:
+        maxAttempts: 2
+    instances:
+      too-deep:
+        baseConfig: c1

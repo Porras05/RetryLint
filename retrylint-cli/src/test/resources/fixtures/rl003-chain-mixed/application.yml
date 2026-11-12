@@ -1,0 +1,8 @@
+# Consecutive retry layers: unknown target (warning) then non-idempotent target (error).
+# No time limiters are declared, so RL002 reports one completeness gap for the adjacent pair.
+resilience4j:
+  retry:
+    instances:
+      repeated:
+        maxAttempts: 3
+        waitDuration: 10ms

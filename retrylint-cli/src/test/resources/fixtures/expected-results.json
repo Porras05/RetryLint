@@ -12,6 +12,9 @@
   "rl001-bigint": { "exitCode": 0, "findingRules": ["RL001"], "gapRules": ["RL002", "RL002"] },
   "rl002-safe-greater": { "exitCode": 0, "findingRules": ["RL003"], "gapRules": [] },
   "rl002-one-attempt": { "exitCode": 0, "findingRules": [], "gapRules": [] },
+  "config-multilevel-base": { "exitCode": 0, "findingRules": ["RL001"], "gapRules": [] },
+  "rl003-inherited-attempts": { "exitCode": 0, "findingRules": ["RL003", "RL003"], "gapRules": [] },
+  "rl003-chain-mixed": { "exitCode": 0, "findingRules": ["RL001", "RL003", "RL003"], "gapRules": ["RL002"] },
 
   "duplicate-id": { "exitCode": 2, "errorContains": "duplicate service ID" },
   "duplicate-operation": { "exitCode": 2, "errorContains": "duplicate operation ID" },
@@ -24,5 +27,7 @@
   "two-node-cycle": { "exitCode": 2, "errorContains": "service.a -> service.b -> service.a" },
   "cycle": { "exitCode": 2, "errorContains": "service-a.call -> service-b.call -> service-c.call -> service-a.call" },
   "config-unknown-base": { "exitCode": 2, "errorContains": "unknown retry baseConfig" },
-  "config-alias-conflict": { "exitCode": 2, "errorContains": "declares both 'maxAttempts' and 'max-attempts'" }
+  "config-alias-conflict": { "exitCode": 2, "errorContains": "declares both 'maxAttempts' and 'max-attempts'" },
+  "config-base-cycle": { "exitCode": 2, "errorContains": "retry baseConfig cycle" },
+  "config-base-depth-exceeded": { "exitCode": 2, "errorContains": "retry baseConfig chain exceeds depth 8" }
 }

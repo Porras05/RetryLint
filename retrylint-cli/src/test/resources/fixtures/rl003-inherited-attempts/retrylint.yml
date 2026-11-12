@@ -1,0 +1,46 @@
+version: 1
+name: rl003-inherited-attempts
+services:
+  - id: service
+    config: application.yml
+operations:
+  - id: service.root
+    service: service
+    idempotency: idempotent
+  - id: service.unknown
+    service: service
+    idempotency: unknown
+  - id: service.unknown-no-retry
+    service: service
+    idempotency: unknown
+  - id: service.non-idempotent
+    service: service
+    idempotency: non-idempotent
+  - id: service.non-idempotent-single
+    service: service
+    idempotency: non-idempotent
+  - id: service.idempotent
+    service: service
+    idempotency: idempotent
+calls:
+  - id: to-unknown
+    from: service.root
+    to: service.unknown
+    retry: inherits-default
+  - id: to-unknown-no-retry
+    from: service.root
+    to: service.unknown-no-retry
+  - id: to-non-idempotent
+    from: service.root
+    to: service.non-idempotent
+    retry: explicit-two
+  - id: to-non-idempotent-single
+    from: service.root
+    to: service.non-idempotent-single
+    retry: from-single
+  - id: to-idempotent
+    from: service.root
+    to: service.idempotent
+    retry: inherits-default
+analysis:
+  roots: [service.root]

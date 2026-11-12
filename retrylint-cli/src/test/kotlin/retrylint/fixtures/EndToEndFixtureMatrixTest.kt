@@ -15,14 +15,14 @@ class EndToEndFixtureMatrixTest {
     private val mapper = ObjectMapper()
 
     @Test
-    fun `all twenty five fixture projects match the frozen expectations`() {
+    fun `all thirty fixture projects match the frozen expectations`() {
         val fixtureRoot = resourcePath("/fixtures")
         val expectations = mapper.readTree(resourcePath("/fixtures/expected-results.json").toFile())
         val fixtureNames = Files.list(fixtureRoot).use { paths ->
             paths.filter(Files::isDirectory).map { it.fileName.toString() }.sorted().toList()
         }
 
-        assertEquals(25, fixtureNames.size)
+        assertEquals(30, fixtureNames.size)
         assertEquals(fixtureNames, expectations.fieldNames().asSequence().toList().sorted())
 
         fixtureNames.forEach { name ->

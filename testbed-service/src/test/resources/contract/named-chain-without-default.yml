@@ -1,0 +1,25 @@
+# Contract scenario: named base chains when no configs.default exists (library defaults apply).
+resilience4j:
+  retry:
+    configs:
+      base1:
+        maxAttempts: 4
+        waitDuration: 300ms
+      base2:
+        baseConfig: base1
+        waitDuration: 75ms
+      partial:
+        waitDuration: 120ms
+    instances:
+      chained:
+        baseConfig: base2
+      partial-only:
+        baseConfig: partial
+      bare:
+        maxAttempts: 6
+  timelimiter:
+    instances:
+      bare:
+        timeoutDuration: 750ms
+      library-default:
+        cancelRunningFuture: false

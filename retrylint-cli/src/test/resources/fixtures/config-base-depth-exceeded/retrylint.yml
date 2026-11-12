@@ -1,0 +1,19 @@
+version: 1
+name: config-base-depth-exceeded
+services:
+  - id: service
+    config: application.yml
+operations:
+  - id: service.root
+    service: service
+    idempotency: idempotent
+  - id: service.target
+    service: service
+    idempotency: idempotent
+calls:
+  - id: root-to-target
+    from: service.root
+    to: service.target
+    retry: too-deep
+analysis:
+  roots: [service.root]

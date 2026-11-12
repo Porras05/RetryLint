@@ -1,0 +1,41 @@
+# Contract scenario: configs.default plus named bases with and without an explicit baseConfig.
+resilience4j:
+  retry:
+    configs:
+      default:
+        maxAttempts: 5
+        waitDuration: 200ms
+      slow:
+        waitDuration: 900ms
+      strict:
+        baseConfig: slow
+        maxAttempts: 2
+    instances:
+      implicit-default:
+        registerHealthIndicator: false
+      explicit-default:
+        baseConfig: default
+        waitDuration: 50ms
+      from-slow:
+        baseConfig: slow
+      from-strict:
+        baseConfig: strict
+      strict-override:
+        baseConfig: strict
+        maxAttempts: 4
+  timelimiter:
+    configs:
+      default:
+        timeoutDuration: 2s
+      fast:
+        timeoutDuration: 300ms
+      inherits-fast:
+        baseConfig: fast
+    instances:
+      implicit-default:
+        cancelRunningFuture: false
+      from-fast:
+        baseConfig: fast
+      from-inherits-fast:
+        baseConfig: inherits-fast
+        cancelRunningFuture: true

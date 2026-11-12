@@ -9,16 +9,19 @@ kotlin {
 }
 
 dependencies {
-    implementation(platform("org.springframework.boot:spring-boot-dependencies:3.5.0"))
-    implementation("org.springframework.boot:spring-boot-starter-web")
-    implementation("org.springframework.boot:spring-boot-starter-actuator")
-    implementation("org.springframework.boot:spring-boot-starter-aop")
-    implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
-    implementation("org.jetbrains.kotlin:kotlin-reflect")
-    implementation("io.github.resilience4j:resilience4j-spring-boot3:2.3.0")
+    implementation(platform(libs.spring.boot.dependencies))
+    implementation(libs.spring.boot.starter.web)
+    implementation(libs.spring.boot.starter.actuator)
+    implementation(libs.spring.boot.starter.aop)
+    implementation(libs.jackson.module.kotlin.managed)
+    implementation(libs.kotlin.reflect)
+    implementation(libs.resilience4j.spring.boot3)
 
     testImplementation(kotlin("test"))
-    testImplementation("org.springframework.boot:spring-boot-starter-test")
+    testImplementation(libs.spring.boot.starter.test)
+    testRuntimeOnly(libs.junit.platform.launcher)
+    // The Spring contract test compares RetryLint's resolver with the real Resilience4j registry.
+    testImplementation(project(":retrylint-cli"))
 }
 
 tasks.test {

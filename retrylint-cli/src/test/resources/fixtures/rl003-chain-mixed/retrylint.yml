@@ -1,0 +1,26 @@
+version: 1
+name: rl003-chain-mixed
+services:
+  - id: service
+    config: application.yml
+operations:
+  - id: service.root
+    service: service
+    idempotency: idempotent
+  - id: service.unknown
+    service: service
+    idempotency: unknown
+  - id: service.non-idempotent
+    service: service
+    idempotency: non-idempotent
+calls:
+  - id: root-to-unknown
+    from: service.root
+    to: service.unknown
+    retry: repeated
+  - id: unknown-to-non-idempotent
+    from: service.unknown
+    to: service.non-idempotent
+    retry: repeated
+analysis:
+  roots: [service.root]

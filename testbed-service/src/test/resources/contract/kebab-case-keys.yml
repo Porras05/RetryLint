@@ -1,0 +1,21 @@
+# Contract scenario: kebab-case spellings of every supported field.
+resilience4j:
+  retry:
+    configs:
+      default:
+        max-attempts: 2
+        wait-duration: 10ms
+      kebab-base:
+        base-config: default
+        max-attempts: 7
+    instances:
+      kebab-instance:
+        base-config: kebab-base
+        wait-duration: 40ms
+  timelimiter:
+    configs:
+      default:
+        timeout-duration: 1500ms
+    instances:
+      kebab-time-limiter:
+        base-config: default

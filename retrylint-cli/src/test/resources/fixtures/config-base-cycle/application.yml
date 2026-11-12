@@ -1,0 +1,10 @@
+resilience4j:
+  retry:
+    configs:
+      alpha:
+        baseConfig: beta
+      beta:
+        base-config: alpha
+    instances:
+      looping:
+        baseConfig: alpha

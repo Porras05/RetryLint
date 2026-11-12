@@ -1,0 +1,28 @@
+version: 1
+name: config-multilevel-base
+services:
+  - id: service
+    config: application.yml
+operations:
+  - id: service.root
+    service: service
+    idempotency: idempotent
+  - id: service.middle
+    service: service
+    idempotency: idempotent
+  - id: service.leaf
+    service: service
+    idempotency: idempotent
+calls:
+  - id: root-to-middle
+    from: service.root
+    to: service.middle
+    retry: shallow
+    timeLimiter: outer
+  - id: middle-to-leaf
+    from: service.middle
+    to: service.leaf
+    retry: deep
+    timeLimiter: inner
+analysis:
+  roots: [service.root]

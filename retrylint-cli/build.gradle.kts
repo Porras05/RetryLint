@@ -9,14 +9,29 @@ kotlin {
 }
 
 dependencies {
-    implementation("info.picocli:picocli:4.7.7")
-    implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.18.3")
-    implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.18.3")
+    implementation(libs.picocli)
+    implementation(libs.jackson.module.kotlin)
+    implementation(libs.jackson.dataformat.yaml)
 
     testImplementation(kotlin("test"))
-    testImplementation("io.github.resilience4j:resilience4j-retry:2.3.0")
-    testImplementation("io.github.resilience4j:resilience4j-timelimiter:2.3.0")
+    testImplementation(platform(libs.junit.bom))
+    testRuntimeOnly(libs.junit.platform.launcher)
+    testImplementation(libs.resilience4j.retry)
+    testImplementation(libs.resilience4j.timelimiter)
 }
+
+jacoco {
+    toolVersion = libs.versions.jacoco.get()
+}
+
+/** Coverage is measured on the analysis core only (plan section 12.4); CLI wiring is excluded. */
+val coverageClassDirectories = files(
+    sourceSets["main"].output.classesDirs.files.map { directory ->
+        fileTree(directory) {
+            include("retrylint/config/**", "retrylint/graph/**", "retrylint/rules/**")
+        }
+    },
+)
 
 tasks.test {
     useJUnitPlatform()
@@ -28,14 +43,35 @@ tasks.jacocoTestReport {
     reports {
         xml.required.set(true)
         html.required.set(true)
+        csv.required.set(true)
     }
-    classDirectories.setFrom(
-        files(classDirectories.files.map { directory ->
-            fileTree(directory) {
-                include("retrylint/config/**", "retrylint/graph/**", "retrylint/rules/**")
+    classDirectories.setFrom(coverageClassDirectories)
+}
+
+tasks.jacocoTestCoverageVerification {
+    dependsOn(tasks.test)
+    classDirectories.setFrom(coverageClassDirectories)
+    violationRules {
+        rule {
+            limit {
+                counter = "BRANCH"
+                value = "COVEREDRATIO"
+                minimum = "0.80".toBigDecimal()
             }
-        }),
-    )
+        }
+    }
+}
+
+tasks.check {
+    dependsOn(tasks.jacocoTestCoverageVerification)
+}
+
+tasks.register<Copy>("archiveCoverage") {
+    group = "verification"
+    description = "Copy the JaCoCo XML/HTML/CSV report into evaluation/coverage as checked-in evidence."
+    dependsOn(tasks.jacocoTestReport)
+    from(layout.buildDirectory.dir("reports/jacoco/test"))
+    into(rootProject.layout.projectDirectory.dir("evaluation/coverage/retrylint-cli"))
 }
 
 application {

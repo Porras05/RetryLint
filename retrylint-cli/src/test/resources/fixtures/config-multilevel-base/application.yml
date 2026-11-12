@@ -1,0 +1,30 @@
+# Three-level named baseConfig chain mixing camelCase and kebab-case.
+# deep: level3 -> level2 -> level1 gives 3 attempts (level1) and 20ms wait (level2).
+resilience4j:
+  retry:
+    configs:
+      default:
+        maxAttempts: 2
+        waitDuration: 10ms
+      level1:
+        max-attempts: 3
+      level2:
+        base-config: level1
+        wait-duration: 20ms
+      level3:
+        baseConfig: level2
+    instances:
+      deep:
+        baseConfig: level3
+      shallow:
+        base-config: default
+        maxAttempts: 3
+  timelimiter:
+    configs:
+      default:
+        timeoutDuration: 1s
+    instances:
+      outer:
+        timeoutDuration: 5s
+      inner:
+        baseConfig: default
